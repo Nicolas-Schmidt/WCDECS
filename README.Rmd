@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# Diseño e implementacion de experimentos en ciencias sociales
+
+***Santiago López-Cariboni, Luciana Cantera, Lucía Suárez, Nicolás Schmidt***
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+Este curso abarca el diseño, la realización y el análisis de experimentos en ciencias sociales. Revisa los experimentos de campo, experimentos naturales, de encuesta y de laboratorio.
+
+El programa del curso esta [acá](https://github.com/Nicolas-Schmidt/CursoExperimentos/blob/master/Programa/Programa2023.pdf).
+
+## Objetivos deaprendizaje:
+
+-   Cómo identificar y abordar las principales amenazas para los diseños experimentales
+-   Cómo implementar componentes clave del diseño y análisis experimental en código
+-   Cómo evaluar las opciones de diseño en sus propios experimentos a través de la simulación
+-   Adquirir experiencia replicando el diseño y análisis de experimentos publicados destacados
+-   Cómo diseñar un experimento y preparar un pre-registro completo
+
+#### Cronograma
+
+```{r, results='asis', echo=FALSE}
+
+datos <- rio::import("Cronograma.xlsx")
+datos$Fecha <- as.character(datos$Fecha)
+filas <- nrow(datos)
+colum <- ncol(datos)
+
+cat(paste("|", names(datos)), "\n")
+cat(paste(c(rep("|------", colum), "|" ), collapse = ""),"\n")
+
+for (i in 1:filas) {
+    cat(paste("|", paste(datos[i,], collapse = "|"), "|", "\n"))
+}
+```
+
+#### Materiales del Curso
+
+```{r, results='asis', echo=FALSE}
+
+datos <- rio::import("Clases.xlsx")
+filas <- nrow(datos)
+colum <- ncol(datos)
+
+cat(paste("|", names(datos)), "\n")
+cat(paste(c(rep("|------", colum), "|" ), collapse = ""),"\n")
+
+for (i in 1:filas) {
+    cat(paste("|", paste(datos[i,], collapse = "|"), "|", "\n"))
+}
+
+```
