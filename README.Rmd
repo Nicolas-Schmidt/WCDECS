@@ -1,8 +1,8 @@
 ---
-title: "Diseño e implementacion de experimentos en ciencias sociales"
-output:
-  github_document:
+output: github_document
 ---
+
+## Diseño e implementacion de experimentos en ciencias sociales
 
 
 ```{r, include = FALSE}
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-#### Docentes
+### Docentes
 
 ***Santiago López-Cariboni*** 
 

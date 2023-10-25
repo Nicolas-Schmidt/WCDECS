@@ -1,7 +1,7 @@
-Diseño e implementacion de experimentos en ciencias sociales
-================
 
-#### Docentes
+## Diseño e implementacion de experimentos en ciencias sociales
+
+### Docentes
 
 ***Santiago López-Cariboni***
 
