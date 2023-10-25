@@ -1,5 +1,6 @@
 ---
-output: github_document
+layout: home
+title: Diseño e implementacion de experimentos en ciencias sociales
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -13,13 +14,33 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Diseño e implementacion de experimentos en ciencias sociales
+#### Docentes
 
-***Santiago López-Cariboni, Luciana Cantera, Lucía Suárez, Nicolás Schmidt***
+***Santiago López-Cariboni*** 
 
-<!-- badges: start -->
+- Email: santiago.lopez@cienciassociales.edu.uy
+- Web: [https://www.lopez-cariboni.info/](https://www.lopez-cariboni.info/)
+- GitHub: [@lopez-cariboni](https://github.com/lopez-cariboni)
+ 
+***Luciana Cantera *** 
 
-<!-- badges: end -->
+- Email: luciana.cantera@cienciassociales.edu.uy
+- GitHub: [@lucianacantera](https://github.com/lucianacantera)
+
+***Lucía Suárez***
+
+- Email: lucia.suarez@cienciassociales.edu.uy
+- GitHub: [@luciasuarezferrer](https://github.com/luciasuarezferrer)
+
+***Nicolás Schmidt***
+
+- Email: nschmidt@cienciassociales.edu.uy
+- Web: [https://dcp-nicolas.schmidt.edu.uy](https://cienciassociales.edu.uy/departamento-de-ciencia-politica/nicolas-schmidt/)
+- GitHub: [@Nicolas-Schmidt](https://github.com/Nicolas-Schmidt)    
+
+
+
+#### Descripción
 
 Este curso abarca el diseño, la realización y el análisis de experimentos en ciencias sociales. Revisa los experimentos de campo, experimentos naturales, de encuesta y de laboratorio.
 
