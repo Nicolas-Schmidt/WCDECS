@@ -1,7 +1,11 @@
 ---
-layout: default
-title: Diseño e implementacion de experimentos en ciencias sociales
-output: github_document
+title: "Diseño e implementacion de experimentos en ciencias sociales"
+output:
+  html_document:
+    self_contained: false
+    theme: lumen
+  output_file: index.html
+  
 ---
 
 
@@ -9,7 +13,7 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-",
+  fig.path = "man/figures/index-",
   out.width = "100%"
 )
 ```
