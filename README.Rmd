@@ -3,7 +3,7 @@ layout: home
 title: Diseño e implementacion de experimentos en ciencias sociales
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
