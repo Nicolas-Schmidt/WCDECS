@@ -1,8 +1,8 @@
 ---
-layout: home
+layout: default
 title: Diseño e implementacion de experimentos en ciencias sociales
+output: github_document
 ---
-
 
 
 ```{r, include = FALSE}
@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 - Web: [https://www.lopez-cariboni.info/](https://www.lopez-cariboni.info/)
 - GitHub: [@lopez-cariboni](https://github.com/lopez-cariboni)
  
-***Luciana Cantera *** 
+***Luciana Cantera*** 
 
 - Email: luciana.cantera@cienciassociales.edu.uy
 - GitHub: [@lucianacantera](https://github.com/lucianacantera)
@@ -40,7 +40,7 @@ knitr::opts_chunk$set(
 
 
 
-#### Descripción
+#### Descripcón
 
 Este curso abarca el diseño, la realización y el análisis de experimentos en ciencias sociales. Revisa los experimentos de campo, experimentos naturales, de encuesta y de laboratorio.
 
