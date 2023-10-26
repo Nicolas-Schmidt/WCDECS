@@ -69,14 +69,14 @@ El programa del curso esta
 
 #### Materiales del Curso
 
-| Módulo | Tema                                                      | Cantidad de clases | Presentaciones                                                                                | Laboratorios |
-|--------|-----------------------------------------------------------|--------------------|-----------------------------------------------------------------------------------------------|--------------|
-| 1      | Inferencia causal                                         | 1                  | [Slide 1](https://drive.google.com/file/d/1zpyLVzf75A1yy5zIeg0aAMfdiT24G651/view?usp=sharing) | .            |
-| 2      | Análisis bajo asignación aleatoria simple                 | 1                  | .                                                                                             | .            |
-| 3      | Estrategias de aleatorización y análisis basado en diseño | 2                  | .                                                                                             | .            |
-| 4      | Diseños experimentales                                    | 4                  | .                                                                                             | .            |
-| 5      | Análisis estadístico de experimentos                      | 3                  | .                                                                                             | .            |
-| 6      | Tipos de experimentos en ciencias sociales                | 3                  | .                                                                                             | .            |
-| 7      | Pre-registro de experimentos                              | 1                  | .                                                                                             | .            |
+| Módulo | Tema                                                      | Cantidad de clases | Presentaciones                                                                                  | Laboratorios |
+|--------|-----------------------------------------------------------|--------------------|-------------------------------------------------------------------------------------------------|--------------|
+| 1      | Inferencia causal                                         | 1                  | [Slide 1](https://drive.google.com/file/d/1zpyLVzf75A1yy5zIeg0aAMfdiT24G651/view?usp=sharing)   | .            |
+| 2      | Análisis bajo asignación aleatoria simple                 | 1                  | [Slides](https://drive.google.com/file/d/1kgu_trh0wRz9OG2HtATphlJxC4ALlhmk/view?usp=drive_link) | .            |
+| 3      | Estrategias de aleatorización y análisis basado en diseño | 2                  | .                                                                                               | .            |
+| 4      | Diseños experimentales                                    | 4                  | .                                                                                               | .            |
+| 5      | Análisis estadístico de experimentos                      | 3                  | .                                                                                               | .            |
+| 6      | Tipos de experimentos en ciencias sociales                | 3                  | .                                                                                               | .            |
+| 7      | Pre-registro de experimentos                              | 1                  | .                                                                                               | .            |
 
-###### \*Actulización: 2023-10-26 01:06:14
+###### \*Actulización: 2023-10-26 02:15:02.351633
