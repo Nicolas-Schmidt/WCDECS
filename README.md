@@ -33,7 +33,7 @@ experimentos en ciencias sociales. Revisa los experimentos de campo,
 experimentos naturales, de encuesta y de laboratorio.
 
 El programa del curso esta
-[acá](https://github.com/Nicolas-Schmidt/CursoExperimentos/blob/master/Programa/Programa2023.pdf).
+[acá](https://drive.google.com/file/d/1LoqrzsCgzLVk5mwedZIQ1jkhL866mjhF/view?usp=sharing).
 
 ## Objetivos deaprendizaje:
 
@@ -69,12 +69,14 @@ El programa del curso esta
 
 #### Materiales del Curso
 
-| Módulo | Tema                                                      | Cantidad de clases | Slide                                                                                            | Labs | add |
-|--------|-----------------------------------------------------------|--------------------|--------------------------------------------------------------------------------------------------|------|-----|
-| 1      | Inferencia causal                                         | 1                  | [ff](https://github.com/Nicolas-Schmidt/CursoExperimentos/blob/master/Programa/Programa2023.pdf) | NA   | NA  |
-| 2      | Análisis bajo asignación aleatoria simple                 | 1                  | NA                                                                                               | NA   | NA  |
-| 3      | Estrategias de aleatorización y análisis basado en diseño | 2                  | NA                                                                                               | NA   | NA  |
-| 4      | Diseños experimentales                                    | 4                  | NA                                                                                               | NA   | NA  |
-| 5      | Análisis estadístico de experimentos                      | 3                  | NA                                                                                               | NA   | NA  |
-| 6      | Tipos de experimentos en ciencias sociales                | 3                  | NA                                                                                               | NA   | NA  |
-| 7      | Pre-registro de experimentos                              | 1                  | NA                                                                                               | NA   | NA  |
+| Módulo | Tema                                                      | Cantidad de clases | Presentaciones                                                                                | Laboratorios |
+|--------|-----------------------------------------------------------|--------------------|-----------------------------------------------------------------------------------------------|--------------|
+| 1      | Inferencia causal                                         | 1                  | [Slide 1](https://drive.google.com/file/d/11S5sW3UUnEfDna5LPVoeTchjwbAmg1iw/view?usp=sharing) | .            |
+| 2      | Análisis bajo asignación aleatoria simple                 | 1                  | .                                                                                             | .            |
+| 3      | Estrategias de aleatorización y análisis basado en diseño | 2                  | .                                                                                             | .            |
+| 4      | Diseños experimentales                                    | 4                  | .                                                                                             | .            |
+| 5      | Análisis estadístico de experimentos                      | 3                  | .                                                                                             | .            |
+| 6      | Tipos de experimentos en ciencias sociales                | 3                  | .                                                                                             | .            |
+| 7      | Pre-registro de experimentos                              | 1                  | .                                                                                             | .            |
+
+###### \*Actulización: 2023-10-26 00:53:59
