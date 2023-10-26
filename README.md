@@ -71,7 +71,7 @@ El programa del curso esta
 
 | Módulo | Tema                                                      | Cantidad de clases | Presentaciones                                                                                | Laboratorios |
 |--------|-----------------------------------------------------------|--------------------|-----------------------------------------------------------------------------------------------|--------------|
-| 1      | Inferencia causal                                         | 1                  | [Slide 1](https://drive.google.com/file/d/11S5sW3UUnEfDna5LPVoeTchjwbAmg1iw/view?usp=sharing) | .            |
+| 1      | Inferencia causal                                         | 1                  | [Slide 1](https://drive.google.com/file/d/1zpyLVzf75A1yy5zIeg0aAMfdiT24G651/view?usp=sharing) | .            |
 | 2      | Análisis bajo asignación aleatoria simple                 | 1                  | .                                                                                             | .            |
 | 3      | Estrategias de aleatorización y análisis basado en diseño | 2                  | .                                                                                             | .            |
 | 4      | Diseños experimentales                                    | 4                  | .                                                                                             | .            |
@@ -79,4 +79,4 @@ El programa del curso esta
 | 6      | Tipos de experimentos en ciencias sociales                | 3                  | .                                                                                             | .            |
 | 7      | Pre-registro de experimentos                              | 1                  | .                                                                                             | .            |
 
-###### \*Actulización: 2023-10-26 00:53:59
+###### \*Actulización: 2023-10-26 01:06:14
