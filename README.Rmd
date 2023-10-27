@@ -43,7 +43,7 @@ knitr::opts_chunk$set(
 
 Este curso abarca el diseño, la realización y el análisis de experimentos en ciencias sociales. Revisa los experimentos de campo, experimentos naturales, de encuesta y de laboratorio.
 
-El programa del curso está disponible [aquí](https://drive.google.com/file/d/1LoqrzsCgzLVk5mwedZIQ1jkhL866mjhF/view?usp=sharing).
+El programa del curso está disponible [aquí](https://drive.google.com/u/0/uc?id=15pJsNz39t-EHyQn7jl75tWN-rmQBdm1c&export=download).
 
 ## Objetivos deaprendizaje:
 
