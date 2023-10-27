@@ -79,4 +79,4 @@ El programa del curso esta
 | 6      | Tipos de experimentos en ciencias sociales                | 3                  | .                                                                                               | .            |
 | 7      | Pre-registro de experimentos                              | 1                  | .                                                                                               | .            |
 
-###### \*Actulización: 2023-10-26 02:15:02.351633
+###### \*Actulización: 2023-10-27 12:44:21.110587
