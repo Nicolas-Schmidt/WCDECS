@@ -35,7 +35,7 @@ experimentos en ciencias sociales. Revisa los experimentos de campo,
 experimentos naturales, de encuesta y de laboratorio.
 
 El programa del curso está disponible
-[aquí](https://drive.google.com/u/0/uc?id=15pJsNz39t-EHyQn7jl75tWN-rmQBdm1c&export=download).
+[aquí](https://drive.google.com/u/0/uc?id=1P7wshzrPodf2tfPWMIRXo6YsI3zh0dMn&export=download).
 
 ## Objetivos deaprendizaje:
 
@@ -49,7 +49,7 @@ El programa del curso está disponible
   publicados destacados
 - Cómo diseñar un experimento y preparar un pre-registro completo
 
-### Bibliografía básica (por orden de importancia para el curso):
+### Bibliografía general
 
 Gerber, Alan S., and Donald P. Green. 2012. *Field Experiments: Design,
 Analysis, and Interpretation.* New York: W.W. Norton. (FEDAI).
@@ -109,4 +109,4 @@ La literatura del curso está disponible
 | 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 | 7      | Pre-registro de experimentos                              | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 
-###### \*Actulización: 2023-10-27 14:55:13.438751
+###### \*Actulización: 2023-10-27 14:58:09.13199
