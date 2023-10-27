@@ -32,8 +32,8 @@ Este curso abarca el diseño, la realización y el análisis de
 experimentos en ciencias sociales. Revisa los experimentos de campo,
 experimentos naturales, de encuesta y de laboratorio.
 
-El programa del curso esta
-[acá](https://drive.google.com/file/d/1LoqrzsCgzLVk5mwedZIQ1jkhL866mjhF/view?usp=sharing).
+El programa del curso está disponible
+[aquí](https://drive.google.com/file/d/1LoqrzsCgzLVk5mwedZIQ1jkhL866mjhF/view?usp=sharing).
 
 ## Objetivos deaprendizaje:
 
@@ -69,14 +69,14 @@ El programa del curso esta
 
 #### Materiales del Curso
 
-| Módulo | Tema                                                      | Cantidad de clases | Presentaciones                                                                                  | Laboratorios |
-|--------|-----------------------------------------------------------|--------------------|-------------------------------------------------------------------------------------------------|--------------|
-| 1      | Inferencia causal                                         | 1                  | [Slide 1](https://drive.google.com/file/d/1zpyLVzf75A1yy5zIeg0aAMfdiT24G651/view?usp=sharing)   | .            |
-| 2      | Análisis bajo asignación aleatoria simple                 | 1                  | [Slides](https://drive.google.com/file/d/1kgu_trh0wRz9OG2HtATphlJxC4ALlhmk/view?usp=drive_link) | .            |
-| 3      | Estrategias de aleatorización y análisis basado en diseño | 2                  | .                                                                                               | .            |
-| 4      | Diseños experimentales                                    | 4                  | .                                                                                               | .            |
-| 5      | Análisis estadístico de experimentos                      | 3                  | .                                                                                               | .            |
-| 6      | Tipos de experimentos en ciencias sociales                | 3                  | .                                                                                               | .            |
-| 7      | Pre-registro de experimentos                              | 1                  | .                                                                                               | .            |
+| Módulo | Tema                                                      | Cantidad de clases | Presentaciones                                                                            | Laboratorios                                                                                                                                                                                                                                                |
+|--------|-----------------------------------------------------------|--------------------|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1      | Inferencia causal                                         | 1                  | [PDF](https://drive.google.com/file/d/14ocI_63vA0eF2ixw4rOMzs0H6vzGTv4H/view?usp=sharing) | Lab 1: Introducción a la aleatorización simple,completa, y por bloques: [HTML](https://drive.google.com/open?id=1A4J-XZab1r_iaJ9XU18nphHLtWFuFJSt&usp=drive_fs), [.Rmd](https://drive.google.com/file/d/19z4SL9vYMvSU8s1QrE_ICsWRCQWTeqvW/view?usp=sharing) |
+| 2      | Análisis bajo asignación aleatoria simple                 | 1                  | NA                                                                                        | NA                                                                                                                                                                                                                                                          |
+| 3      | Estrategias de aleatorización y análisis basado en diseño | 2                  | .                                                                                         | .                                                                                                                                                                                                                                                           |
+| 4      | Diseños experimentales                                    | 4                  | .                                                                                         | .                                                                                                                                                                                                                                                           |
+| 5      | Análisis estadístico de experimentos                      | 3                  | .                                                                                         | .                                                                                                                                                                                                                                                           |
+| 6      | Tipos de experimentos en ciencias sociales                | 3                  | .                                                                                         | .                                                                                                                                                                                                                                                           |
+| 7      | Pre-registro de experimentos                              | 1                  | .                                                                                         | .                                                                                                                                                                                                                                                           |
 
-###### \*Actulización: 2023-10-27 12:44:21.110587
+###### \*Actulización: 2023-10-27 12:52:34.847267

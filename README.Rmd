@@ -4,7 +4,6 @@ output: github_document
 
 ## Diseño e implementacion de experimentos en ciencias sociales
 
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -44,7 +43,7 @@ knitr::opts_chunk$set(
 
 Este curso abarca el diseño, la realización y el análisis de experimentos en ciencias sociales. Revisa los experimentos de campo, experimentos naturales, de encuesta y de laboratorio.
 
-El programa del curso esta [acá](https://drive.google.com/file/d/1LoqrzsCgzLVk5mwedZIQ1jkhL866mjhF/view?usp=sharing).
+El programa del curso está disponible [aquí](https://drive.google.com/file/d/1LoqrzsCgzLVk5mwedZIQ1jkhL866mjhF/view?usp=sharing).
 
 ## Objetivos deaprendizaje:
 
@@ -72,8 +71,6 @@ for (i in 1:filas) {
 ```
 
 #### Materiales del Curso
-
-
 
 ```{r, results='asis', echo=FALSE}
 
