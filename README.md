@@ -1,5 +1,5 @@
 
-## Diseño e implementacion de experimentos en ciencias sociales
+## Diseño e implementacion de experimentos en ciencias sociales (Maestría en Economía)
 
 ### Docentes
 
@@ -79,4 +79,4 @@ El programa del curso está disponible
 | 6      | Tipos de experimentos en ciencias sociales                | 3                  | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 | 7      | Pre-registro de experimentos                              | 1                  | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 
-###### \*Actulización: 2023-10-27 13:19:53.075836
+###### \*Actulización: 2023-10-27 13:40:45.052467

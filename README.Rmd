@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-## Diseño e implementacion de experimentos en ciencias sociales
+## Diseño e implementacion de experimentos en ciencias sociales (\small Maestría en Economía)
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
