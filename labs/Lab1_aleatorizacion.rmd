@@ -1,0 +1,163 @@
+---
+title: |
+ | Taller 1: Aleatorización
+output:
+  html_document:
+    toc: true
+    number_sections: true
+    toc_depth: 3
+    toc_float: true
+    theme: spacelab
+    highlight: tango
+urlcolor: BrickRed
+lang : es-AR
+header-includes: \usepackage[spanish]{babel}
+                 \usepackage{graphicx}
+                 \usepackage{subfig}                 
+bibliography: /Users/slopezcariboni/Dropbox/Research/LibraryBibs/Bibs/library.bib
+---
+
+
+***
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(fig.align = "center", eval=TRUE, tidy.opts=list(width.cutoff=60), tidy=TRUE, cache=TRUE)
+
+paquetes <- c('readstata13', 'dplyr', 'data.table', 'ggplot2', 'tidyverse')
+suppressPackageStartupMessages(sapply(paquetes,require,character.only=TRUE))
+
+```
+
+
+***
+
+# Asignación simple
+
+## Sorteo tirando una moneda
+
+Primero utilizamos la distribución binomial.
+
+
+```{r, tidy=TRUE}
+
+# replicabilidad
+set.seed(12345)
+
+# muestra
+N <-200
+
+# Asignación
+# (Un solo intento por tanto size=1)
+simple.ra <- rbinom(n = N, size = 1, prob = .5)
+
+# 112 personas asignadas al tratamiento
+table(simple.ra)
+
+
+```
+
+El mismo procedimiento utilizando el paquete "randomizr".
+
+```{r, tidy=TRUE}
+# install.packages("randomizr")
+library(randomizr)
+
+# replicabilidad
+set.seed(12345)
+
+# Asignación simple
+
+Z <- simple_ra(
+N = N, # tamaño de la muestra
+prob = .5 # probabilidad de tratamiento
+)
+
+table(Z)
+
+```
+
+## Sorteo para un experimento de 3 brazos
+
+Especifica num_arms sin cambiar prob_each, simple_ra() asumirá probabilidades iguales en todos los brazos.
+
+
+
+```{r, tidy=TRUE}
+Z <- simple_ra(N = N, prob_each = c(1/3, 1/3, 1/3))
+table(Z)
+
+
+Z <- simple_ra(N = N, prob_each = c(1/3, 1/3, 1/3),
+               conditions=c("control", "placebo", "treatment"))
+table(Z)
+
+
+Z <- simple_ra(N = N, prob_each = c(.2, .2, .6),
+               conditions=c("control", "placebo", "treatment"))
+table(Z)
+
+
+
+```
+
+# Asignación completa
+
+
+La asignación aleatoria completa es muy similar a la asignación aleatoria simple, salvo que el investigador puede especificar exactamente cuántas unidades se asignan a cada condición.
+
+```{r, tidy=TRUE}
+
+Z <- complete_ra(N = N)
+table(Z)
+
+```
+
+Especificar el número de sujetos en cada condición.
+
+```{r, tidy=TRUE}
+
+Z <- complete_ra(N = N, m_each = c(50, 50, 100))
+table(Z)
+
+```
+
+
+
+# Asignación aleatoria por grupos
+
+```{r, tidy=TRUE}
+
+# Levantar datos
+data(HairEyeColor)
+HairEyeColor <- data.frame(HairEyeColor)
+
+# Transoformar para tener un sujeto por fila
+hec <- HairEyeColor[rep(1:nrow(HairEyeColor),
+                        times = HairEyeColor$Freq), 1:3]
+
+N <- nrow(hec)
+
+# eliminar rownames
+rownames(hec) <- NULL
+
+```
+
+
+
+```{r, tidy=TRUE}
+
+Z <- block_ra(blocks = hec$Hair)
+table(Z, hec$Hair)
+
+
+Z <- block_ra(blocks = hec$Hair, conditions = c("Control", "Placebo", "Treatment"))
+table(Z, hec$Hair)
+
+
+Z <- block_ra(blocks = hec$Hair, prob_each = c(.3, .7))
+table(Z, hec$Hair)
+
+
+```
+
+
