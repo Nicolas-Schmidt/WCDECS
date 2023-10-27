@@ -43,11 +43,15 @@ knitr::opts_chunk$set(
 
 \normalsize
 
-#### Descripcón
+## Descripcón
 
 Este curso abarca el diseño, la realización y el análisis de experimentos en ciencias sociales. Revisa los experimentos de campo, experimentos naturales, de encuesta y de laboratorio.
 
+
+## Programa
+
 El programa del curso está disponible [aquí](https://drive.google.com/u/0/uc?id=1P7wshzrPodf2tfPWMIRXo6YsI3zh0dMn&export=download).
+
 
 ## Objetivos deaprendizaje:
 
@@ -58,7 +62,7 @@ El programa del curso está disponible [aquí](https://drive.google.com/u/0/uc?i
 -   Cómo diseñar un experimento y preparar un pre-registro completo
 
 
-### Bibliografía general 
+## Bibliografía general 
 
 Gerber, Alan S., and Donald P. Green. 2012. *Field Experiments: Design, Analysis, and Interpretation.* New York: W.W. Norton. (FEDAI).
 
@@ -80,7 +84,7 @@ La literatura del curso está disponible [aquí](https://drive.google.com/drive/
 
 
 
-#### Cronograma
+## Cronograma
 
 ```{r, results='asis', echo=FALSE}
 
@@ -97,7 +101,7 @@ for (i in 1:filas) {
 }
 ```
 
-#### Materiales del Curso
+## Materiales del Curso
 
 ```{r, results='asis', echo=FALSE}
 

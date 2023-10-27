@@ -28,11 +28,13 @@ Año 2023
   [https://dcp-nicolas.schmidt.edu.uy](https://cienciassociales.edu.uy/departamento-de-ciencia-politica/nicolas-schmidt/)
 - GitHub: [@Nicolas-Schmidt](https://github.com/Nicolas-Schmidt)
 
-#### Descripcón
+## Descripcón
 
 Este curso abarca el diseño, la realización y el análisis de
 experimentos en ciencias sociales. Revisa los experimentos de campo,
 experimentos naturales, de encuesta y de laboratorio.
+
+## Programa
 
 El programa del curso está disponible
 [aquí](https://drive.google.com/u/0/uc?id=1P7wshzrPodf2tfPWMIRXo6YsI3zh0dMn&export=download).
@@ -49,7 +51,7 @@ El programa del curso está disponible
   publicados destacados
 - Cómo diseñar un experimento y preparar un pre-registro completo
 
-### Bibliografía general
+## Bibliografía general
 
 Gerber, Alan S., and Donald P. Green. 2012. *Field Experiments: Design,
 Analysis, and Interpretation.* New York: W.W. Norton. (FEDAI).
@@ -77,7 +79,7 @@ EGAP](https://lilymedina.github.io/theory_and_practice_of_field_experiments/)
 La literatura del curso está disponible
 [aquí](https://drive.google.com/drive/folders/154rb3NLmaPQQB8L9xvvFmakDQ1wMudYQ?usp=sharing)
 
-#### Cronograma
+## Cronograma
 
 | Clase | Fecha      | Tema                                                      |
 |-------|------------|-----------------------------------------------------------|
@@ -97,7 +99,7 @@ La literatura del curso está disponible
 | 14    | 2023-12-12 | Tipos de experimentos en ciencias sociales                |
 | 15    | 2023-12-14 | Pre-registro de experimentos                              |
 
-#### Materiales del Curso
+## Materiales del Curso
 
 | Módulo | Tema                                                      | Lecturas                                                                                                                                             | Presentaciones                                                                              | Laboratorios                                                                                                                                                                                                                                                      |
 |--------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -109,4 +111,4 @@ La literatura del curso está disponible
 | 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 | 7      | Pre-registro de experimentos                              | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 
-###### \*Actulización: 2023-10-27 14:58:09.13199
+###### \*Actulización: 2023-10-27 16:38:45.165899
