@@ -49,6 +49,34 @@ El programa del curso está disponible
   publicados destacados
 - Cómo diseñar un experimento y preparar un pre-registro completo
 
+### Bibliografía básica (por orden de importancia para el curso):
+
+Gerber, Alan S., and Donald P. Green. 2012. *Field Experiments: Design,
+Analysis, and Interpretation.* New York: W.W. Norton. (FEDAI).
+
+Imbens, G. W., & Rubin, D. B. (2015). Causal inference in statistics,
+social, and biomedical sciences. Cambridge University Press. (CISSBS)
+
+Athey, Susan, and Guido W Imbens. 2017. “The Econometrics of Randomized
+Experiments.” In Handbook of Economic Field Experiments, Elsevier,
+73–140. (ERE)
+
+Blair, Graeme, Jasper Cooper, Alexander Coppock, y Macartan Humphreys.
+*Research Design in the Social Sciences Declaration, Diagnosis, and
+Redesign*. Forthcoming, Princeton University Press. (R3DR). Disponible
+online en:
+
+Glennerster, Rachel, and Kudzai Takavarasha. 2013. *Running Randomized
+Evaluations: A Practical Guide*. Princeton: Princeton UP.(RRE)
+
+Jake Bowers, Maarten Voors, and Nahomi Ichino. Traducido por Lily
+Medina, [La teoría y la práctica de los experimentos de campo: Una
+introducción de los Learning Days de
+EGAP](https://lilymedina.github.io/theory_and_practice_of_field_experiments/)
+
+La literatura del curso está disponible
+[aquí](https://drive.google.com/drive/folders/154rb3NLmaPQQB8L9xvvFmakDQ1wMudYQ?usp=sharing)
+
 #### Cronograma
 
 | Clase | Fecha      | Tema                                                      |
@@ -71,14 +99,19 @@ El programa del curso está disponible
 
 #### Materiales del Curso
 
-| Módulo | Tema                                                      | Lecturas                                                                                                                     | Presentaciones                                                                              | Laboratorios                                                                                                                                                                                                                                                      |
-|--------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1      | Inferencia causal                                         | Gerber  & Green 2012. FEDAI [Descarga](https://drive.google.com/drive/folders/14HDw0lx7v8cduNtj2XNvvZ5fm_lQ7Z6y?usp=sharing) | [PDF](https://drive.google.com/u/0/uc?id=14ocI_63vA0eF2ixw4rOMzs0H6vzGTv4H&export=download) | Lab 1: Introducción a la aleatorización simple,completa, y por bloques: [HTML](https://drive.google.com/u/0/uc?id=1J6pjygV39O6g-A_VqCOC-A64s9vlZSd_&export=download), [Rmd](https://drive.google.com/u/0/uc?id=1JAns64_qRpMvtEWVIQC39CLFNQhEMoCz&export=download) |
-| 2      | Análisis bajo asignación aleatoria simple                 | .                                                                                                                            | .                                                                                           | .                                                                                                                                                                                                                                                                 |
-| 3      | Estrategias de aleatorización y análisis basado en diseño | .                                                                                                                            | .                                                                                           | .                                                                                                                                                                                                                                                                 |
-| 4      | Diseños experimentales                                    | .                                                                                                                            | .                                                                                           | .                                                                                                                                                                                                                                                                 |
-| 5      | Análisis estadístico de experimentos                      | .                                                                                                                            | .                                                                                           | .                                                                                                                                                                                                                                                                 |
-| 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                            | .                                                                                           | .                                                                                                                                                                                                                                                                 |
-| 7      | Pre-registro de experimentos                              | .                                                                                                                            | .                                                                                           | .                                                                                                                                                                                                                                                                 |
+| Módulo | Tema              | Lecturas                                                                                                                     | Presentaciones | Laboratorios |
+|--------|-------------------|------------------------------------------------------------------------------------------------------------------------------|----------------|--------------|
+| 1      | Inferencia causal | Gerber  & Green 2012. FEDAI [Descarga](https://drive.google.com/drive/folders/14HDw0lx7v8cduNtj2XNvvZ5fm_lQ7Z6y?usp=sharing) |                |              |
 
-###### \*Actulización: 2023-10-27 14:20:42.264475
+Barbas 2010
+[pdf](url)\|[PDF](https://drive.google.com/u/0/uc?id=14ocI_63vA0eF2ixw4rOMzs0H6vzGTv4H&export=download)\|Lab
+1: Introducción a la aleatorización simple,completa, y por bloques:
+[HTML](https://drive.google.com/u/0/uc?id=1J6pjygV39O6g-A_VqCOC-A64s9vlZSd_&export=download),
+[Rmd](https://drive.google.com/u/0/uc?id=1JAns64_qRpMvtEWVIQC39CLFNQhEMoCz&export=download)
+\| \| 2\|Análisis bajo asignación aleatoria simple\|.\|.\|. \| \|
+3\|Estrategias de aleatorización y análisis basado en diseño\|.\|.\|. \|
+\| 4\|Diseños experimentales\|.\|.\|. \| \| 5\|Análisis estadístico de
+experimentos\|.\|.\|. \| \| 6\|Tipos de experimentos en ciencias
+sociales\|.\|.\|. \| \| 7\|Pre-registro de experimentos\|.\|.\|. \|
+
+###### \*Actulización: 2023-10-27 14:48:36.200734

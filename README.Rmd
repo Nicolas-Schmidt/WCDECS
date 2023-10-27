@@ -57,6 +57,29 @@ El programa del curso está disponible [aquí](https://drive.google.com/u/0/uc?i
 -   Adquirir experiencia replicando el diseño y análisis de experimentos publicados destacados
 -   Cómo diseñar un experimento y preparar un pre-registro completo
 
+
+### Bibliografía básica (por orden de importancia para el curso): 
+
+Gerber, Alan S., and Donald P. Green. 2012. *Field Experiments: Design, Analysis, and Interpretation.* New York: W.W. Norton. (FEDAI).
+
+Imbens, G. W., & Rubin, D. B. (2015). Causal inference in statistics, social, and biomedical sciences. Cambridge University Press. (CISSBS)
+
+Athey, Susan, and Guido W Imbens. 2017. “The Econometrics of Randomized Experiments.” In Handbook of Economic Field Experiments, Elsevier, 73–140. (ERE)
+
+Blair, Graeme, Jasper Cooper, Alexander Coppock, y Macartan Humphreys. *Research Design in the Social Sciences Declaration, Diagnosis, and Redesign*.  Forthcoming, Princeton University Press. (R3DR). Disponible online en: \url{https://book.declaredesign.org/}
+
+Glennerster, Rachel, and Kudzai Takavarasha. 2013. *Running Randomized Evaluations: A Practical Guide*. Princeton: Princeton UP.(RRE)
+
+Jake Bowers, Maarten Voors, and Nahomi Ichino. Traducido por Lily Medina, [La teoría y la práctica de los experimentos de campo:
+Una introducción de los Learning Days de EGAP](https://lilymedina.github.io/theory_and_practice_of_field_experiments/)
+
+
+La literatura del curso está disponible [aquí](https://drive.google.com/drive/folders/154rb3NLmaPQQB8L9xvvFmakDQ1wMudYQ?usp=sharing)
+
+
+
+
+
 #### Cronograma
 
 ```{r, results='asis', echo=FALSE}
