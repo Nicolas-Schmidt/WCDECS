@@ -221,6 +221,8 @@ EGAP, [10 Things to Know About Randomization Inference](https://egap.org/resourc
 
 Peng Ding, Avi Feller, and Luke Miratrix (2016), “Randomization Inference for Treatment Effect Variation,” Journal of the Royal Statistical Society, Series B 78: 655–671
 
+Samii, C., & Aronow, P. M. (2012). On equivalencies between design-based and regression-based variance estimators for randomized experiments. Statistics & Probability Letters, 82(2), 365–370.
+
 
 - *Regresión y ajuste por covariables*
 
