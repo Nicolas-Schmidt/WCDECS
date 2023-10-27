@@ -2,7 +2,9 @@
 output: github_document
 ---
 
-## Diseño e implementacion de experimentos en ciencias sociales (\small Maestría en Economía)
+## Diseño e implementacion de experimentos en ciencias sociales
+Curso dictado en la Maestría en Economía (dECON -  FCS)
+Año 2023
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -13,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-### Docentes
+\scriptsize
 
 ***Santiago López-Cariboni*** 
 
@@ -37,7 +39,7 @@ knitr::opts_chunk$set(
 - Web: [https://dcp-nicolas.schmidt.edu.uy](https://cienciassociales.edu.uy/departamento-de-ciencia-politica/nicolas-schmidt/)
 - GitHub: [@Nicolas-Schmidt](https://github.com/Nicolas-Schmidt)    
 
-
+\normalsize
 
 #### Descripcón
 
