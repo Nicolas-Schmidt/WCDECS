@@ -1,7 +1,9 @@
 
 ## Diseño e implementacion de experimentos en ciencias sociales
 
-Curso dictado en la Maestría en Economía (dECON - FCS) Año 2023
+Curso dictado en la Maestría en Economía (dECON - FCS)
+
+Año 2023
 
 ***Santiago López-Cariboni***
 
@@ -79,4 +81,4 @@ El programa del curso está disponible
 | 6      | Tipos de experimentos en ciencias sociales                | 3                  | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 | 7      | Pre-registro de experimentos                              | 1                  | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 
-###### \*Actulización: 2023-10-27 13:43:17.565318
+###### \*Actulización: 2023-10-27 13:45:45.751567
