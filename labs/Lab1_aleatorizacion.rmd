@@ -1,6 +1,6 @@
 ---
 title: |
- | Taller 1: Aleatorización
+ | Taller 1: Lab 1: Introducción a la aleatorización simple, completa, y por bloques
 output:
   html_document:
     toc: true
@@ -122,8 +122,7 @@ table(Z)
 ```
 
 
-
-# Asignación aleatoria por grupos
+# Asignación aleatoria por grupos (o bloques)
 
 ```{r, tidy=TRUE}
 
@@ -141,7 +140,6 @@ N <- nrow(hec)
 rownames(hec) <- NULL
 
 ```
-
 
 
 ```{r, tidy=TRUE}
