@@ -45,7 +45,7 @@ h1 {
 </style>
 
 
-## Diseño e implementacion de experimentos en ciencias sociales
+## Diseño e implementacion de experimentos en ciencias sociales <a name="informacion-general"></a>
 
 Curso dictado en la Maestría en Economía (dECON - FCS)
 
@@ -74,18 +74,18 @@ Año 2023
   [https://dcp-nicolas.schmidt.edu.uy](https://cienciassociales.edu.uy/departamento-de-ciencia-politica/nicolas-schmidt/)
 - GitHub: [@Nicolas-Schmidt](https://github.com/Nicolas-Schmidt)
 
-## Descripcón
+## Descripcón <a name="descripcion"></a>
 
 Este curso abarca el diseño, la realización y el análisis de
 experimentos en ciencias sociales. Revisa los experimentos de campo,
 experimentos naturales, de encuesta y de laboratorio.
 
-## Programa
+## Programa <a name="programa"></a>
 
 El programa del curso está disponible
 [aquí](https://drive.google.com/u/0/uc?id=1P7wshzrPodf2tfPWMIRXo6YsI3zh0dMn&export=download).
 
-## Objetivos deaprendizaje:
+## Objetivos deaprendizaje: <a name="objetivos"></a>
 
 - Cómo identificar y abordar las principales amenazas para los diseños
   experimentales
@@ -97,7 +97,7 @@ El programa del curso está disponible
   publicados destacados
 - Cómo diseñar un experimento y preparar un pre-registro completo
 
-## Bibliografía general
+## Bibliografía general <a name="bibliografia"></a>
 
 Gerber, Alan S., and Donald P. Green. 2012. *Field Experiments: Design,
 Analysis, and Interpretation.* New York: W.W. Norton. (FEDAI).
