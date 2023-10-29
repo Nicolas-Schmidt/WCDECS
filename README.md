@@ -1,13 +1,21 @@
+<div class="navbar">
+  <a href="#informacion-general">Información General</a>
+  <a href="#descripcion">Descripción</a>
+  <a href="#programa">Programa</a>
+  <a href="#objetivos">Objetivos de Aprendizaje</a>
+  <a href="#bibliografia">Bibliografía</a>
+</div>
+
 <style>
   body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    margin: 20px;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
   }
 
   .navbar {
-    background-color: #333;
+    background-color: #8a2be2; /* Código de color para violeta */
     overflow: hidden;
   }
 
@@ -25,11 +33,9 @@
     color: black;
   }
 
-  .container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Estilos para las secciones del documento */
+  h2 {
+    margin-top: 20px;
   }
 </style>
 
