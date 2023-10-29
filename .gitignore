@@ -6,6 +6,10 @@
 .^Icon\r
 .^Icon\r\r
 .^Icon?
+.Icon
+.Icon\r
+.Icon\r\r
+.Icon?
 *Icon*
 Icon\r
 Icon\r\r
