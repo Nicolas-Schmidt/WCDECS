@@ -4,6 +4,8 @@
   <a href="#programa">Programa</a>
   <a href="#objetivos">Objetivos</a>
   <a href="#bibliografia">Bibliografía</a>
+  <a href="#cronograma">Cronograma</a>
+  <a href="#materiales">Materiales</a>
 </div>
 
 <style>
@@ -85,7 +87,7 @@ experimentos naturales, de encuesta y de laboratorio.
 El programa del curso está disponible
 [aquí](https://drive.google.com/u/0/uc?id=1P7wshzrPodf2tfPWMIRXo6YsI3zh0dMn&export=download).
 
-## Objetivos: <a name="objetivos"></a>
+## Objetivos de aprendizaje: <a name="objetivos"></a>
 
 - Cómo identificar y abordar las principales amenazas para los diseños
   experimentales
@@ -125,7 +127,7 @@ EGAP](https://lilymedina.github.io/theory_and_practice_of_field_experiments/)
 La literatura del curso está disponible
 [aquí](https://drive.google.com/drive/folders/154rb3NLmaPQQB8L9xvvFmakDQ1wMudYQ?usp=sharing)
 
-## Cronograma
+## Cronograma <a name="cronograma"></a>
 
 | Clase | Fecha      | Tema                                                      |
 |-------|------------|-----------------------------------------------------------|
@@ -145,7 +147,7 @@ La literatura del curso está disponible
 | 14    | 2023-12-12 | Tipos de experimentos en ciencias sociales                |
 | 15    | 2023-12-14 | Pre-registro de experimentos                              |
 
-## Materiales del Curso
+## Materiales del Curso <a name="materiales"></a>
 
 | Módulo | Tema                                                      | Lecturas                                                                                                                                             | Presentaciones                                                                              | Laboratorios                                                                                                                                                                                                                                                      |
 |--------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
