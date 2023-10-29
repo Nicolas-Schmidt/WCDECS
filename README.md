@@ -16,7 +16,7 @@ h1 {
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #FFFFFF;
     margin: 0;
     padding: 0;
   }
