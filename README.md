@@ -1,17 +1,3 @@
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 20px;
-    padding: 20px;
-  }
-  .container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-</style>
 
 ## Diseño e implementacion de experimentos en ciencias sociales
 
@@ -125,4 +111,4 @@ La literatura del curso está disponible
 | 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 | 7      | Pre-registro de experimentos                              | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 
-###### \*Actulización: 2023-10-27 16:38:45.165899
+###### \*Actulización: 2023-10-29 17:07:49.43582
