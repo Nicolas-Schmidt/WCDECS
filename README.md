@@ -1,32 +1,30 @@
+
 <div class="navbar">
-  <a href="#informacion-general">Información General</a>
-  <a href="#descripcion">Descripción</a>
-  <a href="#programa">Programa</a>
-  <a href="#objetivos">Objetivos</a>
-  <a href="#bibliografia">Bibliografía</a>
-  <a href="#cronograma">Cronograma</a>
-  <a href="#materiales">Materiales</a>
+
+<a href="#informacion-general">Información General</a>
+<a href="#descripcion">Descripción</a> <a href="#programa">Programa</a>
+<a href="#objetivos">Objetivos</a>
+<a href="#bibliografia">Bibliografía</a>
+<a href="#cronograma">Cronograma</a>
+<a href="#materiales">Materiales</a>
+
 </div>
 
 <style>
-
-h1 {
+&#10;h1 {
     display: none;
   }
-  
-  body {
+  &#10;  body {
     font-family: Arial, sans-serif;
     background-color: #FFFFFF;
     margin: 0;
     padding: 0;
   }
-
-  .navbar {
+&#10;  .navbar {
     background-color: #8a2be2; /* Código de color para violeta */
     overflow: hidden;
   }
-
-  .navbar a {
+&#10;  .navbar a {
     float: left;
     display: block;
     color: white;
@@ -34,18 +32,15 @@ h1 {
     padding: 14px 16px;
     text-decoration: none;
   }
-
-  .navbar a:hover {
+&#10;  .navbar a:hover {
     background-color: #ddd;
     color: black;
   }
-
-  /* Estilos para las secciones del documento */
+&#10;  /* Estilos para las secciones del documento */
   h2 {
     margin-top: 20px;
   }
 </style>
-
 
 ## Diseño e implementacion de experimentos en ciencias sociales <a name="informacion-general"></a>
 
@@ -159,4 +154,4 @@ La literatura del curso está disponible
 | 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 | 7      | Pre-registro de experimentos                              | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
 
-###### \*Actulización: 2023-10-29 17:07:49.43582
+###### \*Actulización: 2023-10-29 19:19:55
