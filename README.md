@@ -2,7 +2,7 @@
   <a href="#informacion-general">Información General</a>
   <a href="#descripcion">Descripción</a>
   <a href="#programa">Programa</a>
-  <a href="#objetivos">Objetivos de Aprendizaje</a>
+  <a href="#objetivos">Objetivos</a>
   <a href="#bibliografia">Bibliografía</a>
 </div>
 
@@ -85,7 +85,7 @@ experimentos naturales, de encuesta y de laboratorio.
 El programa del curso está disponible
 [aquí](https://drive.google.com/u/0/uc?id=1P7wshzrPodf2tfPWMIRXo6YsI3zh0dMn&export=download).
 
-## Objetivos deaprendizaje: <a name="objetivos"></a>
+## Objetivos: <a name="objetivos"></a>
 
 - Cómo identificar y abordar las principales amenazas para los diseños
   experimentales
