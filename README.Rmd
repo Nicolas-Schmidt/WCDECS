@@ -26,7 +26,7 @@ h1 {
   }
 
   .navbar {
-    background-color: #8a2be2; /* Código de color para violeta */
+    background-color: #8a2be2; 
     overflow: hidden;
   }
 
@@ -44,7 +44,6 @@ h1 {
     color: black;
   }
 
-  /* Estilos para las secciones del documento */
   h2 {
     margin-top: 20px;
   }
