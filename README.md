@@ -1,32 +1,30 @@
+
 <div class="navbar">
-  <a href="#informacion-general">Información General</a>
-  <a href="#descripcion">Descripción</a>
-  <a href="#programa">Programa</a>
-  <a href="#objetivos">Objetivos</a>
-  <a href="#bibliografia">Bibliografía</a>
-  <a href="#cronograma">Cronograma</a>
-  <a href="#materiales">Materiales</a>
+
+<a href="#informacion-general">Información General</a>
+<a href="#descripcion">Descripción</a> <a href="#programa">Programa</a>
+<a href="#objetivos">Objetivos</a>
+<a href="#bibliografia">Bibliografía</a>
+<a href="#cronograma">Cronograma</a>
+<a href="#materiales">Materiales</a>
+
 </div>
 
 <style>
-
-h1 {
+&#10;h1 {
     display: none;
   }
-  
-  body {
+  &#10;  body {
     font-family: Arial, sans-serif;
     background-color: #FFFFFF;
     margin: 0;
     padding: 0;
   }
-
-  .navbar {
+&#10;  .navbar {
     background-color: #8a2be2; 
     overflow: hidden;
   }
-
-  .navbar a {
+&#10;  .navbar a {
     float: left;
     display: block;
     color: white;
@@ -34,17 +32,14 @@ h1 {
     padding: 14px 16px;
     text-decoration: none;
   }
-
-  .navbar a:hover {
+&#10;  .navbar a:hover {
     background-color: #ddd;
     color: black;
   }
-
-  h2 {
+&#10;  h2 {
     margin-top: 20px;
   }
 </style>
-
 
 ## Diseño e implementacion de experimentos en ciencias sociales <a name="informacion-general"></a>
 
@@ -148,14 +143,21 @@ La literatura del curso está disponible
 
 ## Materiales del Curso <a name="materiales"></a>
 
-| Módulo | Tema                                                      | Lecturas                                                                                                                                             | Presentaciones                                                                              | Laboratorios                                                                                                                                                                                                                                                      |
-|--------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1      | Inferencia causal                                         | Gerber  & Green 2012. FEDAI [Descarga](https://drive.google.com/drive/folders/14HDw0lx7v8cduNtj2XNvvZ5fm_lQ7Z6y?usp=sharing), Barbas 2010 [pdf](url) | [PDF](https://drive.google.com/u/0/uc?id=14ocI_63vA0eF2ixw4rOMzs0H6vzGTv4H&export=download) | Lab 1: Introducción a la aleatorización simple,completa, y por bloques: [HTML](https://drive.google.com/u/0/uc?id=1J6pjygV39O6g-A_VqCOC-A64s9vlZSd_&export=download), [Rmd](https://drive.google.com/u/0/uc?id=1JAns64_qRpMvtEWVIQC39CLFNQhEMoCz&export=download) |
-| 2      | Análisis bajo asignación aleatoria simple                 | .                                                                                                                                                    | .                                                                                           | Lab 2: RI: [HTML](https://drive.google.com/file/d/1-JyeCf7fnkAD5yinoPHoOwRv4L2B28RS/view?usp=sharing), [Rmd](https://drive.google.com/file/d/1xRH8NtGT5Sbc_Vp9HG_sKGht02ZHIMiZ/view?usp=sharing)                                                                                                                                                                                                                                                                 |
-| 3      | Estrategias de aleatorización y análisis basado en diseño | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
-| 4      | Diseños experimentales                                    | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
-| 5      | Análisis estadístico de experimentos                      | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
-| 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
-| 7      | Pre-registro de experimentos                              | .                                                                                                                                                    | .                                                                                           | .                                                                                                                                                                                                                                                                 |
+| Módulo | Tema              | Lecturas                                                                                                                         | Presentaciones | Laboratorios |
+|--------|-------------------|----------------------------------------------------------------------------------------------------------------------------------|----------------|--------------|
+| 1      | Inferencia causal | Gerber  & Green 2012. FEDAI \[Descarga\] <https://drive.google.com/drive/folders/14HDw0lx7v8cduNtj2XNvvZ5fm_lQ7Z6y?usp=sharing>) |                |              |
 
-###### \*Actulización: 2023-10-29 19:21:53
+Barabas 2010
+[pdf](https://drive.google.com/file/d/15SqCaheQIA_Eg8Q6CxkkF5Gdt2dPdK1Y/view)
+Aronow et al 2015
+[pdf](url)\|[PDF](https://drive.google.com/u/0/uc?id=14ocI_63vA0eF2ixw4rOMzs0H6vzGTv4H&export=download)\|Lab
+1: Introducción a la aleatorización simple,completa, y por bloques:
+[HTML](https://drive.google.com/u/0/uc?id=1J6pjygV39O6g-A_VqCOC-A64s9vlZSd_&export=download),
+[Rmd](https://drive.google.com/u/0/uc?id=1JAns64_qRpMvtEWVIQC39CLFNQhEMoCz&export=download)
+\| \| 2\|Análisis bajo asignación aleatoria simple\|.\|.\|. \| \|
+3\|Estrategias de aleatorización y análisis basado en diseño\|.\|.\|. \|
+\| 4\|Diseños experimentales\|.\|.\|. \| \| 5\|Análisis estadístico de
+experimentos\|.\|.\|. \| \| 6\|Tipos de experimentos en ciencias
+sociales\|.\|.\|. \| \| 7\|Pre-registro de experimentos\|.\|.\|. \|
+
+###### \*Actulización: 2023-10-31 11:35:59.431843
