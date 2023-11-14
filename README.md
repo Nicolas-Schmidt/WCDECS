@@ -132,12 +132,12 @@ La literatura del curso está disponible
 | 1     | 2023-10-24 | Inferencia causal                                         |
 | 2     | 2023-10-26 | Análisis bajo asignación aleatoria simple                 |
 | 3     | 2023-10-31 | Estrategias de aleatorización y análisis basado en diseño |
-| 4     | 2023-11-07 | Estrategias de aleatorización y análisis basado en diseño |
-| 5     | 2023-11-09 | Diseños experimentales                                    |
-| 6     | 2023-11-14 | Diseños experimentales                                    |
-| 7     | 2023-11-16 | Diseños experimentales                                    |
+| 4     | 2023-11-07 | —                                                         |
+| 5     | 2023-11-09 | Estrategias de aleatorización y análisis basado en diseño |
+| 6     | 2023-11-14 | Estrategias de aleatorización y análisis basado en diseño |
+| 7     | 2023-11-16 | Estrategias de aleatorización y análisis basado en diseño |
 | 8     | 2023-11-21 | Diseños experimentales                                    |
-| 9     | 2023-11-23 | Análisis estadístico de experimentos                      |
+| 9     | 2023-11-23 | Diseños experimentales                                    |
 | 10    | 2023-11-28 | Análisis estadístico de experimentos                      |
 | 11    | 2023-11-30 | Análisis estadístico de experimentos                      |
 | 12    | 2023-12-05 | Tipos de experimentos en ciencias sociales                |
@@ -157,4 +157,4 @@ La literatura del curso está disponible
 | 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | .                                                                                           | .                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | 7      | Pre-registro de experimentos                              | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | .                                                                                           | .                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
-###### \*Actulización: 2023-11-14 09:12:07
+###### \*Actulización: 2023-11-14 11:09:47
