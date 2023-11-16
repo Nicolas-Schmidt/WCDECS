@@ -1,0 +1,149 @@
+---
+title: |
+ | Taller 5: Expeirmentos por conglomerados y bloqueados
+output:
+  html_document:
+    toc: true
+    number_sections: true
+    toc_depth: 3
+    toc_float: true
+    theme: spacelab
+    highlight: tango
+urlcolor: BrickRed
+lang : es-AR
+header-includes: \usepackage[spanish]{babel}
+                 \usepackage{graphicx}
+                 \usepackage{subfig}                 
+bibliography: /Users/slopezcariboni/Dropbox/Research/LibraryBibs/Bibs/library.bib
+---
+
+
+***
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(fig.align = "center", eval=TRUE, tidy.opts=list(width.cutoff=60), tidy=TRUE, cache=TRUE)
+paquetes <- c('dplyr', 'data.table', 'ggplot2', 'tidyverse')
+suppressPackageStartupMessages(sapply(paquetes,require,character.only=TRUE))
+
+```
+
+
+# Asignación agrupada
+
+La asignación por grupos es desafortunada. Si puedes evitar asignar sujetos a tratamientos por conglomerados, deberías hacerlo. A veces, la asignación por conglomerados es inevitable. Algunas situaciones comunes son:
+
+- Compañeros de hogar: se asignan hogares enteros al tratamiento o al control.
+- Alumnos en aulas: se asignan aulas enteras al tratamiento o al control.
+- Residentes en ciudades o pueblos: se asignan comunidades enteras al tratamiento o al control.
+
+
+La asignación agrupada reduce el tamaño efectivo de la muestra de un experimento. En el caso extremo en el que los resultados potenciales están perfectamente correlacionados con las agrupaciones, el experimento tiene un tamaño de muestra efectivo igual al número de agrupaciones. Cuando los resultados potenciales no están perfectamente correlacionados con las agrupaciones, el tamaño efectivo de la muestra es igual al número de sujetos. Casi todos los experimentos asignados por conglomerados se encuentran en algún punto intermedio entre estos dos extremos.
+
+El único argumento necesario para la función \texttt{cluster_ra()} es el argumento "clusters", que es un vector de longitud $N$ que indica a qué cluster pertenece cada sujeto. Supongamos que, por alguna razón, tenemos que asignar tratamientos según las combinaciones únicas de *color de pelo*, *color de ojos* y *sexo*.
+
+
+```{r, tidy=TRUE, messages=FALSE}
+library(DeclareDesign)
+
+data(HairEyeColor)
+HairEyeColor <- data.frame(HairEyeColor)
+
+# Transform so each row is a subject
+# Columns describe subject's hair color, eye color, and gender
+hec <- HairEyeColor[rep(1:nrow(HairEyeColor),
+                        times = HairEyeColor$Freq), 1:3]
+
+N <- nrow(hec)
+
+# Fix the rownames
+rownames(hec) <- NULL
+
+clusters <- with(hec, paste(Hair, Eye, Sex, sep = "_"))
+hec$clusters <- clusters
+
+Z_clust <- cluster_ra(clusters = clusters)
+
+head(table(clusters, Z_clust))
+
+```
+
+Esto demuestra que cada conglomerado está asignado al tratamiento o al control. No hay dos unidades dentro del mismo conglomerado asignadas a condiciones diferentes.
+
+Como con todas las funciones de \texttt{randomizr}, puede especificar múltiples brazos de tratamiento de varias maneras:
+
+```{r, tidy=TRUE, messages=FALSE}
+Z_clust <- cluster_ra(clusters=clusters, 
+                      conditions=c("Control", "Placebo", "Treatment"))
+head(table(clusters, Z_clust))
+```
+
+
+```{r, tidy=TRUE, messages=FALSE}
+Z_clust <- cluster_ra(clusters=clusters, 
+                      conditions=c("Control", "Placebo", "Treatment"))
+head(table(clusters, Z_clust))
+```
+
+```{r, tidy=TRUE, messages=FALSE}
+Z_clust <- cluster_ra(clusters=clusters, m_each=c(5, 15, 12))
+head(table(clusters, Z_clust))
+```
+
+
+
+# Diseños por conglomerado y bloqueados (blocked and clustered)
+
+La potencia de los experimentos agrupados puede mejorarse a veces mediante el bloqueo. En este caso, los conglomerados enteros son miembros de un bloque concreto: imaginemos pueblos anidados dentro de regiones discretas, o aulas anidadas dentro de escuelas discretas.
+
+A modo de ejemplo, agrupemos nuestros conglomerados en bloques por tamaño utilizando \texttt{dplyr}
+
+
+```{r, tidy=TRUE, messages=FALSE}
+
+suppressMessages(library(dplyr))
+cluster_level_df <- 
+  hec %>%
+  group_by(clusters) %>%
+  summarize(cluster_size = n()) %>%
+  arrange(cluster_size) %>%
+  mutate(blocks = paste0("block_", sprintf("%02d",rep(1:16, each=2))))
+
+
+cluster_level_df
+
+hec <- left_join(hec, cluster_level_df)
+
+# Extract the cluster and block variables
+clusters <- hec$clusters
+blocks <- hec$blocks
+table(clusters, blocks)
+
+
+Z <- block_and_cluster_ra(clusters = clusters, blocks = blocks)
+table(clusters, Z)
+table(blocks, Z)
+
+```
+
+
+# Cálculo de probabilidades de asignación
+
+Las cinco funciones de asignación aleatoria de randomizr asignan unidades al tratamiento con probabilidades conocidas (aunque a veces complicadas). Las funciones \texttt{declare_ra()} y \texttt{obtain_condition_probabilities()} calculan estas probabilidades según los parámetros de su diseño experimental.
+
+Veamos la asignación aleatoria por bloques que utilizamos antes.
+
+```{r, tidy=TRUE, messages=FALSE}
+
+declaration <- declare_ra(blocks = hec$blocks,
+                          clusters = hec$clusters)
+
+
+prob_mat <- declaration$probabilities_matrix
+head(prob_mat)
+
+cond_prob <- obtain_condition_probabilities(declaration, Z)
+table(cond_prob, Z)
+
+
+```
+

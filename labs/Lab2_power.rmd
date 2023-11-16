@@ -1,0 +1,130 @@
+---
+title: |
+ | Taller 2: Potencia
+output:
+  html_document:
+    toc: true
+    number_sections: true
+    toc_depth: 3
+    toc_float: true
+    theme: spacelab
+    highlight: tango
+urlcolor: BrickRed
+lang : es-AR
+header-includes: \usepackage[spanish]{babel}
+                 \usepackage{graphicx}
+                 \usepackage{subfig}                 
+bibliography: /Users/slopezcariboni/Dropbox/Research/LibraryBibs/Bibs/library.bib
+---
+
+
+***
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(fig.align = "center", eval=TRUE, tidy.opts=list(width.cutoff=60), tidy=TRUE, cache=TRUE)
+
+paquetes <- c('readstata13', 'dplyr', 'data.table', 'ggplot2', 'tidyverse')
+suppressPackageStartupMessages(sapply(paquetes,require,character.only=TRUE))
+
+```
+
+En este taller utilizamos código en R para algunos análisis de potencia. Los ejemplos están basados en EGAP: https://egap.org/resource/10-things-to-know-about-statistical-power/ .
+
+# Análisis de potencia para el diseño estándar
+
+El diseño estándar asigna aleatoriamente a los sujetos al tratamiento o al control con una probabilidad de 0,5. Tenemos que hacer suposiciones sobre el tamaño del efecto del tratamiento y la desviación estándar de la variable de resultado. A continuación, variamos el número total de sujetos para ver cómo variará la potencia con el tamaño de la muestra.
+
+Esta operación puede hacerse con una fórmula derivada analíticamente, pero esta simulación proporcionará la base para diseños más complicados.
+
+
+
+```{r, tidy=TRUE}
+
+possible.ns <- seq(from=100, to=2000, by=50)     # The sample sizes we'll be considering
+powers <- rep(NA, length(possible.ns))           # Empty object to collect simulation estimates
+alpha <- 0.05                                    # Standard significance level
+sims <- 500                                      # Number of simulations to conduct for each N
+
+#### Outer loop to vary the number of subjects ####
+for (j in 1:length(possible.ns)){
+  N <- possible.ns[j]                              # Pick the jth value for N
+  
+  significant.experiments <- rep(NA, sims)         # Empty object to count significant experiments
+  
+  #### Inner loop to conduct experiments "sims" times over for each N ####
+  for (i in 1:sims){
+    Y0 <-  rnorm(n=N, mean=60, sd=20)              # control potential outcome
+    tau <- 5                                       # Hypothesize treatment effect
+    Y1 <- Y0 + tau                                 # treatment potential outcome
+    Z.sim <- rbinom(n=N, size=1, prob=.5)          # Do a random assignment
+    Y.sim <- Y1*Z.sim + Y0*(1-Z.sim)               # Reveal outcomes according to assignment
+    fit.sim <- lm(Y.sim ~ Z.sim)                   # Do analysis (Simple regression)
+    p.value <- summary(fit.sim)$coefficients[2,4]  # Extract p-values
+    significant.experiments[i] <- (p.value <= alpha) # Determine significance according to p <= 0.05
+  }
+  
+  powers[j] <- mean(significant.experiments)       # store average success rate (power) for each N
+}
+plot(possible.ns, powers, ylim=c(0,1))
+
+```
+# Potencia controlando por covariables
+
+La inclusión de covariables como regresores puede ayudar a la precisión con la que se estiman los efectos del tratamiento. No incluimos las covariables porque nos interese el impacto causal de las covariables en los resultados, sino porque nos interesa reducir el entorno de ruido de nuestro experimento. Al modelar la variable dependiente como una función de algunas covariables más el error, estamos reduciendo efectivamente la desviación estándar de nuestros resultados.
+
+Supongamos que, gracias a una investigación observacional previa, sabemos que los ingresos están correlacionados tanto con el sexo como con la edad: los hombres ganan más que las mujeres y las personas mayores ganan más que los jóvenes. Podemos incluir estimaciones de la fuerza de esta correlación cuando generemos resultados potenciales hipotéticos. (línea 16 del bloque de código siguiente).
+
+Cuando controlamos las covariables, aumenta la capacidad predictiva de nuestro modelo. Esto tiene importantes implicaciones para la potencia. El gráfico siguiente muestra el resultado de esta simulación: con cualquier tamaño de muestra, el modelo ajustado por covariables obtiene mejores resultados que el modelo sin ajustar. De hecho, el modelo no ajustado requiere el triple de sujetos para alcanzar una potencia del 80% que el modelo ajustado por covariables.
+
+
+
+```{r, tidy=TRUE}
+rm(list=ls())
+possible.ns <- seq(from=100, to=2000, by=50)
+powers <- rep(NA, length(possible.ns))
+powers.cov <- rep(NA, length(possible.ns))        # Need a second empty vector
+alpha <- 0.05
+sims <- 500
+for (j in 1:length(possible.ns)){
+  N <- possible.ns[j]
+  
+  significant.experiments <- rep(NA, sims)
+  significant.experiments.cov <- rep(NA, sims)      # Need a second empty vector here too
+  
+  for (i in 1:sims){
+    gender <- c(rep("F", N/2), rep("M", N/2))       # Generate "gender" covariate
+    age <- sample(x=18:65, size=N, replace=TRUE)    # Generate "age" covariate
+    effectofgender <- 10                            # Hypothesize the "effect" of gender on income
+    effectofage <- 2                                # Hypothesize the "effect" of age on income
+    
+    ## Hypothesize Control Outcome as a function of gender, age, and error
+    Y0 <- effectofgender*(gender=="M") + effectofage*age + rnorm(n=N, mean=100, sd=20)
+    
+    ## This is all the same ##
+    tau <- 5
+    Y1 <- Y0 + tau
+    Z.sim <- rbinom(n=N, size=1, prob=.5)
+    Y.sim <- Y1*Z.sim + Y0*(1-Z.sim)
+    fit.sim <- lm(Y.sim ~ Z.sim)
+    
+    ## This is the novel analysis -- including two covariates to increase precision ##
+    fit.sim.cov <- lm(Y.sim ~ Z.sim + (gender=="M") + age)
+    
+    ## extract p-values and calculate significance ##
+    p.value <- summary(fit.sim)$coefficients[2,4]
+    p.value.cov <- summary(fit.sim.cov)$coefficients[2,4]
+    significant.experiments[i] <- (p.value <= alpha)
+    significant.experiments.cov[i] <- (p.value.cov <= alpha)
+  }
+  
+  powers[j] <- mean(significant.experiments)
+  powers.cov[j] <- mean(significant.experiments.cov)
+}
+
+plot(possible.ns, powers, ylim=c(0,1))
+points(possible.ns, powers.cov, col="red")
+
+```
+
+
+

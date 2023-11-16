@@ -1,0 +1,1087 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{default}
+\usefonttheme{professionalfonts}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Potencia estadística},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[page number]
+\pagenumbering{arabic}
+% \usepackage[mathbf,mathcal]{euler}
+\usepackage{multicol}
+
+
+\newenvironment{cols}[1][]{}{}
+
+\newenvironment{col}[1]{\begin{minipage}{#1}\ignorespaces}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+
+\title{Potencia estadística}
+\author{Diseño e implementación de experimentos en ciencias sociales\\
+\emph{Departamento de Economía (UdelaR)}}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+\hypertarget{what-is-power}{%
+\section{What is power?}\label{what-is-power}}
+
+\begin{frame}{What is power?}
+\protect\hypertarget{what-is-power-1}{}
+\begin{itemize}
+\item
+  We want to separate signal from noise.
+\item
+  Power = probability of rejecting null hypothesis, given true effect
+  \(\ne\) 0.
+\item
+  In other words, it is the ability to detect an effect given that it
+  exists.
+\item
+  Formally: (1 - Type II) error rate.
+\item
+  Thus, power \(\in\) (0, 1).
+\item
+  Standard thresholds: 0.8 or 0.9.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Starting point for power analysis}
+\protect\hypertarget{starting-point-for-power-analysis}{}
+\begin{itemize}
+\item
+  Power analysis is something we do \emph{before} we run a study.
+
+  \begin{itemize}
+  \item
+    Helps you figure out the sample you need to detect a given effect
+    size.
+  \item
+    Or helps you figure out a minimal detectable difference given a set
+    sample size.
+  \item
+    May help you decide whether to run a study.
+  \end{itemize}
+\item
+  It is hard to learn from an under-powered null finding.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Was there an effect, but we were unable to detect it? or was there
+    no effect? We can't say.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Power}
+\protect\hypertarget{power}{}
+\begin{itemize}
+\item
+  Say there truly is a treatment effect and you run your experiment many
+  times. How often will you get a statistically significant result?
+\item
+  Some guesswork to answer this question.
+
+  \begin{itemize}
+  \item
+    How big is your treatment effect?
+  \item
+    How many units are treated, measured?
+  \item
+    How much noise is there in the measurement of your outcome?
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Approaches to power calculation}
+\protect\hypertarget{approaches-to-power-calculation}{}
+\begin{itemize}
+\item
+  Analytical calculations of power
+\item
+  Simulation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Power calculation tools}
+\protect\hypertarget{power-calculation-tools}{}
+\begin{itemize}
+\item
+  Interactive
+
+  \begin{itemize}
+  \item
+    \href{https://egap.shinyapps.io/power-app/}{EGAP Power Calculator}
+  \item
+    \href{https://rpsychologist.com/d3/NHST/}{rpsychologist}
+  \end{itemize}
+\item
+  R Packages
+
+  \begin{itemize}
+  \item
+    \href{https://cran.r-project.org/web/packages/pwr/index.html}{pwr}
+  \item
+    \href{https://cran.r-project.org/web/packages/DeclareDesign/index.html}{DeclareDesign},
+    see also \url{https://declaredesign.org/}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\hypertarget{analytical-calculations-of-power}{%
+\section{Analytical calculations of
+power}\label{analytical-calculations-of-power}}
+
+\begin{frame}{Analytical calculations of power}
+\protect\hypertarget{analytical-calculations-of-power-1}{}
+\begin{itemize}
+\item
+  Formula: \begin{align*}
+  \text{Power} &= \Phi\left(\frac{|\tau| \sqrt{N}}{2\sigma}- \Phi^{-1}(1- \frac{\alpha}{2})\right)
+  \end{align*}
+\item
+  Components:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\phi\): standard normal CDF is monotonically increasing
+  \item
+    \(\tau\): the effect size
+  \item
+    \(N\): the sample size
+  \item
+    \(\sigma\): the standard deviation of the outcome
+  \item
+    \(\alpha\): the significance level (typically 0.05)
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Example: Simulation-based power for complete
+randomization}
+\protect\hypertarget{example-simulation-based-power-for-complete-randomization}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{power\_calculator \textless{}{-}}\StringTok{ }\ControlFlowTok{function}\NormalTok{(mu\_t, mu\_c,}
+\NormalTok{    sigma, }\DataTypeTok{alpha =} \FloatTok{0.05}\NormalTok{, N) \{}
+\NormalTok{    lowertail \textless{}{-}}\StringTok{ }\NormalTok{(}\KeywordTok{abs}\NormalTok{(mu\_t }\OperatorTok{{-}}\StringTok{ }\NormalTok{mu\_c) }\OperatorTok{*}\StringTok{ }\KeywordTok{sqrt}\NormalTok{(N))}\OperatorTok{/}\NormalTok{(}\DecValTok{2} \OperatorTok{*}
+\StringTok{        }\NormalTok{sigma)}
+\NormalTok{    uppertail \textless{}{-}}\StringTok{ }\DecValTok{{-}1} \OperatorTok{*}\StringTok{ }\NormalTok{lowertail}
+\NormalTok{    beta \textless{}{-}}\StringTok{ }\KeywordTok{pnorm}\NormalTok{(lowertail }\OperatorTok{{-}}\StringTok{ }\KeywordTok{qnorm}\NormalTok{(}\DecValTok{1} \OperatorTok{{-}}\StringTok{ }\NormalTok{alpha}\OperatorTok{/}\DecValTok{2}\NormalTok{),}
+        \DataTypeTok{lower.tail =} \OtherTok{TRUE}\NormalTok{)}
+    \OperatorTok{+}\DecValTok{1} \OperatorTok{{-}}\StringTok{ }\KeywordTok{pnorm}\NormalTok{(uppertail }\OperatorTok{{-}}\StringTok{ }\KeywordTok{qnorm}\NormalTok{(}\DecValTok{1} \OperatorTok{{-}}\StringTok{ }\NormalTok{alpha}\OperatorTok{/}\DecValTok{2}\NormalTok{),}
+        \DataTypeTok{lower.tail =} \OtherTok{FALSE}\NormalTok{)}
+    \KeywordTok{return}\NormalTok{(beta)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Example: Simulation-based power for complete
+randomization}
+\protect\hypertarget{example-simulation-based-power-for-complete-randomization-1}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{power\_calculator}\NormalTok{(}\DataTypeTok{mu\_t =} \DecValTok{1}\OperatorTok{/}\DecValTok{4}\NormalTok{, }\DataTypeTok{mu\_c =} \DecValTok{0}\NormalTok{, }\DataTypeTok{sigma =} \DecValTok{1}\NormalTok{,}
+    \DataTypeTok{alpha =} \FloatTok{0.05}\NormalTok{, }\DataTypeTok{N =} \DecValTok{100}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.2388632
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Example: Simulation-based power for complete
+randomization}
+\protect\hypertarget{example-simulation-based-power-for-complete-randomization-2}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{power\_calculator}\NormalTok{(}\DataTypeTok{mu\_t =} \DecValTok{1}\OperatorTok{/}\DecValTok{4}\NormalTok{, }\DataTypeTok{mu\_c =} \DecValTok{0}\NormalTok{, }\DataTypeTok{sigma =} \DecValTok{1}\NormalTok{,}
+    \DataTypeTok{alpha =} \FloatTok{0.05}\NormalTok{, }\DataTypeTok{N =} \DecValTok{1000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.9768629
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Example: Simulation-based power for complete
+randomization}
+\protect\hypertarget{example-simulation-based-power-for-complete-randomization-3}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{power\_calculator}\NormalTok{(}\DataTypeTok{mu\_t =} \DecValTok{1}\OperatorTok{/}\DecValTok{4}\NormalTok{, }\DataTypeTok{mu\_c =} \DecValTok{0}\NormalTok{, }\DataTypeTok{sigma =} \DecValTok{2}\NormalTok{,}
+    \DataTypeTok{alpha =} \FloatTok{0.05}\NormalTok{, }\DataTypeTok{N =} \DecValTok{1000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.5065661
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Example: Simulation-based power for complete
+randomization}
+\protect\hypertarget{example-simulation-based-power-for-complete-randomization-4}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{power\_calculator}\NormalTok{(}\DataTypeTok{mu\_t =} \DecValTok{2}\OperatorTok{/}\DecValTok{4}\NormalTok{, }\DataTypeTok{mu\_c =} \DecValTok{0}\NormalTok{, }\DataTypeTok{sigma =} \DecValTok{1}\NormalTok{,}
+    \DataTypeTok{alpha =} \FloatTok{0.05}\NormalTok{, }\DataTypeTok{N =} \DecValTok{1000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Example: Using DeclareDesign}
+\protect\hypertarget{example-using-declaredesign}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(DeclareDesign)}
+\KeywordTok{library}\NormalTok{(tidyverse)}
+
+\NormalTok{P0 \textless{}{-}}\StringTok{ }\KeywordTok{declare\_population}\NormalTok{(N, }\DataTypeTok{u0 =} \KeywordTok{rnorm}\NormalTok{(N))}
+\CommentTok{\# declare Y(Z=1) and Y(Z=0)}
+\NormalTok{O0 \textless{}{-}}\StringTok{ }\KeywordTok{declare\_potential\_outcomes}\NormalTok{(}\DataTypeTok{Y\_Z\_0 =} \DecValTok{5} \OperatorTok{+}
+\StringTok{    }\NormalTok{u0, }\DataTypeTok{Y\_Z\_1 =}\NormalTok{ Y\_Z\_}\DecValTok{0} \OperatorTok{+}\StringTok{ }\NormalTok{tau)}
+\CommentTok{\# design is to assign m units to}
+\CommentTok{\# treatment}
+\NormalTok{A0 \textless{}{-}}\StringTok{ }\KeywordTok{declare\_assignment}\NormalTok{(}\DataTypeTok{Z =} \KeywordTok{conduct\_ra}\NormalTok{(}\DataTypeTok{N =}\NormalTok{ N,}
+    \DataTypeTok{m =} \KeywordTok{round}\NormalTok{(N}\OperatorTok{/}\DecValTok{2}\NormalTok{)))}
+\CommentTok{\# estimand is the average difference}
+\CommentTok{\# between Y(Z=1) and Y(Z=0)}
+\NormalTok{estimand\_ate \textless{}{-}}\StringTok{ }\KeywordTok{declare\_inquiry}\NormalTok{(}\DataTypeTok{ATE =} \KeywordTok{mean}\NormalTok{(Y\_Z\_}\DecValTok{1} \OperatorTok{{-}}
+\StringTok{    }\NormalTok{Y\_Z\_}\DecValTok{0}\NormalTok{))}
+\NormalTok{R0 \textless{}{-}}\StringTok{ }\KeywordTok{declare\_reveal}\NormalTok{(Y, Z)}
+\NormalTok{design0\_base \textless{}{-}}\StringTok{ }\NormalTok{P0 }\OperatorTok{+}\StringTok{ }\NormalTok{A0 }\OperatorTok{+}\StringTok{ }\NormalTok{O0 }\OperatorTok{+}\StringTok{ }\NormalTok{R0}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Example: Using DeclareDesign}
+\protect\hypertarget{example-using-declaredesign-1}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#\# For example:}
+\NormalTok{design0\_N100\_tau25 \textless{}{-}}\StringTok{ }\KeywordTok{redesign}\NormalTok{(design0\_base,}
+    \DataTypeTok{N =} \DecValTok{100}\NormalTok{, }\DataTypeTok{tau =} \FloatTok{0.25}\NormalTok{)}
+\NormalTok{dat0\_N100\_tau25 \textless{}{-}}\StringTok{ }\KeywordTok{draw\_data}\NormalTok{(design0\_N100\_tau25)}
+\KeywordTok{head}\NormalTok{(dat0\_N100\_tau25)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    ID          u0 Z    Y_Z_0    Y_Z_1        Y
+## 1 001  0.44853297 1 5.448533 5.698533 5.698533
+## 2 002 -0.20105196 1 4.798948 5.048948 5.048948
+## 3 003  1.54239837 0 6.542398 6.792398 6.542398
+## 4 004 -0.54998139 1 4.450019 4.700019 4.700019
+## 5 005 -1.10680777 1 3.893192 4.143192 4.143192
+## 6 006 -0.04259078 0 4.957409 5.207409 4.957409
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Example: Using DeclareDesign}
+\protect\hypertarget{example-using-declaredesign-2}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{with}\NormalTok{(dat0\_N100\_tau25, }\KeywordTok{mean}\NormalTok{(Y\_Z\_}\DecValTok{1} \OperatorTok{{-}}\StringTok{ }\NormalTok{Y\_Z\_}\DecValTok{0}\NormalTok{))  }\CommentTok{\# true ATE}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.25
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{with}\NormalTok{(dat0\_N100\_tau25, }\KeywordTok{mean}\NormalTok{(Y[Z }\OperatorTok{==}\StringTok{ }\DecValTok{1}\NormalTok{]) }\OperatorTok{{-}}\StringTok{ }\KeywordTok{mean}\NormalTok{(Y[Z }\OperatorTok{==}
+\StringTok{    }\DecValTok{0}\NormalTok{]))  }\CommentTok{\# estimate}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.3374549
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{lm\_robust}\NormalTok{(Y }\OperatorTok{\textasciitilde{}}\StringTok{ }\NormalTok{Z, }\DataTypeTok{data =}\NormalTok{ dat0\_N100\_tau25)}\OperatorTok{$}\NormalTok{coef  }\CommentTok{\# estimate}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## (Intercept)           Z 
+##   5.0510077   0.3374549
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Example: Using DeclareDesign}
+\protect\hypertarget{example-using-declaredesign-3}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{E0 \textless{}{-}}\StringTok{ }\KeywordTok{declare\_estimator}\NormalTok{(Y }\OperatorTok{\textasciitilde{}}\StringTok{ }\NormalTok{Z, }\DataTypeTok{model =}\NormalTok{ lm\_robust,}
+    \DataTypeTok{label =} \StringTok{"t test 1"}\NormalTok{, }\DataTypeTok{inquiry =} \StringTok{"ATE"}\NormalTok{)}
+\NormalTok{t\_test \textless{}{-}}\StringTok{ }\ControlFlowTok{function}\NormalTok{(data) \{}
+\NormalTok{    test \textless{}{-}}\StringTok{ }\KeywordTok{with}\NormalTok{(data, }\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Y[Z }\OperatorTok{==}
+\StringTok{        }\DecValTok{1}\NormalTok{], }\DataTypeTok{y =}\NormalTok{ Y[Z }\OperatorTok{==}\StringTok{ }\DecValTok{0}\NormalTok{]))}
+    \KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{statistic =}\NormalTok{ test}\OperatorTok{$}\NormalTok{statistic,}
+        \DataTypeTok{p.value =}\NormalTok{ test}\OperatorTok{$}\NormalTok{p.value)}
+\NormalTok{\}}
+\NormalTok{T0 \textless{}{-}}\StringTok{ }\KeywordTok{declare\_test}\NormalTok{(}\DataTypeTok{handler =} \KeywordTok{label\_test}\NormalTok{(t\_test),}
+    \DataTypeTok{label =} \StringTok{"t test 2"}\NormalTok{)}
+\NormalTok{design0\_plus\_tests \textless{}{-}}\StringTok{ }\NormalTok{design0\_base }\OperatorTok{+}\StringTok{ }\NormalTok{E0 }\OperatorTok{+}
+\StringTok{    }\NormalTok{T0}
+
+\NormalTok{design0\_N100\_tau25\_plus \textless{}{-}}\StringTok{ }\KeywordTok{redesign}\NormalTok{(design0\_plus\_tests,}
+    \DataTypeTok{N =} \DecValTok{100}\NormalTok{, }\DataTypeTok{tau =} \FloatTok{0.25}\NormalTok{)}
+
+\CommentTok{\#\# Only repeat the random assignment,}
+\CommentTok{\#\# not the creation of Y0. Ignore}
+\CommentTok{\#\# warning}
+\KeywordTok{names}\NormalTok{(design0\_N100\_tau25\_plus)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "P0"       "A0"       "O0"       "R0"       "t test 1" "t test 2"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{design0\_N100\_tau25\_sims \textless{}{-}}\StringTok{ }\KeywordTok{simulate\_design}\NormalTok{(design0\_N100\_tau25\_plus,}
+    \DataTypeTok{sims =} \KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{))  }\CommentTok{\# only repeat the random assignment}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: We recommend you choose a number of simulations higher than 30.
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+
+## Warning in fn(data, ~(Y ~ Z), model = ~lm_robust): The argument 'model = ' is
+## deprecated. Please use '.method = ' instead.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# design0\_N100\_tau25\_sims has 200 rows}
+\CommentTok{\# (2 tests * 100 random assignments)}
+\CommentTok{\# just look at the first 6 rows}
+\KeywordTok{head}\NormalTok{(design0\_N100\_tau25\_sims)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                    design   N  tau sim_ID estimator term  estimate std.error
+## 1 design0_N100_tau25_plus 100 0.25      1  t test 1    Z 0.1467999 0.2037624
+## 2 design0_N100_tau25_plus 100 0.25      1  t test 2 <NA>        NA        NA
+## 3 design0_N100_tau25_plus 100 0.25      2  t test 1    Z 0.4222026 0.2032860
+## 4 design0_N100_tau25_plus 100 0.25      2  t test 2 <NA>        NA        NA
+## 5 design0_N100_tau25_plus 100 0.25      3  t test 1    Z 0.3182903 0.2039122
+## 6 design0_N100_tau25_plus 100 0.25      3  t test 2 <NA>        NA        NA
+##   statistic    p.value    conf.low conf.high df outcome inquiry step_1_draw
+## 1 0.7204464 0.47296517 -0.25755996 0.5511597 98       Y     ATE           1
+## 2 0.7204464 0.47296531          NA        NA NA    <NA>    <NA>           1
+## 3 2.0768897 0.04042793  0.01878815 0.8256171 98       Y     ATE           1
+## 4 2.0768897 0.04053255          NA        NA NA    <NA>    <NA>           1
+## 5 1.5609179 0.12176674 -0.08636693 0.7229475 98       Y     ATE           1
+## 6 1.5609179 0.12179580          NA        NA NA    <NA>    <NA>           1
+##   step_2_draw
+## 1           1
+## 2           1
+## 3           2
+## 4           2
+## 5           3
+## 6           3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# for each estimator, power =}
+\CommentTok{\# proportion of simulations with}
+\CommentTok{\# p.value \textless{} 0.5}
+\NormalTok{design0\_N100\_tau25\_sims }\OperatorTok{\%\textgreater{}\%}
+\StringTok{    }\KeywordTok{group\_by}\NormalTok{(estimator) }\OperatorTok{\%\textgreater{}\%}
+\StringTok{    }\KeywordTok{summarize}\NormalTok{(}\DataTypeTok{pow =} \KeywordTok{mean}\NormalTok{(p.value }\OperatorTok{\textless{}}\StringTok{ }\FloatTok{0.05}\NormalTok{),}
+        \DataTypeTok{.groups =} \StringTok{"drop"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 2 x 2
+##   estimator   pow
+##   <chr>     <dbl>
+## 1 t test 1   0.21
+## 2 t test 2   0.21
+\end{verbatim}
+\end{frame}
+
+\hypertarget{power-with-covariate-adjustment}{%
+\section{Power with covariate
+adjustment}\label{power-with-covariate-adjustment}}
+
+\begin{frame}{Covariate adjustment and power}
+\protect\hypertarget{covariate-adjustment-and-power}{}
+\begin{itemize}
+\item
+  Covariate adjustment can improve power because it mops up variation in
+  the outcome variable.
+
+  \begin{itemize}
+  \item
+    If prognostic, covariate adjustment can reduce variance
+    dramatically. Lower variance means higher power.
+  \item
+    If non-prognostic, power gains are minimal.
+  \end{itemize}
+\item
+  All covariates must be pre-treatment. Do not drop observations on
+  account of missingness.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    See the module on
+    \href{threats-to-internal-validity-of-randomized-experiments.html}{threats
+    to internal validity} and the
+    \href{https://egap.org/resource/10-things-to-know-about-covariate-adjustment/}{10
+    things to know about covariate adjustment}.
+  \end{itemize}
+\item
+  Freedman's bias as n of observations decreases and K covariates
+  increases.
+\end{itemize}
+\end{frame}
+
+\hypertarget{power-with-covariate-adjustment-1}{%
+\section{Power with covariate
+adjustment}\label{power-with-covariate-adjustment-1}}
+
+\begin{frame}{Covariate adjustment and power}
+\protect\hypertarget{covariate-adjustment-and-power-1}{}
+\begin{itemize}
+\item
+  Covariate adjustment can improve power because it mops up variation in
+  the outcome variable.
+
+  \begin{itemize}
+  \item
+    If prognostic, covariate adjustment can reduce variance
+    dramatically. Lower variance means higher power.
+  \item
+    If non-prognostic, power gains are minimal.
+  \end{itemize}
+\item
+  All covariates must be pre-treatment. Do not drop observations on
+  account of missingness.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    See the module on
+    \href{threats-to-internal-validity-of-randomized-experiments.html}{threats
+    to internal validity} and the
+    \href{https://egap.org/resource/10-things-to-know-about-covariate-adjustment/}{10
+    things to know about covariate adjustment}.
+  \end{itemize}
+\item
+  Freedman's bias as n of observations decreases and K covariates
+  increases.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Blocking}
+\protect\hypertarget{blocking}{}
+\begin{itemize}
+\item
+  Blocking: randomly assign treatment within blocks
+
+  \begin{itemize}
+  \item
+    ``Ex-ante'' covariate adjustment
+  \item
+    Higher precision/efficiency implies more power
+  \item
+    Reduce ``conditional bias'': association between treatment
+    assignment and potential outcomes
+  \item
+    Benefits of blocking over covariate adjustment clearest in small
+    experiments
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\hypertarget{power-for-cluster-randomization}{%
+\section{Power for cluster
+randomization}\label{power-for-cluster-randomization}}
+
+\begin{frame}{Power and clustered designs}
+\protect\hypertarget{power-and-clustered-designs}{}
+\begin{itemize}
+\item
+  Recall the \href{randomization.html}{randomization module}.
+\item
+  Given a fixed \(N\), a clustered design is weakly less powered than a
+  non-clustered design.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The difference is often substantial.
+  \end{itemize}
+\item
+  We have to estimate variance correctly:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Clustering standard errors (the usual)
+  \item
+    Randomization inference
+  \end{itemize}
+\item
+  To increase power:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Better to increase number of clusters than number of units per
+    cluster.
+  \item
+    How much clusters reduce power depends critically on the
+    intra-cluster correlation (the ratio of variance within clusters to
+    total variance).
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{A note on clustering in observational research}
+\protect\hypertarget{a-note-on-clustering-in-observational-research}{}
+\begin{itemize}
+\item
+  Often overlooked, leading to (possibly) wildly understated
+  uncertainty.
+
+  \begin{itemize}
+  \item
+    Frequentist inference based on ratio \(\hat{\beta}/\hat{se}\)
+  \item
+    If we underestimate \(\hat{se}\), we are much more likely to reject
+    \(H_0\). (Type-I error rate is too high.)
+  \end{itemize}
+\item
+  Many observational designs much less powered than we think they are.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{EGAP Power Calculator}
+\protect\hypertarget{egap-power-calculator}{}
+\begin{itemize}
+\item
+  Try the calculator at: \url{https://egap.shinyapps.io/power-app/}
+\item
+  For cluster randomization designs, try adjusting:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Number of clusters
+  \item
+    Number of units per clusters
+  \item
+    Intra-cluster correlation
+  \item
+    Treatment effect
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Comments}
+\protect\hypertarget{comments}{}
+\begin{itemize}
+\item
+  Know your outcome variable.
+\item
+  What effects can you realistically expect from your treatment?
+\item
+  What is the plausible range of variation of the outcome variable?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A design with limited possible movement in the outcome variable may
+    not be well-powered.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion: How to improve your power}
+\protect\hypertarget{conclusion-how-to-improve-your-power}{}
+\begin{enumerate}
+\item
+  Increase the \(N\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If clustered, increase the number of clusters if at all possible
+  \end{itemize}
+\item
+  Strengthen the treatment
+\item
+  Improve precision
+
+  \begin{itemize}
+  \item
+    Covariate adjustment
+  \item
+    Blocking
+  \end{itemize}
+\item
+  Better measurement of the outcome variable
+\end{enumerate}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,130 @@
+---
+title: Aleatorización por bloques
+author: |
+  | Diseño e implementación de experimentos en ciencias sociales
+  | *Departamento de Economía (UdelaR)*
+output:
+  beamer_presentation:
+    toc: no
+    keep_tex: yes
+    slide_level: 2
+    includes:
+      in_header: header.tex
+  slidy_presentation: default
+number_sections: no
+theme: default
+fonttheme: professionalfonts
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, size = "footnotesize")
+
+library(knitr)
+library(randomizr)
+
+library(here)
+library(tidyverse)
+# library(DeclareDesign)
+# library(estimatr)
+library(devtools)
+# library(rcompanion) ## for pairwisePermutationTest()
+
+# library(kableExtra)
+
+```
+
+
+## Análisis bajo asignación aleatoria por bloques
+
+
+<!-- - *Inferencia de aleatorización (p-valores exactos para hipótesis nulas nítidas)*
+
+\tiny 
+
+- FEDAI, capítulo 3 
+- CISSBS capítulos 5 y 6, capítulo 9 (secciones 9.3 y 9.8), capítulo 10 (sección 10.3)
+- Duflo, E., Glennerster, R., & Kremer, M. (2007). Using randomization in development economics research: A toolkit. Handbook of development economics, 4, 3895-3962. (capítulos 4 y 7)
+- EGAP, [10 Things to Know About Randomization Inference](https://egap.org/resource/10-things-to-know-about-hypothesis-testing/)
+- Peng Ding, Avi Feller, and Luke Miratrix (2016), “Randomization Inference for Treatment Effect Variation,” Journal of the Royal Statistical Society, Series B 78: 655–671
+- Samii, C., & Aronow, P. M. (2012). On equivalencies between design-based and regression-based variance estimators for randomized experiments. Statistics & Probability Letters, 82(2), 365–370.
+
+\normalsize
+
+- *Regresión y ajuste por covariables*
+
+\tiny
+
+- FEDAI, secciones 4.1, 4.2, y 4.3.
+- Freedman, David A. 2008. “On Regression Adjustments in Experiments with Several Treatments.” *Annals of Applied Statistics* 2(1): 176–96.
+- Lin, Winston. 2013. “Agnostic Notes on Regression Adjustments to Experimental Data: Reexamining Freedman’s Critique.” *The Annals of Applied Statistics* 7(1): 295–318.
+- Wager, Stefan, Wenfei Du, Jonathan Taylor, and Robert J. Tibshirani. 2016. “High-Dimensional Regression Adjustments in Randomized Experiments.” *Proceedings of the National Academy of Sciences of the United States of America* 113(45): 12673–78.
+ -->
+
+
+<!-- ![](figs/lyall20093.png){#id .class width=90%} -->
+
+# Experimentos aleatorizados por bloque 
+
+- Idea básica: realizar experimentos completamente aleatorizados dentro de estratos definidos por covariables. \pause
+
+- Motivación principal: más eficiente que el diseño estándar (es decir, menor SE). \pause
+
+- George Box: "Bloquea lo que puedas y aleatoriza lo que no puedas". \pause
+
+- Compararemos la varianza de los diseños bloqueados con la
+aleatorización completa. \pause
+
+- Cierta confusión en la literatura: ¿puede perjudicar el bloqueo?
+
+- Hay que tener cuidado: la comparación depende de los supuestos de la muestra (Pashley \& Miratrix, 2021, JEBS)
+
+
+
+## Bloqueo
+
+-  Creamos bloques de unidades y aleatorizamos por separado dentro de cada bloque. Hacemos miniexperimentos en cada bloque. 
+
+-  Ejemplo: \textcolor{brown}{bloque} = distrito, \textcolor{brown}{unidades} = comunidades. Aleatorizamos
+el tratamiento a nivel de comunidad dentro del distrito y también
+medimos los resultados a nivel comunitario.\pause
+
+-  Los bloques que representan un subgrupo sustancialmente significativo pueden ayudar a conocer cómo pueden diferir los efectos según el subgrupo. \pause
+
+-  Al controlar el número de sujetos por subgrupo, se asegura
+que tiene suficientes sujetos en cada grupo. \pause
+
+-  Especialmente útil cuando se tiene un grupo poco frecuente - por casualidad se puede tener muy pocos en el tratamiento o en el control, incluso con asignación aleatoria (o podrías tener algún desbalance).
+
+## Cómo bloquear 
+
+- Covariables discretas $\rightarrow$ bloques son combinaciones únicas \pause
+
+- Crear grupos homogéneos basados en información pre-tratamiento (distancias Mahalanobicas utilizando $\mathbf{X}$ 
+    + Difícil/imposible encontrar bloques óptimos en general, pero existen algoritmos "greedy".
+    + Es posible obtener bloques óptimos con emparejamiento (*pair matching*) ($J = n/2$)
+
+
+## Ejemplo
+
+- Experimento aleatorio por bloques:
+  + Experimento completamente aleatorizado en cada bloque (schools).
+  + Elija $n_{1,school 1}$ votante para ser tratados 
+  + y $n_{0,school 1} = n_{school 1} - n_{1, school 1}$ para el control.
+  + Y así con las siguientes escuelas... \pause
+
+- Probabilidad de tratamiento (*propensity score*)
+  + $P(D = 1 | school = 1)$
+  + $P(D = 1 | school = 2)$
+  + ... \pause
+
+- El bloqueo asegura balance a través de los bloques. \pause 
+   
+- Qué sucede si la asignación en cada bloque es distinta?
+
+
+
+## Ejemplo
+
+![](figs/blocking)
+
+

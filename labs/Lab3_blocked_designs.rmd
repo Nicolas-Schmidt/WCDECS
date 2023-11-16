@@ -1,0 +1,220 @@
+---
+title: |
+ | Taller 3: Analizando expeirmentos bloqueados
+output:
+  html_document:
+    toc: true
+    number_sections: true
+    toc_depth: 3
+    toc_float: true
+    theme: spacelab
+    highlight: tango
+urlcolor: BrickRed
+lang : es-AR
+header-includes: \usepackage[spanish]{babel}
+                 \usepackage{graphicx}
+                 \usepackage{subfig}                 
+bibliography: /Users/slopezcariboni/Dropbox/Research/LibraryBibs/Bibs/library.bib
+---
+
+Este ejecicio se basa fuertemente en Luke Sonnet ("Simulations - Debiasing Difference-in-Means", declaredesign.org)
+
+***
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(fig.align = "center", eval=TRUE, tidy.opts=list(width.cutoff=60), tidy=TRUE, cache=TRUE)
+
+paquetes <- c('readstata13', 'dplyr', 'data.table', 'ggplot2', 'tidyverse')
+suppressPackageStartupMessages(sapply(paquetes,require,character.only=TRUE))
+
+```
+
+
+# Unidades con distina probabilidad de asignación (IPW)
+
+```{r, tidy=TRUE, messages=FALSE}
+
+library(DeclareDesign)
+
+
+N <- 10000
+dat <- tibble(Y0 = 1:N,
+              Y1 = Y0 + 10000)
+dat <-
+  dat %>%
+  mutate(
+    p = seq(0.25, 0.75, length.out = N),
+    Z = simple_ra(N, prob_unit = p),
+    Y = Z * Y1 + (1 - Z) * Y0)
+  
+dat %>%
+  summarise(
+    naive_estimate = mean(Y[Z == 1]) - mean(Y[Z == 0]),
+    ipw_estimate = weighted.mean(Y[Z == 1], 1 / p[Z == 1]) -
+      weighted.mean(Y[Z == 0], 1 / (1 - p[Z == 0]))
+  )
+
+```
+
+
+# Diseños bloqueados
+
+El bloqueo es una estrategia común en el diseño experimental que se utiliza para mejorar la eficiencia de los estimadores garantizando que las unidades con resultados potenciales similares, cuando se bloquean, estarán representadas en ambas condiciones de tratamiento.
+
+## Probabilidad fija de tratamiento
+
+Consideremos primero un ejemplo en el que los bloques predicen los resultados potenciales, pero en el que la probabilidad de tratamiento es constante en todos los bloques. En este caso, estimar una simple diferencia de medias sin pasar la información sobre los bloques no sesgará la estimación, pero no aprovechará la mayor eficiencia que proporciona el bloqueo y los errores estándar serán innecesariamente grandes. Veámoslo en un ejemplo.
+
+En primer lugar, configuremos nuestros datos y el esquema de aleatorización. En todos estos análisis, nuestro estimando será el efecto medio del tratamiento
+
+
+
+```{r, tidy=TRUE, messages=FALSE}
+
+# Define population with blocks of the same size, with some block-level shock
+simp_blocks <- declare_model(
+  blocks = add_level(
+    N = 40,
+    block_shock = runif(N, 0, 10)
+  ),
+  individual = add_level(
+    N = 8,
+    epsilon = rnorm(N),
+    # Block shocks influnce Y_Z_1, the treatment potential outcome
+    potential_outcomes(Y ~ Z * 0.5 * block_shock + epsilon)
+  )
+)
+# Complete random assignment of half of units in each block
+blocked_assign <- declare_assignment(Z = block_ra(blocks = blocks, prob = 0.5))
+# Estimand is the ATE
+ate <- declare_inquiry(ATE = mean(Y_Z_1 - Y_Z_0))
+outcomes <- declare_measurement(Y = reveal_outcomes(Y ~ Z))
+
+```
+
+```{r, tidy=TRUE, messages=FALSE}
+dim <- declare_estimator(Y ~ Z, inquiry = "ATE", label = "DIM")
+dim_bl <- declare_estimator(Y ~ Z, .method = difference_in_means, blocks = blocks, inquiry = "ATE", label = "DIM blocked")
+
+# Our design
+simp_bl_des <- simp_blocks +
+  blocked_assign +
+  ate +
+  outcomes + 
+  dim +
+  dim_bl
+
+# Our diagnosands of interest
+my_diagnosands <- declare_diagnosands(
+  `Bias` = mean(estimate - estimand),
+  `Coverage` =  mean(estimand <= conf.high & estimand >= conf.low),
+  `Mean of Estimated ATE` = mean(estimate),
+  `Mean of True ATE (Estimand)` = mean(estimand),
+  `Mean Standard Error` = mean(std.error)
+)
+
+
+
+```
+
+
+
+Obtengamos un conjunto de datos de ejemplo para mostrar la relación entre los resultados potenciales del tratamiento y los bloques.
+
+```{r, tidy=TRUE, messages=FALSE}
+
+set.seed(42)
+dat <- draw_data(simp_bl_des)
+plot(dat$blocks, dat$Y_Z_1,
+     ylab = "Y_Z_1 (treatment PO)", xlab = "Block ID")
+
+```
+
+
+
+Como puede ver, los bloques tienden a tener resultados potenciales de tratamiento agrupados. Ahora comparemos el rendimiento de los dos estimadores utilizando nuestros diagnósticos de interés.
+
+```{r, tidy=TRUE, messages=FALSE}
+
+set.seed(42)
+simp_bl_dig <- diagnose_design(
+  simp_bl_des,
+  sims = 500,
+  diagnosands = my_diagnosands
+)
+
+simp_bl_dig
+
+
+```
+
+Ambas estimaciones son insesgadas (y de hecho son idénticas), y se puede ver que los errores estándar cuando se tiene en cuenta el bloqueo son mucho menores (lo que lleva a una mejor cobertura y a una estimación más eficiente). Observe que las filas "se" de la tabla describen la incertidumbre derivada de la simulación y pueden ayudarnos a saber si hemos estimado bien el sesgo y la varianza utilizando el método de simulación.
+
+
+## Resultados potenciales y probabilidades de tratamiento correlacionados
+
+Sin embargo, no tener en cuenta el bloqueo resulta más problemático si la probabilidad de tratamiento en cada bloque está correlacionada con los resultados potenciales. Imagine, por ejemplo, que está trabajando con un socio que desea que su intervención tenga un gran efecto y sea susceptible de un análisis riguroso (en cuyo caso, enhorabuena). En este escenario, pueden sospechar que ciertos tipos de unidades tienen efectos de tratamiento más altos y quieren que esas unidades sean tratadas más a menudo. En este caso, si los bloques con mayores efectos de tratamiento se tratan más a menudo, el estimador ingenuo sobrerrepresentará esas unidades tratadas y sesgará al alza la ATE. La contabilización del bloqueo mediante la estimación de los efectos del tratamiento dentro del bloque y la posterior ponderación de la probabilidad de tratamiento, que es lo que hace nuestro estimador difference_in_means() cuando se especifican los bloques, eliminará este sesgo.
+
+
+
+```{r, tidy=TRUE, messages=FALSE}
+
+corr_blocks <- declare_model(
+  blocks = add_level(
+    N = 60,
+    block_shock = runif(N, 0, 10),
+    indivs_per_block = 8,
+    # if block shock is > 5, treat 6 units, otherwise treat 2
+    m_treat = ifelse(block_shock > 5, 6, 2)
+  ),
+  individual = add_level(
+    N = indivs_per_block,
+    epsilon = rnorm(N, sd = 3)
+    
+  )
+) + 
+  declare_model(potential_outcomes(Y ~ Z * 0.5 * block_shock + epsilon))
+# Use same potential outcomes as above, but now treatment probability varies across blocks
+corr_blocked_assign <- declare_assignment(
+  Z = block_ra(
+    blocks = blocks,
+    # The next line will just get the number of treated for a block from
+    # the first unit in that block
+    block_m = m_treat[!duplicated(blocks)]
+  ),
+  legacy = FALSE
+)
+corr_bl_des <- 
+  corr_blocks +
+  corr_blocked_assign +
+  ate +
+  outcomes +
+  dim +
+  dim_bl
+```
+
+Como puede verse a continuación, la probabilidad de tratamiento está fuertemente correlacionada con el efecto del tratamiento.
+
+
+```{r, tidy=TRUE, messages=FALSE}
+set.seed(43)
+dat <- draw_data(corr_bl_des)
+plot(factor(dat$m_treat / 8), dat$Y_Z_1 - dat$Y_Z_0,
+     ylab = "True treat. effect", xlab = "Pr treatment in block")
+```
+
+
+Diagnosticamos estos estimadores.
+
+```{r, tidy=TRUE, messages=FALSE}
+set.seed(44)
+corr_bl_dig <- diagnose_design(
+  corr_bl_des,
+  sims = 500,
+  diagnosands = my_diagnosands
+)
+corr_bl_dig$simulations <- NULL
+
+corr_bl_dig
+
+```
