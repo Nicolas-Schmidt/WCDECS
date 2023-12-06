@@ -1,0 +1,69 @@
+---
+title: |
+ | Taller 6: Cumplimiento imperfecto y variables instrumentales
+output:
+  html_document:
+    toc: true
+    number_sections: true
+    toc_depth: 2
+    toc_float: true
+    theme: spacelab
+    highlight: tango
+urlcolor: BrickRed
+lang : es-AR
+header-includes: \usepackage[spanish]{babel}
+                 \usepackage{graphicx}
+                 \usepackage{subfig}                 
+bibliography: /Users/slopezcariboni/Dropbox/Research/LibraryBibs/Bibs/library.bib
+---
+
+
+***
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(fig.align = "center", eval=TRUE, tidy.opts=list(width.cutoff=60), tidy=TRUE, cache=TRUE)
+paquetes <- c('ivreg')
+suppressPackageStartupMessages(sapply(paquetes,require,character.only=TRUE))
+
+```
+
+
+# LATE a mano
+
+$$LATE = \frac{EffectZonY}{EffectZonD} = \frac{E[Y_i|Z_i=1]-E[Y_i|Z_i=0]}{E[D_i|Z_i=1]-E[D_i|Z_i=0]}$$ \pause
+
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+
+Z <- rep(0:1,50) # Assign 50 to treatment group (Z = 1), 50 to control group (Z = 0)
+
+D <- Z           # Compliers have D (treatment received) = Z (treatment assignment)
+D[1:10]  <- 0    # 10 Never Takers
+D[11:20] <- 1    # 10 Always Takers
+
+Y        <- 50*D # Compliers have Y = 50 if treated, 0 if not treated
+Y[1:10]  <- 100  # Never takers have high Y
+Y[11:20] <- 0    # Always takers have low Y
+
+
+# Estimated share of compliers 
+ITTD <- coef(lm(D~Z))[2] 
+
+# Estimated intention-to-treat effect
+ITT  <- coef(lm(Y~Z))[2] 
+
+# LATE estimate
+LATE <- ITT / ITTD
+
+cbind(Y_1 = mean(Y[Z==1]), Y_0=mean(Y[Z==0]), ITTD, ITT, LATE)
+```
+
+
+# LATE mediante variables instrumentales
+
+
+
+```{r, 'iv2', echo=TRUE, include=TRUE, cache=TRUE, messages=FALSE}
+# install.packages(AER)
+summary(ivreg(Y~ D | Z)) 
+```
