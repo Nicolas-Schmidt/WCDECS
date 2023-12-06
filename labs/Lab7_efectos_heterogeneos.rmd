@@ -1,0 +1,138 @@
+---
+title: |
+ | Taller 5: Efectos heterogéneos descriptivos y causales 
+output:
+  html_document:
+    toc: true
+    number_sections: true
+    toc_depth: 3
+    toc_float: true
+    theme: spacelab
+    highlight: tango
+urlcolor: BrickRed
+lang : es-AR
+header-includes: \usepackage[spanish]{babel}
+                 \usepackage{graphicx}
+                 \usepackage{subfig}                 
+bibliography: /Users/slopezcariboni/Dropbox/Research/LibraryBibs/Bibs/library.bib
+---
+
+
+***
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(fig.align = "center", eval=TRUE, tidy.opts=list(width.cutoff=60), tidy=TRUE, cache=TRUE)
+paquetes <- c('dplyr', 'data.table', 'ggplot2', 'tidyverse')
+suppressPackageStartupMessages(sapply(paquetes,require,character.only=TRUE))
+
+library("cregg")
+data("immigration")
+
+```
+
+
+# Marginal Means
+
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+
+f1 <- ChosenImmigrant ~ Gender + LanguageSkills + PriorEntry + Education * Job + CountryOfOrigin * ReasonForApplication + 
+    JobExperience + JobPlans
+plot(mm(immigration, f1, id = ~CaseID), vline = 0.5)
+
+
+```
+
+
+
+# Average Marginal Component Effects
+
+
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+
+f1 <- ChosenImmigrant ~ Gender + LanguageSkills + PriorEntry + Education * Job + CountryOfOrigin * ReasonForApplication + 
+    JobExperience + JobPlans
+plot(mm(immigration, f1, id = ~CaseID), vline = 0.5)
+
+
+```
+
+
+
+
+# Subgroup Analyis
+
+
+## Subgroup Marginal Means
+
+
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+
+immigration$contest <- factor(immigration$contest_no)
+mm_by <- cj(immigration, ChosenImmigrant ~ Gender + Education + LanguageSkills, id = ~CaseID, estimate = "mm", by = ~contest)
+plot(mm_by, group = "contest", vline = 0.5)
+
+```
+
+
+## Tests of Preference Heterogeneity
+
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+
+cj_anova(immigration, ChosenImmigrant ~ Gender + Education + LanguageSkills, by = ~contest_no)
+
+```
+
+
+Differences in Conditional AMCEs
+
+
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+
+## the original plot is split at the value of 10, which is not a true median split
+immigration$ethnosplit <- NA_real_
+immigration$ethnosplit[immigration$ethnocentrism <= 10] <- 1L
+immigration$ethnosplit[immigration$ethnocentrism > 10] <- 2L
+immigration$ethnosplit <- factor(immigration$ethnosplit, 1:2, c("Low Ethnocentrism", "High Ethnocentrism"))
+x <- cj(na.omit(immigration), f1, id = ~CaseID, estimate = "mm", by = ~ethnosplit)
+plot(x, group = "ethnosplit", vline = 0.5)
+
+```
+
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+
+
+
+# calculate conditional AMCEs
+amces <- cj(na.omit(immigration), ChosenImmigrant ~ ReasonForApplication + LanguageSkills, id = ~CaseID, estimate = "amce", 
+    by = ~ethnosplit)
+diff_amces <- cj(na.omit(immigration), ChosenImmigrant ~ ReasonForApplication + LanguageSkills, id = ~CaseID, estimate = "amce_diff", 
+    by = ~ethnosplit)
+plot(rbind(amces, diff_amces)) + ggplot2::facet_wrap(~BY, ncol = 3L)
+
+```
+
+
+
+# Causal interactions
+
+
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+
+
+amces_2 <- cj(immigration, ChosenImmigrant ~ LanguageSkills, id = ~CaseID, estimate = "amce", by = ~Gender)
+diff_amces_2 <- cj(immigration, ChosenImmigrant ~ LanguageSkills, id = ~CaseID, estimate = "amce_diff", by = ~Gender)
+plot(rbind(amces_2, diff_amces_2)) + ggplot2::facet_wrap(~BY, ncol = 3L)
+
+```
+
+
+
+
+

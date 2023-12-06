@@ -1,0 +1,186 @@
+---
+title: Diseños de aliento y cumplimiento imperfecto
+author: |
+  | Diseño e implementación de experimentos en ciencias sociales
+  | *Departamento de Economía (UdelaR)*
+output:
+  beamer_presentation:
+    toc: no
+    keep_tex: yes
+    slide_level: 2
+    includes:
+      in_header: header.tex
+  slidy_presentation: default
+number_sections: no
+# theme: metropolis
+fonttheme: professionalfonts
+highlight: "tango"
+incremental: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, size = "footnotesize")
+
+library(knitr)
+library(randomizr)
+
+library(here)
+library(tidyverse)
+# library(DeclareDesign)
+# library(estimatr)
+library(devtools)
+# library(rcompanion) ## for pairwisePermutationTest()
+
+# library(kableExtra)
+library(AER)
+
+```
+
+
+
+## Tipos de cumplimiento
+
+```{r, 'tab', echo=FALSE, include=TRUE, cache=TRUE}
+
+kable(
+
+data.frame(type = c("Always-takers","Compliers", "Never-takers", "Defiers"), "Treatment" = c("Treated", "Treated", "Not Treated", "Not Treated"), "Control" = c("Treated", "Not Treated", "Not Treated", "Treated"))
+)
+
+```
+
+
+## Incumplimiento y resultados potenciales del tratamiento
+
+\center ![](figs/one_sided){#id .class width=80%}
+
+
+
+## Tipos de efectos causales
+
+
+>- ITT: intención de tratar (*intent to treat*)
+>- LATE: efecto local (*local average treatment effect*)
+  >   + También conocido como “Complier Average Causal Effect” (CACE).
+
+
+
+## Incumplimiento de un solo lado (one-sided noncompliance)
+
+\center ![](figs/compliers){#id .class width=100%}
+
+
+- 100 son asignados aleatoriamente al tratamiento \pause 
+- 80 son realmente tratados
+
+
+
+
+## Incumplimiento de un solo lado (one-sided noncompliance)
+
+\center 
+![](figs/compliers){#id .class width=100%}
+
+
+- Dado que \textcolor{violet}{la asignación es aleatoria} y sabemos que hay un 20\% de nunca-cumplidores (Never-Takers) en el grupo de tratamiento (columna de la izquierda), \textcolor{violet}{probablemente haya un 20\% de nunca-cumplidores en el grupo de control}. \pause
+- Dada la restricción de exclusión, los nunca-cumplidores tienen el mismo resultado potencial bajo las dos condiciones de tratamiento. 
+
+
+## Incumplimiento de un solo lado (one-sided)
+
+\center ![](figs/compliers){#id .class width=100%}
+
+
+- La diferencia en los resultados medios (40) no puede atribuirse a los *Never-takers*. 
+- Por tanto, podemos atribuir todo el efecto ITT a los cumplidores. 
+- El LATE puede calcularse dividiendo la estimación del ITT por la proporción de cumplidores: 
+
+$$40/0.8 = 50$$
+
+
+## Incumplimiento de ambos lados (two-sided noncompliance)
+
+![](figs/compliers2){#id .class width=100%}
+
+Supuestos necesarios para estimar un LATE:
+
+- Restricción de exclusión \pause
+- Que la población no contenga desfiantes (*defiers*) (también denominado supuesto de "monotonicidad")
+
+
+## Incumplimiento de ambos lados (two-sided noncompliance)
+
+
+![](figs/compliers2){#id .class width=100%}
+
+
+- Podemos estimar el porcentaje de cumplidores: 100\% - 10\% (nunca cumplen) - 10\% (siempre cumplen) = 80%. 
+
+- LATE: 
+
+$$40/0.8 = 50$$
+
+
+
+## LATE y variables instrumentales
+
+
+
+$$LATE = ATE_{complier} = ITT / ATE \text{ de Z en D}$$
+
+
+
+- LATE es equivalente a una estimación por variables instrumentales. 
+- Supongamos que 50 individuos de una población de 100 son asignados aleatoriamente al tratamiento.\pause 
+- La regresión (D~Z) da la proporción estimada de cumplidores: 80%. 
+- El efecto ITT: Y~Z. \pause
+- El LATE se calcula dividiendo por la proporción de cumplidores. \pause
+
+- El mismo resultados surge de una regresión MCO en dos etapas (2SLS) en la que el resultado (Y) se regresa sobre el tratamiento (D), utilizando la asignación al tratamiento como variable instrumental (Z). 
+
+
+
+## LATE y variables instrumentales
+
+$$LATE = \frac{EffectZonY}{EffectZonD} = \frac{E[Y_i|Z_i=1]-E[Y_i|Z_i=0]}{E[D_i|Z_i=1]-E[D_i|Z_i=0]}$$ \pause
+
+\tiny
+```{r, 'iv1', echo=TRUE, include=TRUE, cache=TRUE}
+
+Z <- rep(0:1,50) # Assign 50 to treatment group (Z = 1), 50 to control group (Z = 0)
+
+D <- Z           # Compliers have D (treatment received) = Z (treatment assignment)
+D[1:10]  <- 0    # 10 Never Takers
+D[11:20] <- 1    # 10 Always Takers
+
+Y        <- 50*D # Compliers have Y = 50 if treated, 0 if not treated
+Y[1:10]  <- 100  # Never takers have high Y
+Y[11:20] <- 0    # Always takers have low Y
+
+
+# Estimated share of compliers 
+ITTD <- coef(lm(D~Z))[2] 
+
+# Estimated intention-to-treat effect
+ITT  <- coef(lm(Y~Z))[2] 
+
+# LATE estimate
+LATE <- ITT / ITTD
+
+cbind(Y_1 = mean(Y[Z==1]), Y_0=mean(Y[Z==0]), ITTD, ITT, LATE)
+```
+
+
+## LATE y variables instrumentales
+\tiny
+```{r, 'iv2', echo=TRUE, include=TRUE, cache=TRUE, messages=FALSE}
+# install.packages(AER)
+summary(ivreg(Y~ D | Z)) 
+```
+
+## Discusión
+
+- El LATE sólo refleja los efectos del tratamiento entre los cumplidores. \pause
+- La estimación LATE siempre es mayor que la estimación ITT. \pause
+- El LATE es un estimando importante en los diseños de "aliento" y en los "downstream experiments". \pause
+- Se puede utilizar un diseño con placebo para identificar el LATE ( Gerber, Green, Kaplan, y Kern, 2010)

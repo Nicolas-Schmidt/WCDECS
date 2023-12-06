@@ -1,0 +1,136 @@
+---
+title: Estimación
+author: |
+  | Diseño e implementación de experimentos en ciencias sociales
+  | *Departamento de Economía (UdelaR)*
+output:
+  beamer_presentation:
+    toc: no
+    keep_tex: yes
+    slide_level: 2
+    includes:
+      in_header: header.tex
+  slidy_presentation: default
+number_sections: no
+theme: default
+fonttheme: professionalfonts
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, size = "footnotesize")
+
+library(knitr)
+library(randomizr)
+
+library(here)
+library(tidyverse)
+# library(DeclareDesign)
+# library(estimatr)
+library(devtools)
+# library(rcompanion) ## for pairwisePermutationTest()
+
+# library(kableExtra)
+
+```
+
+# Experimentos aleatorizados de dos ramas
+
+
+## Efecto medio del tratamiento en la muestra (SATE)
+
+
+- $N$: muestra
+- Aleatorización completa de $m$ en $N$
+- $(Z_{i} = 1)$: tratados
+- $(Z_{i} = 1)$: controles
+- $SATE =  E_{i \in N}[Y_i(1) - Y_i(0)]$
+- $Y_i =  Y_i(1) \times Z_1 + Y_i(0) \times (1 - Z_1)$ \pause
+
+
+$$\widehat{\tau} = \frac{\sum_1^m Y_i}{m} - \frac{\sum_{m+1}^N Y_i}{N-m}$$ \pause
+
+$$\widehat{se(\tau)} = \sqrt{\frac{V(Y_i(1))}{m} + \frac{V(Y_i(0))}{N-m}}$$
+
+
+
+## Ajuste por covariables
+
+- Freedman (2008) critica la práctica de utilizar covariables en una regresión MCO para estimar el SATE con datos experimentales. \pause
+
+- Mientras que el estimador de diferencia de medias es insesgado para el efecto medio del tratamiento, el estimador MCO ajustado por covariables muestra un pequeño sesgo muestral (a veces denominado "sesgo Freedman") que disminuye rápidamente a medida que aumenta el tamaño de la muestra. \pause
+
+- Más preocupante es la crítica de que el ajuste de covariables puede incluso perjudicar la precisión.
+
+
+
+
+## Estimador de Lin
+
+- Lin (2013) ofrece un estimador alternativo que garantiza ser al menos tan preciso como el estimador no ajustado. \pause
+- El problema se produce cuando: 
+  + la correlación de las covariables con el resultado es muy diferente en la condición de tratamiento que en la condición de control
+  + los diseños están fuertemente desequilibrados en el sentido de tener grandes proporciones de unidades tratadas o no tratadas. \pause
+- El estimador de Lin ajusta por covariables en cada brazo del experimento por separado.\pause
+- Equivale a la inclusión de un conjunto completo de interacciones del tratamiento con cada covariable. \pause
+- El preprocesamiento de los datos mediante quitarle la media a las covariables convierte el coeficiente del regresor del tratamiento en una estimación del SATE global. \pause
+- El estimador "lm_lin" del paquete "estimatr" implementa este preprocesamiento en un solo paso.
+
+
+## Estimador de Lin
+
+
+$$Y_{i} = \tau Z_{i} + \beta \boldmath{X_{i}} + \epsilon_{i}$$
+
+
+$$Y_{i} = \tau Z_{i} + \beta \boldmath{X^{c}_{i}} + \gamma \boldmath{X^{c}_{i}}Z_{i} + \epsilon_{i}$$
+
+
+## Estimador de Lin (vs OLS y DIM)
+
+\center ![](figs/figure18_3_lin){#id .class width=70%}
+
+
+
+# Expermientos bloqueados
+
+
+## Estrategia
+
+\center ![](figs/fig84_randomizations){#id .class width=70%}
+
+
+## Asignaciones
+
+\center ![](figs/figure_18_4_sd_blocking){#id .class width=70%}
+
+
+## Análisis
+
+Supone un conjunto de bloques $j$
+
+$$\widehat{\tau} = \sum_{j=1}^J \frac{N_j}{N} \hat \tau_j$$ 
+
+
+
+## Problema de controlar por efectos fijos (bloque)
+
+
+\center ![](figs/trouble){#id .class width=70%}
+
+
+# Expermientos de asignación por conglomerados
+
+
+## Estrategia
+
+\center ![](figs/fig84_randomizations){#id .class width=70%}
+
+
+## ICC
+
+$$ICC = \frac{\sigma^{2}_{between}}{\sigma^{2}_{between} + \sigma^{2}_{within}}$$
+
+## ICC
+
+\center ![](figs/figure_18_5){#id .class width=70%}
+
