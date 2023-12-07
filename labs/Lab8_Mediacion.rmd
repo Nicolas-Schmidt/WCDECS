@@ -1,0 +1,101 @@
+---
+title: |
+ | Taller 8: Mecanismos causales y mediación
+output:
+  html_document:
+    toc: true
+    number_sections: true
+    toc_depth: 2
+    toc_float: true
+    theme: spacelab
+    highlight: tango
+urlcolor: BrickRed
+lang : es-AR
+header-includes: \usepackage[spanish]{babel}
+                 \usepackage{graphicx}
+                 \usepackage{subfig}                 
+bibliography: /Users/slopezcariboni/Dropbox/Research/LibraryBibs/Bibs/library.bib
+---
+
+
+***
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(fig.align = "center", eval=TRUE, tidy.opts=list(width.cutoff=60), tidy=TRUE, cache=TRUE)
+paquetes <- c('ivreg')
+suppressPackageStartupMessages(sapply(paquetes,require,character.only=TRUE))
+
+```
+
+
+# Simular un proceso de mediación
+
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+
+set.seed(1234) # Replication
+n = 1000 # Sample size
+Y0 = runif(n) # Potential outcome under control condition
+D = sample((1:n)%%2) # Treatment: 1 if treated, 0 otherwise
+X<-rnorm(n) # Covariate
+M<-rnorm(n=n,mean=D+rnorm(n)) # Mediator influenced by Treatment
+Y1 = Y0 + 1 + M # Potential outcome under treatment
+Y = D*Y1 + (1-D)*Y0 # Outcome in population
+samp<-data.frame(D,M,Y)
+
+head(samp)
+
+```
+
+
+# Efecto total de D en Y
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+# total effect
+total_effect<-lm(Y~D+X,data=samp) 
+summary(total_effect)
+
+```
+
+# Análisis de mediación
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+
+med.f<-lm(M~D+X,data=samp) # Model for mediator
+summary(med.f)
+out.f<-lm(Y~M+D+X,data=samp) # Model for outcome
+summary(out.f)
+```
+
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+library(mediation)
+#Estimate ACME and ADE
+med.out<-
+mediate(med.f,out.f,treat="D",mediator="M",robustSE=T,sims=1000)
+# Sensitivity of ACME to unobserved pre-treatment confounder
+s.out<-medsens(med.out)
+
+plot(s.out) # Plot sensistivity bounds
+```
+
+
+# Ecuaciones estructurales 
+
+```{r, tidy=TRUE, messages=FALSE, warnings=FALSE}
+#Structural equations estimates of ACME ADE
+library(systemfit)
+
+f1<-formula(Y~D+X)
+f2<-formula(M~D+X)
+f3<-formula(Y~D+M+X)
+
+med.sys<-systemfit(list(f1,f2,f3),data=samp)
+ACME<-coef(med.sys)["eq1_D"]-coef(med.sys)["eq3_D"]
+ADE<-coef(med.sys)["eq3_D"]
+
+ACME
+
+ADE
+
+```

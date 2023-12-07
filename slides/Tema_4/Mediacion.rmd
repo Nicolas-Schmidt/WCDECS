@@ -1,0 +1,93 @@
+---
+title: Mecanismos causales y mediación
+author: |
+  | Diseño e implementación de experimentos en ciencias sociales
+  | *Departamento de Economía (UdelaR)*
+output:
+  beamer_presentation:
+    toc: no
+    keep_tex: yes
+    slide_level: 2
+    includes:
+      in_header: header.tex
+  slidy_presentation: default
+number_sections: no
+# theme: metropolis
+fonttheme: professionalfonts
+highlight: "tango"
+incremental: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, size = "footnotesize")
+library(knitr)
+library(randomizr)
+
+library(here)
+library(tidyverse)
+# library(DeclareDesign)
+# library(estimatr)
+library(devtools)
+# library(rcompanion) ## for pairwisePermutationTest()
+
+# library(kableExtra)
+library(AER)
+
+```
+
+
+
+## Mecanismos
+
+- Queremos describir no sólo la magnitud y el sentido de un efecto causal observado, sino también el mecanismo (o mecanismos) que lo produjo. 
+
+- Qué parde del efecto causal pasa a través de una variable mediadora
+
+
+
+## Estimandos
+
+Descomponer el efecto total del tratamiento en:
+
+- Efecto indirecto sobre un mediador que luego afecta el resultado, llamado efecto de mediación causal promedio (ACME)
+
+- Efecto directo promedio restante (ADE) del tratamiento. 
+
+
+## Supuesto de "ignorabilidad secuencial"
+
+- Sin embargo, una estimación no-sesgada de estos efectos requiere un conjunto de supuestos sólidos sobre la relación entre el tratamiento, los mediadores, la variable de resultado y los posibles factores de confusión.
+
+- colectivamente ignorabilidad secuencial (Imai, Keele y Yamamoto (2010), Bullock, Green y Ha (2010)
+
+
+## "Sequential ignorability"
+
+\center ![](figs/sequential_ignorability){#id .class width=80%}
+
+
+## "Sequential ignorability"
+
+\center ![](figs/seq){#id .class width=100%}
+
+
+
+## Estrategias
+
+>- Análisis de efectos heterogéneos
+>- Experimentos paralelos
+>- Análisis de mediación (Imai y Yamamoto 2013)
+
+
+## Análisis de mediación (Imai y Yamamoto 2013)
+
+
+- \texttt{Mediation} en R (Tingley et al. 2014)
+- Sensibilidad de sus estimaciones a violaciones de la ignorabilidad secuencial
+
+
+
+## Análisis de mediación (Imai y Yamamoto 2013)
+
+
+\center ![](figs/models){#id .class width=80%}
