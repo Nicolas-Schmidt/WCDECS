@@ -100,7 +100,7 @@ El programa del curso está disponible
   través de la simulación
 - Adquirir experiencia replicando el diseño y análisis de experimentos
   publicados destacados
-- Cómo diseñar un experimento y preparar un pre-registro completo
+- Cómo diseñar un experimento y preparar un pre-registro completo.
 
 ## Bibliografía general <a name="bibliografia"></a>
 
