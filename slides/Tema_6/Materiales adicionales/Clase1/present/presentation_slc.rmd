@@ -1,0 +1,701 @@
+---
+title: "La práctica de los experimentos de encuesta"
+author:
+- "*Santiago López-Cariboni*, Universidad Católica del Uruguay" 
+
+
+date: '`r format(Sys.time(), format="%B %d %Y")`'
+output: beamer_presentation
+keep_tex: yes
+---
+
+
+
+
+# History and Logic
+
+---
+
+## Experiments: History I
+
+Oxford English Dictionary defines “experiment” as:
+
+- A scientific procedure undertaken to make a discovery, test a hypothesis, or demonstrate a known fact
+
+- A course of action tentatively adopted without being sure of the outcome
+
+---
+
+## Experiments: History II
+
+-“Experiments” have a very long history
+
+- Major advances in design and analysis of
+experiments based on agricultural and later
+biostatistical research in the 19th century
+(Fisher, Neyman, Pearson, etc.)
+
+- Multiple origins in the social sciences
+	+ First randomized experiment by Peirce and Jastrow (1884)
+	+ Gosnell (1924)
+	+ LaLonde (1986)
+	+ Gerber and Green (2000)
+
+
+
+## Experiments: History III
+- “Question testing” split ballots (e.g., Cantril)
+
+- Rise of surveys in the behavioral revolution
+	+ Split ballots (e.g., Schuman & Presser; Bishop)
+
+- 1983: Merrill Shanks and the Berkeley Survey Research Center develop CATI
+
+- Mid-1980s: Paul Sniderman & Tom Piazza performed the first modern survey experiment^[Sniderman, Paul M., and Thomas Piazza. 1993. The Scar of Race. Cambridge, MA: Harvard University Press.]
+	- Then: the “first multi-investigator”
+	- Later: Skip Lupia and Diana Mutz created TESS
+
+
+## TESS
+- Time-Sharing Experiments for the Social Sciences
+
+- Multi-disciplinary initiative that provides infrastructure for survey experiments on nationally representative samples of the United States population
+
+- Great resource for survey experimental materials, designs, and data
+
+- Funded by the U.S. National Science Foundation
+
+- Anyone anywhere in the world can apply
+
+- See also: LISS, Bergen’s Citizen Panel, Gothenburg’s
+Citizen Panel
+
+
+## The First Survey Experiment?
+
+Hadley Cantril (1940) asks 3000 Americans either:
+
+
+Do you think the U.S.
+should do more than it is
+now doing to help
+England and France?
+
++ Yes
++ No
+
+.pull-right[
+Do you think the U.S.
+should do more than it is
+now doing to help
+England and France **in
+their fight against Hitler**?
+
++ Yes
++ No
+
+
+## The First Survey Experiment?
+
+Hadley Cantril (1940) asks 3000 Americans either:
+
+
+Do you think the U.S.
+should do more than it is
+now doing to help
+England and France?
+
++ Yes 13%
++ No
+
+.pull-right[
+Do you think the U.S.
+should do more than it is
+now doing to help
+England and France **in
+their fight against Hitler**?
+
++ Yes 22%
++ No
+
+The “Hitler effect” was 22% - 13% = 9%
+
+
+## Definitions I
+
+- A randomized experiment is:
+
+*The observation of units after, and possibly before, a randomly assigned intervention in a controlled setting, which tests one or more precise causal expectations*
+
+
+- If we manipulate the thing we want to know
+the effect of (X ), and control (i.e., hold
+constant) everything we do not want to know
+the effect of (Z ), the only thing that can affect
+the outcome (Y ) is X .
+
+
+
+## Definitions II
+
+- A survey experiment is just an experiment that occurs in
+a survey context
+	+ As opposed to in the field or in a laboratory
+
+- Can be in any mode (face-to-face, CATI, IVR, CASI,
+etc.)
+
+- May or may not involve a representative population
+Mutz (2011): “population-based survey experiments”
+
+
+
+
+## Definitions II
+
+**Unit**: A physical object at a particular point in time
+
+
+## Definitions II
+
+**Treatment**: An intervention, whose effect(s) we wish to assess relative to some other
+(non-)intervention
+
+
+**Synonyms**: manipulation, intervention, factor,
+condition, cell
+
+
+
+## Definitions II
+
+**Outcome**: The variable we are trying to explain
+
+
+
+## Definitions II
+
+**Potential outcomes**: The outcome value for each unit that we would observe if that unit received
+each treatment 
+
+
+Multiple potential outcomes for each unit, but we
+only observe one of them
+
+
+
+## Definitions II
+
+**Causal effect**: The comparisons between the
+unit-level potential outcomes under each
+intervention
+
+*This is what we want to know!*
+
+
+## Definitions II
+
+**Average causal effect**: Difference in mean
+outcomes between treatment groups
+
+*This is almost what we want to know!*
+
+
+
+## Example
+**Unit**: Americans in 1940
+
+**Outcome**: Support for military intervention
+
+**Treatment**: Mentioning Hitler versus not
+
+**Potential outcomes** :
+
+1. Support in “Hitler” condition
+2. Support in control condition
+
+**Causal effect**: Difference in support between the
+two question wordings for each respondent
+
+- Individual treatment effect not observable!
+- Average effect (ATE) is the mean-difference
+
+
+## Questions?
+
+
+## Why are experiments useful?
+
+
+Causal inference!
+
+
+
+## Addressing Confounding
+
+In observational research. . .
+Correlate a “putative” cause (X ) and an outcome (Y ), where X temporally precedes Y
+
+Identify all possible confounds (Z) “Condition” on all confounds
+
+Calculate correlation between X and Y at each combination of levels of Z
+
+
+Basically: $Y = \beta_0 + \beta_1 X + \beta_{2-k}Z + \epsilon$
+
+---
+
+\begin{center}
+\includegraphics[width=4in]{confound}
+\end{center}
+
+---
+
+\begin{center}
+\includegraphics[width=4in]{confound2}
+\end{center}
+
+
+
+## Experiments are different
+
+1. Causal inferences from design not analysis
+2. Solves both temporal ordering and confounding
+	+ Treatment (X ) applied by researcher before outcome (Y )
+	+ Randomization eliminates confounding (Z)
+	+ We don’t need to “control” for anything
+
+3. Basically: $Y = \beta_0 + \beta_1 X  + \epsilon$
+
+
+4. Thus experiments are a “gold standard”
+
+
+
+## Mill’s Method of Difference
+
+If an instance in which the phenomenon under investigation
+occurs, and an instance in which it does not occur, have every
+circumstance save one in common, that one occurring only in
+the former; the circumstance in which alone the two instances
+differ, is the effect, or cause, or an necessary part of the cause,
+of the phenomenon.
+
+
+## Mill’s Method of Difference
+
+If an instance in which the phenomenon under investigation
+occurs, and an instance in which it does not occur, **have every
+circumstance save one in common**, that one occurring only in
+the former; **the circumstance in which alone the two instances
+differ, is the** effect, or **cause**, or an necessary part of the cause,
+**of the phenomenon**.
+
+
+## Questions?
+
+
+## Neyman-Rubin Potential Outcomes Framework
+
+If we are interested in some outcome $Y$ , then for
+every unit $i$, there are numerous “potential
+outcomes” $Y$*  only one of which is visible in a given
+reality. Comparisons of (partially unobservable)
+potential outcomes indicate causality.
+
+
+
+## Neyman-Rubin Potential Outcomes Framework
+
+Concisely, we typically discuss two potential
+outcomes:
+
+- $Y_{0i}$ , the potential outcome realized if $X_i = 0$ (b/c
+$D_i = 0$, assigned to control)
+
+
+- $Y_{1i}$ , the potential outcome realized if $X_i = 1$ (b/c
+$D_i = 1$, assigned to treatment)
+
+
+## Experimental Inference I
+
+Each unit has multiple *potential* outcomes, but we only
+observe one of them, randomly
+
+
+## Experimental Inference I
+
+Each unit has multiple *potential* outcomes, but we only
+observe one of them, randomly
+
+In this sense, we are sampling potential outcomes from
+each unit’s population of potential outcomes
+
+
+\begin{center}
+\includegraphics[width=3in]{po}
+\end{center}
+
+
+## Experimental Inference II
+
+- We cannot see individual-level causal effects
+- We can see average causal effects
+
+	+ Ex.: Average difference in military support among those thinking of Hitler versus not
+- We want to know: $TE_i = Y_{1i} - Y_{0i}$
+
+
+## Experimental Inference III
+
+- We want to know: $TE_i = Y_{1i} - Y_{0i}$ for every $i$ in the population
+
+- We can average: $E[TE] = E[Y_1 - Y_0] = E[Y_1] - E[Y_0]$
+
+- But we still only see one potential outcome for each unit: $ATE_{naive} = E[Y_1|X = 1] - E[Y_0|X = 0]$
+
+ - *Is this what we want to know?*
+
+
+## Experimental Inference IV
+
+- What we want and what we have:
+$$ATE =E[Y_1] - E[Y_0]$$
+$$ATE_{naive} = E[Y_1|X = 1] - E[Y_0|X = 0]$$
+
+
+Are the following statements true?
+
+$E[Y_1|X = 1] = E[Y_1]$
+$E[Y_0|X = 1] = E[Y_0]$
+
+- Not in general 
+
+
+## Experimental Inference V
+
+- Only true when both of the following hold:
+
+$$E[Y_1] = E[Y_1|X = 1] = E[Y_1|X = 0]$$
+$$E[Y_0] = E[Y_0|X = 1] = E[Y_0|X = 0]$$
+
+- In that case, potential outcomes are independent of
+treatment assignment
+
+- If true (e.g., due to randomization of X), then:
+
+
+$$ATE_{naive} = E[Y_1|X = 1] - E[Y_0|X = 0]$$
+$$ = E[Y_1] - E[Y_0]$$
+$$ = ATE$$
+
+
+## Experimental Inference VI
+
+- This holds in experiments because of a physical process of randomization
+
+- Units differ only in side of coin that was up
+	+ $X_i = 1$ only because $D_i =1$
+
+- Implications: 
+	+ Covariate balance
+	+ Potential outcomes balanced and independent of treatment assignment
+	+ No confounding (selection bias)
+
+
+---
+
+\begin{center}
+\includegraphics[width=4in]{notra}
+\end{center}
+
+---
+
+\begin{center}
+\includegraphics[width=4in]{ra}
+\end{center}
+
+---
+
+
+## Questions?
+
+
+
+## Experimental Analysis I
+
+- The statistic of interest in an experiment is the *sample average treatment effect* (SATE)
+- If our sample is representative, then this provides an estimate of the *population average treatment* (PATE)
+	+ Design-based random sampling 
+	+ Model-based re-weighting
+
+- This boils down to being a mean-difference between two groups:
+
+
+$$SATE = \frac{1}{n_1}\sum Y_{1i} - \frac{1}{n_0}\sum Y_{0i}$$
+
+
+
+## Tidy Experimental Data
+
+An experimental data structure looks like:
+
+\begin{center}
+\includegraphics[width=3in]{expdata}
+\end{center}
+
+
+
+## Computation of Effects I
+
+- In practice we often estimate SATE using t-tests, ANOVA, or OLS regression
+
+- These are all basically equivalent
+
+- Reasons to choose one procedure over another:
+	+ Disciplinary norms
+	+ Ease of interpretation
+	+ Flexibility for >2 treatment conditions
+
+
+
+## Computation of Effects II
+
+R:
+
+```{r, eval=FALSE}
+t.test(outcome ~ treatment, data = data)
+lm(outcome ~ factor(treatment), data = data)
+```
+
+
+## Questions?
+
+
+## Experimental Analysis II
+
+- We don’t just care about the size of the SATE. We also want to know whether it is significantly different from zero (i.e., different from no effect/difference)
+
+- Thus we need to estimate the variance of the SATE 
+
+- The variance is influenced by:
+	+ Total sample size
+	+ Element variance of the outcome, Y 
+	+ Relative size of each treatment group (Some other factors)
+
+
+
+## Experimental Analysis III
+
+Variance of the SATE
+
+- $\widehat{Var}(SATE) = \widehat{Var}(\bar{Y}_0) + \widehat{Var}(\bar{Y}_1)$
+
+	+ Where $\widehat{Var}(Y_0)$ is control group variance 
+	+ And $\widehat{Var}(Y_1)$ is treatment group variance
+
+
+And the standard error of the variance is
+
+- $\widehat{SE}_{SATE} = \sqrt{\widehat{Var}(\bar{Y}_0) + \widehat{Var}(\bar{Y}_1)}$
+
+
+##  Intuition about Variance
+
+- Bigger sample --> smaller SEs Smaller variance --> smaller SEs
+
+- Efficient use of sample size:
+	+ When treatment group variances equal, equal sample sizes are most efficient
+	+ When variances differ, sample units are better allocated to the group with higher variance in Y
+
+
+
+## Statistical Power
+Power analysis is used to determine sample size before conducting an experiment
+
+\begin{center}
+\includegraphics[width=2.5in]{power}
+\end{center}
+
+
+True positive rate ($1-k$) is power
+
+False positive rate is the significance threshold ($\alpha$)
+
+
+## Power calculation
+
+- $\mu$, Treatment group mean outcomes 
+- N, Sample size
+- $\sigma$, Outcome variance
+- $\alpha$ Statistical significance threshold
+- $\Phi$  CDF of a sampling distribution.
+
+$$
+\beta = \Phi \left(\frac{|\mu_t-\mu_c|\sqrt{N}}{2\sigma}-\Phi^{-1} \left(1-\frac{\alpha}{2}\right) \right)
+$$
+
+- $\beta$ is Power, with distribution [0,1]. 
+
+
+
+## Intuition about Power
+
+Minimum detectable effect is the smallest effect we could detect given sample size, “true” ATE, variance of outcome measure, power ($1 - k$), and $\alpha$.
+
+In essence: some non-zero effect sizes are not detectable by a study of a given sample size.
+
+In underpowered study, we will be unlikely to detect true small effects. And most effects are small!^[Gelman, A. and Weakliem, D. 2009. “Of Beauty, Sex and Power.” American Scientist 97(4): 310–16]
+
+## Power in R
+
+\tiny 
+```{r, tidy=TRUE, tidy.opts=list(width.cutoff=60), cache=TRUE}
+
+possible.ns <- seq(from=100, to=2000, by=50) # The sample sizes we'll be considering
+powers <- rep(NA, length(possible.ns))       # Empty object to collect simulation estimates
+alpha <- 0.05                                # Standard significance level
+sims <- 500                                  # Number of simulations to conduct for each N
+
+#### Outer loop to vary the number of subjects ####
+for (j in 1:length(possible.ns)){
+  N <- possible.ns[j]                        # Pick the jth value for N
+  
+  significant.experiments <- rep(NA, sims)   # Empty object to count significant experiments
+  
+  #### Inner loop to conduct experiments "sims" times over for each N ####
+  for (i in 1:sims){
+    Y0 <-  rnorm(n=N, mean=60, sd=20)              # control potential outcome
+    tau <- 5                                       # Hypothesize treatment effect
+    Y1 <- Y0 + tau                                 # treatment potential outcome
+    Z.sim <- rbinom(n=N, size=1, prob=.5)          # Do a random assignment
+    Y.sim <- Y1*Z.sim + Y0*(1-Z.sim)               # Reveal outcomes according to assignment
+    fit.sim <- lm(Y.sim ~ Z.sim)                   # Do analysis (Simple regression)
+    p.value <- summary(fit.sim)$coefficients[2,4]  # Extract p-values (assuming 
+                                                   # equal variance in treatement and 
+                                                   # control groups)
+    significant.experiments[i] <- (p.value <= alpha) # Determine significance according to 
+                                                     #p <= 0.05
+  }
+  
+  powers[j] <- mean(significant.experiments) # store average success rate (power) for each N
+}
+
+```
+
+
+## Power in R
+
+```{r,echo=FALSE}
+plot(possible.ns, powers, ylim=c(0,1), 
+     main= expression(paste("Power Calculation Different Sample Size (", tau, " = 5, SD = 20)")),
+     xlab = "Sample size - N")
+abline(h=0.8, col="red")
+```
+
+
+
+
+## Factorial Designs
+
+-The two-condition experiment is a stylized ideal
+
+- An experiment can have any number of conditions
+	+ Up to the limits of sample size
+	+ More than 8–10 conditions is typically unwieldy
+
+- Three “flavors”:
+	+ Multiple conditions in a single factor
+	+ Multiple fully crossed factors
+	+ Partially crossed (“fractional factorial”) designs
+
+- Regression methods provide a generalizable tool for causal inference in such designs
+
+
+---
+
+\begin{center}
+\includegraphics[width=3.5in]{factorial}
+\end{center}
+
+---
+
+
+\begin{center}
+\includegraphics[width=3.8in]{factorial2}
+\end{center}
+
+
+
+## Example^[Transue. 2007. “Identity Salience, Identity Acceptance, and Racial Policy Attitudes: American National Identity as a Uniting Force.” American Journal of Political Science 51(1): 78–91.]
+
+- How close do you feel to your ethnic or racial
+group?
+
+- Some people have said that taxes need to be raised to take care of pressing national needs. How willing would you be to have your taxes raised to improve education in public schools?
+
+
+
+## Example^[Transue. 2007. “Identity Salience, Identity Acceptance, and Racial Policy Attitudes: American National Identity as a Uniting Force.” American Journal of Political Science 51(1): 78–91.]
+
+- How close do you feel to other Americans?
+
+- Some people have said that taxes need to be raised to take care of pressing national needs. How willing would you be to have your taxes raised to improve education in public schools?
+
+
+
+
+
+
+
+## Example^[Transue. 2007. “Identity Salience, Identity Acceptance, and Racial Policy Attitudes: American National Identity as a Uniting Force.” American Journal of Political Science 51(1): 78–91.]
+
+- How close do you feel to your ethnic or racial
+group?
+
+- Some people have said that taxes need to be raised to take care of pressing national needs. How willing would you be to have your taxes raised to improve educational opportunities for minorities?
+
+
+
+
+## Example^[Transue. 2007. “Identity Salience, Identity Acceptance, and Racial Policy Attitudes: American National Identity as a Uniting Force.” American Journal of Political Science 51(1): 78–91.]
+
+
+- How close do you feel to other Americans?
+
+- Some people have said that taxes need to be raised to take care of pressing national needs. How willing would you be to have your taxes raised to improve educational opportunities for minorities?
+
+
+
+## 2x2 Factorial Design
+
+
+Condition                Americans       Own Race
+---------------------   -------------  -------------
+Educ. for Minorities        $Y_{1,0}$   $Y_{1,1}$
+Schools                     $Y_{0,0}$   $Y_{0,1}$
+---------------------   -------------  -------------
+
+
+
+## Two ways to parameterize this
+
+
+Dummy variable regression (i.e., treatment–control CATEs):
+$Y = \beta_0 + \beta_1 X_{0,1} + \beta_{2}X_{1,0} + \beta_{3}X_{1,1} + \epsilon$
+
+Interaction effects (i.e., treatment–treatment CATEs):
+$Y = \beta_0 + \beta_1 X1_{1} + \beta_{2}X2_{1}  + \beta_{3}X1_{1}\times X2_{1} + \epsilon$
+
+
+
+## Considerations
+
+- Factorial designs can quickly become unwieldy and expensive
+
+- Need to consider what CATEs are of theoretical interest
+	+ Treatment-control, pairwise 
+	+ Treatment-treatment, pairwise
+	+ Marginal effects, averaging across other factors
+	+ Comparison of merged conditions

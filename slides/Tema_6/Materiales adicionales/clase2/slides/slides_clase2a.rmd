@@ -1,0 +1,605 @@
+---
+title: "Tipos de experimentos de encuesta: diseños simples"
+author:
+- "*Santiago López-Cariboni*, Universidad de la República - dECON"
+output: beamer_presentation
+keep_tex: yes
+---
+
+
+# Translating Hypotheses into Designs
+***
+
+# From Theory to Design
+
+- From theory, we derive testable hypotheses
+	+ Hypotheses are expectations about differences in outcomes across levels of a putatively causal variable 
+- Hypothesis must be testable by an SATE ($H_0 = 0$)
+- Manipulations are developed to create variation in that causal variable
+
+***
+
+# Example: News Framing
+- Theory: Presentation of news affects opinion
+- Hypotheses:
+	+ News emphasizing free speech increases support for a hate group rally
+	+ News emphasizing public safety decreases support for a hate group rally
+- Manipulation:
+ 	+ Control group: no information
+ 	+ Free speech group: article emphasizing rights Public safety group: article emphasizing safety
+
+***
+
+
+# Example: Partisan Identity
+
+- Theory: Strength of partisan identity affects tendency to accept party position
+- Hypotheses:
+	+ Strong partisans are more likely to accept their party’s position on an issue
+- Manipulation:
+	+ Control group: no manipulation 
+	+ "Univalent" condition 
+	+ "Ambivalent" condition
+
+***
+
+
+
+# Univalent
+
+*These days, Democrats and Republicans differ from one another considerably. The two groups seem to be growing further and further apart, not only in terms of their opinions but also their lifestyles. Earlier in the survey, you said you tend to identify as a Democrat/ Republican. Please take a few minutes to think about what you like about Democrats/ Republicans compared to the Republicans/ Democrats. Think of 2 to 3 things you especially like best about **your party**. Then think of 2 to 3 things you especially dislike about **the other party**. Now please write those thoughts in the space below.*
+
+***
+
+# Ambivalent
+*These days, Democrats and Republicans differ from one another considerably. The two groups seem to be growing further and further apart, not only in terms of their opinions but also their lifestyles. Earlier in the survey, you said you tend to identify as a Democrat/ Republican. Please take a few minutes to think about what you like about Democrats/ Republicans compared to the Republicans/ Democrats. Think of 2 to 3 things you especially like best about **the other party**. Then think of 2 to 3 things you especially dislike about **your party**. Now please write those thoughts in the space below.*
+
+***
+
+
+# Treatments Test Hypotheses!
+
+- Experimental "factors" are expressions of hypotheses as randomized groups
+- What stimulus each group receives depends on hypotheses
+- Three ways hypotheses lead to stimuli: 
+	+ presence/absence
+	+ levels/doses 
+	+ qualitative variations
+
+***
+
+
+# Ex.: Presence/Absence
+
+- Theory: Negative campaigning reduces support for the party described negatively.
+- Hypothesis: Exposure to a negative advertisement criticizing a party reduces support for that party.
+- Manipulation:
+	+ Control group receives no advertisement. 
+	+ Treatment group watches a video containing a negative ad describing a party.
+
+***
+
+
+# Ex.: Levels/doses
+
+- Theory: Negative campaigning reduces support for the party described negatively.
+- Hypothesis: Exposure to higher levels of negative advertising criticizing a party reduces support for that party.
+- Manipulation:
+	+ Control group receives no advertisement.
+	+ Treatment group 1 watches a video containing 1 negative ad describing a party.
+	+ Treatment group 2 watches a video containing 2 negative ads describing a party.
+	+ Treatment group 3 watches a video containing 3 negative ads describing a party.
+	+ etc.
+
+***
+
+
+# Ex.: Qualitative variation
+
+\small
+
+\begin{itemize}
+\item Theory: Negative campaigning reduces support for the party described negatively.
+\item Hypothesis: Exposure to a negative advertisement criticizing a party reduces support for that party, while a positive advertisement has no effect.
+\item Manipulation:
+	\begin{itemize}\footnotesize
+	\item Control group receives no advertisement. 
+	\item Negative treatment group watches a video containing a negative ad describing a party.
+	\item Positive treatment group watches a video containing a positive ad describing a party.
+	\end{itemize}
+\end{itemize}
+
+
+# Assessing Quality
+
+# Activity!
+
+\begin{itemize}\itemsep0.5em
+\item How do we know if an experiment is any good?
+\item Talk with a partner for about 3 minutes
+\item Try to develop some criteria that allow you to evaluate ``what makes for a good experiment?'' 
+\end{itemize}
+
+***
+
+
+# Some possible criteria
+
+\small
+
+\begin{itemize}\itemsep-0.2em
+\item Significant results
+\item Face validity
+\item Coherent for respondents
+\item Non-obvious to respondents
+\item Simple
+\item Indirect/unobtrusive
+\item Validated by prior work
+\item Innovative/creative
+\item \dots
+\end{itemize}
+
+***
+
+#
+
+\begin{quote}\large
+The best criterion for evaluating the quality of an experiment is whether it manipulated the intended independent variable and controlled everything else by design.
+\end{quote}
+\onslide<2->{\small\hspace{5em} --Thomas J. Leeper (28 June 2018)}
+
+***
+
+
+# How do we know we manipulated what we think we manipulated?
+
+\small
+
+\begin{itemize}
+\item<2-> Outcomes are affected consistent with theory
+\item<3-> Before the study using \textit{pilot testing} (or \emph{pretesting})
+\item<4-> During the study, using \emph{manipulation checks}
+\item<5-> During the study, using \emph{placebos}
+\item<6-> During the study, using \textit{non-equivalent outcomes}
+\end{itemize}
+
+***
+
+
+# I. Outcomes Affected
+
+\begin{itemize}\itemsep0.5em
+\item Follows a circular logic!
+\item Doesn't tell us anything if we hypothesize null effects
+\end{itemize}
+
+***
+
+
+
+# II. Pilot Testing
+
+\small
+
+\begin{itemize}\itemsep0.2em
+\item Goal: establish construct validity of manipulation
+\item Assess whether a set of possible manipulations affect a measure of the \textit{independent} variable
+\item<2-> Example:
+	\begin{itemize}
+	\item Goal: Manipulate the ``strength'' of an argument
+	\item Write several arguments
+	\item Ask pilot test respondents to report how strong each one was
+	\end{itemize}
+\end{itemize}
+
+***
+
+
+# III. Manipulation Checks
+
+\small
+
+\begin{itemize}\itemsep0.2em
+\item Manipulation checks are items added post-treatment, post-outcome that assess whether the \textit{independent} variable was affected by treatment
+\item We typically talk about manipulations as directly setting the value of $X$, but in practice we are typically manipulating something \textit{that we think} strongly modifies $X$
+\item<2-> Example: information manipulations aim to modify knowledge or beliefs, but are necessarily imperfect at doing so
+\end{itemize}
+
+***
+
+
+# \normalsize Manipulation check example\footnote{Leeper \&Slothuus. n.d. ``Can Citizens Be Framed?'' Available from: \url{http://thomasleeper.com/research.html}.}
+
+\begin{enumerate}
+\item Treatment 1: Supply Information
+\item Manipulation check 1: measure beliefs
+\item Treatment 2: Prime a set of considerations
+\item Outcome: Measure opinion
+\item Manipulation check 2: measure dimension salience
+\end{enumerate}
+
+***
+
+
+
+# Some Best Practices
+
+
+\begin{itemize}\itemsep0.5em
+\item<2-> Manipulation checks should be innocuous
+	\begin{itemize}
+	\item Shouldn't modify independent variable
+	\item Shouldn't modify outcome variable
+	\end{itemize}
+\item<3-> Generally, measure post-outcome
+\item<4-> Measure both what you wanted to manipulate \textit{and} what you didn't want to manipulate
+	\begin{itemize}
+	\item Most treatments are \textit{compound}!
+	\end{itemize}
+\end{itemize}
+
+***
+
+
+# IV. Placebos
+
+\begin{itemize}\itemsep0.5em
+\item Include an experimental condition that \textit{does not} manipulate the variable of interest (but might affect the outcome)
+\item<2-> Example:
+	\begin{itemize}
+	\item Study whether risk-related arguments about climate change increase support for a climate change policy
+	\item Placebo condition: control article with risk-related arguments about non-environmental issue (e.g., terrorism)
+	\end{itemize}
+\end{itemize}
+
+***
+
+
+# V. Non-equivalent outcomes
+
+\small
+
+\begin{itemize}\itemsep0.5em
+\item Measures an outcome that \textit{should not} be affected by independent variable
+\item<2-> Example:
+	\begin{itemize}
+	\item Assess effect of some treatment on attitudes toward group A
+	\item Focal outcome: attitudes toward group A
+	\item Non-equivalent outcome: attitudes toward group B
+	\end{itemize}
+\end{itemize}
+
+***
+
+
+
+# Aside: Demand Characteristics
+
+\small
+
+\begin{itemize}\itemsep1em
+\item ``Demand characteristics'' are features of experiments that (unintentionally) imply the purpose of the study and thereby change respondents' behavior (to be consistent with theory)
+\item Implications:
+	\begin{itemize}\footnotesize
+	\item Design experimental treatments that are non-obvious
+	\item Do not disclose the purpose of the study up front\footnote{But, consider the ethics of not doing so (more later)}
+	\end{itemize}
+\end{itemize}
+
+***
+
+
+
+
+# Common Paradigms and Examples
+
+
+
+# Question Wording Designs
+
+\begin{itemize}\itemsep1em
+\item Simplest paradigm for presence/absence or qualitative variation
+\item Manipulation operationalizes this by asking two different questions
+\item Outcome is the answer to the question
+\item Example: Schuldt et al. ```Global Warming' or `Climate Change'? Whether the Planet is Warming Depends on Question Wording.''
+\end{itemize}
+
+***
+
+#
+
+\small
+
+You may have heard about the idea that the world's temperature may have been \textbf{\only<1>{going up}\only<2>{changing}} over the past 100 years, a phenomenon sometimes called \textbf{\only<1>{global warming}\only<2>{climate change}}. What is your personal opinion regarding whether or not this has been happening?
+	\begin{itemize}\itemsep-0.25em\footnotesize
+	\item Definitely has not been happening
+	\item Probably has not been happening
+	\item Unsure, but leaning toward it has not been happening
+	\item Not sure either way
+	\item Unsure, but leaning toward it has been happening
+	\item Probably has been happening
+	\item Definitely has been happening
+	\end{itemize}
+***
+
+
+# \normalsize Another framing example\footnote{Singer \& Couper.2014. ``The Effect of Question Wording on Attitudes toward Prenatal Testing and Abortion.'' \textit{Public Opinion Quarterly} 78(3): 751--760.}
+
+\footnotesize
+
+Today, tests are being developed that make it possible to detect serious genetic defects \textbf{\only<1>{before a baby is born}\only<2>{in the fetus during pregnancy}}. But so far, it is impossible either to treat or to correct most of them. If (you/your partner) were pregnant, would you want (her) to have a test to find out if the \textbf{\only<1>{baby}\only<2>{fetus}} has any serious genetic defects? (Yes/No)
+
+\vspace{0.5em}
+
+Suppose a test shows the \textbf{\only<1>{baby}\only<2>{fetus}} has a serious genetic defect. Would you, yourself, want (your partner) to have an abortion if a test shows the \textbf{\only<1>{baby}\only<2>{fetus}} has a serious genetic defect? (Yes/No)
+
+***
+
+
+# \normalsize Another framing example\footnote{Bobo \& Johnson.2004. ``A Taste for Punishment: Black and White Americans' Views on the Death Penalty and the War on Drugs.'' Du Bois Review 1(1): 151--180.}
+
+\only<2>{Blacks are about 12\% of the U.S. population, but they were half of the homicide offenders last year. }Do you favor or oppose the death penalty for persons convicted of murder?
+
+***
+
+# \normalsize Another framing example\footnote{Haider-Markel \&Joslyn. 2001. ``Gun Policy, Opinion, Tragedy, and Blame Attribution: The Conditional Influence of Issue Frames.'' \textit{Journal of Politics} 63(2): 520--543.}
+
+\only<1>{Concealed handgun laws have recently received national attention. Some people have argued that law-abiding citizens have the right to protect themselves.}\only<2>{Concealed handgun laws have recently received national attention. Some people have argued that laws allowing citizens to carry concealed handguns threaten public safety because they would allow almost anyone to carry a gun almost anywhere, even onto school grounds.} What do you think about concealed handgun laws?
+
+***
+
+
+
+
+
+# \normalsize Question Order Designs
+
+\small
+
+\begin{itemize}
+\item Manipulation of pre-outcome questionnaire
+\item<2-> Example:
+	\begin{itemize}
+	\item Goal: assess influence of value salience on support for a policy
+	\item Manipulate by asking different questions:
+		\begin{itemize}
+		\item Battery of 5 ``rights'' questions, or
+		\item Battery of 5 ``life'' questions
+		\end{itemize}
+	\item Measure support for legalized abortion
+	\end{itemize}
+\item<3-> If answers to manipulated questions matter, can measure rest post-outcome
+\end{itemize}
+
+***
+
+
+
+#  Ex. Question-as-treatment\footnote{Transue. 2007. ``Identity Salience, Identity Acceptance, and Racial Policy Attitudes: {American} National Identity as a Uniting Force.'' \textit{American Journal of Political Science} 51(1): 78--91.}
+	
+
+\begin{itemize}
+\item \only<1,3>{How close do you feel to your ethnic or racial group?}\only<2,4>{How close do you feel to other Americans?}
+\item \only<1-2>{Some people have said that taxes need to be raised to take care of pressing national needs. How willing would you be to have your taxes raised to improve education in public schools?}\only<3-4>{Some people have said that taxes need to be raised to take care of pressing national needs. How willing would you be to have your taxes raised to improve educational opportunities for minorities?}
+\end{itemize}
+	
+***
+
+
+# \normalsize Ex.: Knowledge and Political Interest
+
+\footnotesize
+
+\begin{enumerate}
+\item Do you happen to remember anything special that your U.S. Representative has done for your district or for the people in your district while he has been in Congress?
+\item Is there any legislative bill that has come up in the House of Representatives, on which you remember how your congressman has voted in the last couple of years?
+\item Now, some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say that you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?
+\end{enumerate}
+
+***
+
+# \normalsize Ex.: Knowledge and Political Interest
+
+\footnotesize
+
+\begin{enumerate}
+\item Now, some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say that you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?
+\item Do you happen to remember anything special that your U.S. Representative has done for your district or for the people in your district while he has been in Congress?
+\item Is there any legislative bill that has come up in the House of Representatives, on which you remember how your congressman has voted in the last couple of years?
+\end{enumerate}
+
+***
+
+
+# An Instructional Manipulation\footnote{Sturgis, Allum \& Smith. 2008. ``An Experiment on the Measurement of Political Knowledge in Surveys.'' \textit{Public Opinion Quarterly} 72(1): 90--102.}
+
+\small
+
+For the next few questions, I am going to read out some statements, and for each one, please tell me if it is true or false. If you don't know, \only<1>{just say so and we will skip to the next one}\only<2>{please just give me your best guess}.
+
+\begin{enumerate}\footnotesize
+\item Britain's electoral system is based on proportional representation.
+\item MPs from different parties are on parliamentary committees.
+\item The Conservatives are opposed to the ratification of a constitution for the European Union.
+\end{enumerate}
+
+***
+
+
+# An Instructional Manipulation\footnote{Prior \&Lupia. 2008. ``Money, Time, and Political Knowledge: Distinguishing Quick Recall and Political Learning Skills.'' \textit{American journal of Political Science} 52(1): 169--183.}
+
+\small
+
+\only<1>{In the next part of this study, you will be asked 14 questions about politics, public policy, and economics. Many people don't know the answers to these questions, but it is helpful for us if you answer, even if you're not sure what the correct answer is. We encourage you to take a guess on every question. At the end of this study, you will see a summary of how many questions you answered correctly.}\only<2>{We will pay you for answering questions correctly.
+You will earn \$1 for every correct answer you give. So, if you answer 3 of the 14 questions correctly, you will earn \$3. If you answer 7 of the 14 questions correctly, you will earn \$7. The more questions you answer correctly, the more you will earn.}
+
+***
+
+
+
+# Vignettes
+
+\begin{itemize}
+\item A ``vignette'' is a short text describing a situation
+\item Vignettes are probably the most common survey experimental paradigm, after question wording designs
+\item Take many forms and increasingly encompass non-textual stimuli
+\item Basically limited to web-based mode
+\end{itemize}
+
+***
+
+# A classic vignette\footnote{Gilens, M. 1996. ```Race coding' andwhite opposition to welfare. \textit{American Political Science Review} 90(3): 593--604.}
+
+\small
+
+Now think about a \textbf{(black/white)} woman in her early thirties. She is a high school \textbf{(graduate/drop out)} with a ten-year-old child, and she has been on welfare for the past year.
+
+\begin{itemize}\footnotesize
+\item How likely is it that she will have more children in order to get a bigger welfare check? (1 = Very likely, \dots, 7 = Not at all likely)
+\item How likely do you think it is that she will really try hard to find a job in the next year? (1 = Very likely, \dots, 7 = Not at all likely)
+\end{itemize}
+***
+
+
+# \normalsize Newer vignette\footnote{Banerjee et al. 2012. ``ArePoor Voters Indifferent to Whether Elected Leaders are Criminal or Corrupt? A Vignette Experiment in Rural India.'' Working paper.}
+
+\footnotesize
+
+Imagine that you were living in a village in another district in Uttar Pradesh and that you were voting for candidates in \textbf{(village/state/national)} election. Here are the two candidates who are running against each other: The first candidate is named \textbf{(caste name)} and is running as the \textbf{(BJP/SP/BSP)} party candidate. \textbf{(Corrupt/criminality allegation)}. His opponent is named \textbf{(caste name)} and is running as the \textbf{(BJP/SP/BSP)} party candidate. \textbf{(Opposite corrupt/criminality allegation)}. From this information, please indicate which candidate you would vote for in the \textbf{(village/state/national)} election. 
+
+***
+
+# \normalsize Longer vignette example\footnote{Merolla and Zechmeister. 2013. ``Evaluating Political Leaders in Times of Terror and Economic Threat: The Conditioning Influence of Politician Partisanship.'' \textit{Journal of Politics} 75(3): 599--712.}
+
+\begin{center}
+\includegraphics<1>[width=.85\textwidth]{./../../images/merollazechmeister1}
+\includegraphics<2>[width=.85\textwidth]{./../../images/merollazechmeister2}
+\end{center}
+
+***
+
+# Some vignette considerations
+
+\begin{itemize}\small
+\item<2-> Comparability across conditions
+	\begin{itemize}
+	\item Length
+	\item Readability
+	\end{itemize}
+\item<3-> Language proficiency
+\item<4-> Length
+	\begin{itemize}\small
+	\item Timers
+	\item Forced exposure
+	\item Mouse trackers
+	\end{itemize}
+\item<5-> Devices
+	\begin{itemize}\small
+	\item Browser-specificity
+	\item Device sizes (e.g., mobile)
+	\end{itemize}
+\end{itemize}
+
+***
+
+
+
+# Non-textual Manipulations
+
+\small
+
+\begin{itemize}\itemsep0.5em
+\item Images can work well
+\item Standalone or embedded in a text or question
+\item<2-> Examples
+	\begin{itemize}\footnotesize
+	\item<2-> Kalmoe \& Gross\footnote{``Cueing Patriotism, Prejudice, and Partisanship in the Age of Obama: Experimental Tests of U.S. Flag Imagery Effects in Presidential Elections.'' \textit{Political Psychology}: in press.} measure impact of patriotic cues on candidate support by showing images of candidates with and without flags
+	\item<3-> Subliminal primes possible, depending on software
+	\item<4-> Lots of recent examples of facial manipulation
+	\end{itemize}
+
+\end{itemize}
+
+***
+
+# Example\footnote{Iyengar et al. 2010. ``Do Explicit Racial CuesInfluence Candidate Preference? The Case of Skin Complexion in the 2008 Campaign.'' Working paper.}
+
+\includegraphics[width=\textwidth]{./../../images/IyengarMessingBailenson}
+
+***
+
+# Example\footnote{Laustsen \& Petersen. 2016. ``WinningFaces vary by Ideology.'' \textit{Political Communication} 33(2): 188--211.}
+
+\begin{center}
+\includegraphics[width=\textwidth, trim={0cm 0cm 0cm 9cm}, clip]{./../../images/laustsen}
+\end{center}
+***
+
+# Example\footnote{Bailenson et al. 2006. ``Transformed Facial Similarity as a Political Cue: A Preliminary Investigation.'' \textit{Political Psychology} 27(3): 373--385.}
+
+\begin{center}
+\includegraphics[width=\textwidth, trim={0cm 7.7cm 0cm 0cm}, clip]{./../../images/BailensonGarlandIyengar}
+\end{center}
+***
+
+
+
+
+# Audio \& Video manipulations
+
+\small
+
+\begin{itemize}\itemsep-0.2em
+\item Problematic for same reasons as long texts
+\item<2-> Best practices
+	\begin{itemize}\footnotesize
+	\item Keep it short
+	\item Have the video play automatically
+	\item Disallow survey progression
+	\item Control and validate
+	\end{itemize}
+\item<3->Examples
+	\begin{itemize}
+	\item Television Advertisements\footnote{Vavreck. 2007 ``The Exaggerated Effects of Advertising on Turnout: The Dangers of Self-Reports.'' \textit{Quarterly Journal of Political Science} 2: 325--343.} 
+	\item News Programs\footnote{Mutz. 2007. ``Effects of `In-Your-Face' Television Discourse on Perceptions of a Legitimate Opposition.'' \textit{American Political Science Review} 101(4): 621--635.}
+	\end{itemize}	
+\end{itemize}
+
+***
+
+
+
+
+# ``Task'' Designs
+
+\begin{itemize}\itemsep0.5em
+\item Task designs ask respondents to perform a task
+\item Often developed for laboratory settings
+\item<2-> Most common example: writing something
+\item<3-> Can be problematic:
+	\begin{itemize}
+	\item Time-intensive
+	\item Invites drop-off
+	\item Compliance problems
+	\end{itemize}
+\end{itemize}
+
+***
+
+
+
+
+
+# Univalent
+
+*These days, Democrats and Republicans differ from one another considerably. The two groups seem to be growing further and further apart, not only in terms of their opinions but also their lifestyles. Earlier in the survey, you said you tend to identify as a Democrat/ Republican. Please take a few minutes to think about what you like about Democrats/ Republicans compared to the Republicans/ Democrats. Think of 2 to 3 things you especially like best about **your party**. Then think of 2 to 3 things you especially dislike about **the other party**. Now please write those thoughts in the space below.*
+
+***
+
+# Ambivalent
+*These days, Democrats and Republicans differ from one another considerably. The two groups seem to be growing further and further apart, not only in terms of their opinions but also their lifestyles. Earlier in the survey, you said you tend to identify as a Democrat/ Republican. Please take a few minutes to think about what you like about Democrats/ Republicans compared to the Republicans/ Democrats. Think of 2 to 3 things you especially like best about **the other party**. Then think of 2 to 3 things you especially dislike about **your party**. Now please write those thoughts in the space below.*
+
+***
+
+
+# Questions?

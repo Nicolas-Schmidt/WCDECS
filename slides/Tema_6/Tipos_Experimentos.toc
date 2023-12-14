@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Experimentos de Campo}{3}{0}{1}
+\beamer@sectionintoc {2}{Experimentos Naturales}{16}{0}{2}
+\beamer@sectionintoc {3}{Experimentos de Encuesta}{35}{0}{3}
+\beamer@sectionintoc {4}{Experimentos de Laboratorio}{84}{0}{4}

@@ -1,0 +1,92 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+
+
+\section{Introduction}
+ text
+
+\subsection*{Researcher Name:} 
+\subsection*{Researcher Name:}
+\subsection*{Research Project Title:}
+
+Non-contributory policies
+
+\subsection*{One sentence summary of research question: }
+
+Study on social policy preferences. We look at preferences for redistributing income toward the poor and the informal sector.
+
+\subsection*{Substantive motivation}
+
+In countries with large informal sectors, many individuals' income security depends on non-contributory policies. CCTs are a special case, targeted to the poor. Expansions of non-contributory components to existing social policies (such as unemployment benefits and pensions) are politically difficult to sell, specially to those who contribute to finance social insurance. This project aims at understanding individual-level preferences for noncontributory social policies.
+
+\subsection*{Theoretical motivation }
+
+
+\subsection*{Key literatures/debates to which this will contribute:}
+
+Existing research suggests that ...
+
+
+\subsection*{Primary Hypothesis}
+
+H0: The for support non-contributory policies is larger when these policies target the poor rather than the informal sector. 
+
+H1: Non-contributory policies to protect informal workers have more support when these workers look like being excluded from good stable jobs (informal salaried workers) than when .... using informality as ``exit'' (self-employed).
+
+
+\section{Identification Strategy}
+
+\subsection*{X}
+
+$X_1$ is whether non-contributory social protection is targeted to the ``informal'' sector. 
+
+$X_2$ is whether non-contributory social protection is targeted to the ``poor''.
+
+\subsection*{Y}
+
+The outcome is the support for non-contributory social protection.
+
+$Y_1$ is the support for non-contributory unemployment benefits
+$Y_2$ is the support for non-contributory pensions
+
+
+\subsection*{Units}
+
+The units are working age individuals.  
+
+\subsection*{Random Assignment}
+
+The random assignment to treatment is automated based on On-line survey.
+
+
+\section{Sample, Data, \& Implementation Strategies}
+
+
+
+\subsection*{Sample}
+\subsection*{Measurement strategy:}
+\subsection*{Heterogeneity}
+\subsection*{Implementation Strategy}
+
+\section{Power}
+
+	
+\subsection*{Effect Size}
+\subsection*{Intra-Cluster Correlation (ICC)}
+\subsection*{Power Calculation}
+
+\section{Analysis \& Threats}
+
+\subsection*{Analysis strategy}
+\subsection*{Interpretation strategy}
+\subsection*{Threats to internal validity}
+\subsection*{Threats to external validity}
+\subsection*{Writing strategy}
+
+
+
+
+\end{document}

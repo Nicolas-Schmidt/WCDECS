@@ -1,0 +1,11 @@
+\frametitle{\(\textbf {R}\)}
+\protect\hypertarget{textbfr}{}
+\texttt{rdrobust}: graphical presentation and local polynomial methods
+
+\texttt{rddensity}: density discontinuity tests (manipulation testing)
+
+\texttt{rdlocrand}: local randomization methods
+
+\texttt{rdmulti}: analysis of RD with multiple cutoffs or scores
+
+\texttt{rdpower}: power and sample size calculation

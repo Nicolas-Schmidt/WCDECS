@@ -1,0 +1,248 @@
+---
+title: "Tipos de experimentos de encuesta: diseños complejos"
+author:
+- "*Santiago López-Cariboni*, Universidad de la República - dECON"
+output: 
+  beamer_presentation:
+  toc: true
+keep_tex: yes
+---
+
+
+# Sensitive question designs
+
+## Sensitive Item Designs
+
+- Randomization can be used to measure something
+
+- List experiments
+	+ Randomly present lists of items of varying length 
+	+ Difference in count of items supported is prevalence of sensitive attitude/behavior
+
+- Randomized response 
+	+ Present a sensitive question
+	+ Use a randomization device to dictate whether the respondent answers the sensitive question or something else
+
+
+
+
+## List Experiments^[Kuklinski et al. 1997. “Racial Prejudice and Attitudes Toward Affirmative Action.” American Journal of Political Science 41(2): 402–419.]
+
+Now I’m going to read you three things that sometimes make people angry or upset. After I read all three, just tell me *how many* of them upset you. I don’t want to know which ones. just how many.
+
+1. the federal government increasing the tax on gasoline
+2. professional athletes getting million-dollar salaries
+3. large corporations polluting the environment
+
+
+## List Experiments^[Kuklinski et al. 1997. “Racial Prejudice and Attitudes Toward Affirmative Action.” American Journal of Political Science 41(2): 402–419.]
+
+Now I’m going to read you three things that sometimes make people angry or upset. After I read all three, just tell me *how many* of them upset you. I don’t want to know which ones. just how many.
+
+1. the federal government increasing the tax on gasoline
+2. professional athletes getting million-dollar salaries
+3. large corporations polluting the environment
+4. **a black family moving in next door**
+
+
+
+## Randomized Response^[Blair, Imai, and Zhou. 2015. “Design and Analysis of the Randomized Response Technique.” JASA 110(511): 1304–19.]
+
+Here is a bag; in it there are stones from the game ‘Go,’ some colored black and others white. Please take one stone out, and see by yourself what color it is, black or white. Don’t let me know whether it is black or white, but be sure you know which it is.
+
+If you take a black one, answer the question: “Have you ever had an induced abortion?”
+
+If you take a white one, answer the question: “Were you born in the lunar year of the horse?’
+
+Considerations:
+
+- Can use any randomization device 
+- Can be cognitively complex
+
+
+
+# Conjoint Analysis
+
+
+## Conjoint experiments
+
+- Surveys measure stated preferences
+
+- Conjoint analysis involves measuring revealed preferences based upon a series of forced-choice decisions
+	- Present respondents with pairs of “profiles” containing many features
+	- Force respondents to choose which of the two they prefer
+
+- Estimate relative importance of features of each profile
+
+- Randomization of profile features gives differences in preferences across attributes a causal meaning
+
+
+## Pros and Cons
+
+- Pros
+	- Reduces “cheap talk” results
+	- Lower social desirability biases
+	- Mimics real-world decisions
+	- Revealed preferences are causally interpretable
+
+- Cons
+	- More cognitively complex for respondents than traditional polling
+	- No straightforward “% support” statistics
+
+
+
+## Inmigration Example^[Hainmueller, Jens, and Daniel J. Hopkins. 2015. “The Hidden American Immigration Consensus: A Conjoint Analysis of Attitudes toward Immigrants.” American Journal of Political Science 59 (3): 529–48.]
+
+\begin{center}
+\includegraphics[width=4in]{hainmueller}
+\end{center}
+
+## Inmigration Example
+
+Introduction to experimental tasks:
+
+“This study considers immigration and who is permitted to come to the
+United States to live. For the next few minutes, we are going to ask you to act as if
+you were an immigration official. We will provide you with several pieces of information about people who might apply to move to the United States. For each pair of people,
+please indicate which of the two immigrants you would personally prefer to see admitted
+to the United States. This exercise is purely hypothetical. Please remember that the
+United States receives many more applications for admission than it can accept. Even if
+you aren’t entirely sure, please indicate which of the two you prefer.”
+
+
+## Inmigration Example
+
+\begin{center}
+\includegraphics[width=4in]{inmigrant_profiles}
+\end{center}
+
+
+## Inmigration Example
+
+\begin{center}
+\includegraphics[width=4in]{inmigrant_outcomes}
+\end{center}
+
+
+## Inmigration Example
+
+\begin{center}
+\includegraphics[width=4in]{attval_table}
+\end{center}
+
+
+
+## Inmigration Example : Results
+
+\begin{center}
+\includegraphics[width=2.8in]{results}
+\end{center}
+
+
+## Conjoint experiments: design issues
+
+
+- Randomization of attributes (think about the profile distribution)
+	+ Full randomization gives a uniform multivariate distribution
+	+ Differences with the MVD in the population
+	+ Weighted randomization such that some values would be drawn more frequently than others
+	+ Restricted randomization
+	+ Consequences for the estimation of AMCE
+
+- Randomization of attribute ordering
+	+ causal effects of attributes themselves can be separately identified from pure order effects
+	+ Reshuffling Cognitive demanding
+	+ Randomly order attributes in the first table, and fix the order throughout the rest of the experiment
+
+## Conjoint experiments: design issues
+
+
+- Number of profiles
+	+ Paired-profile designs tend to perform well compared to single-profile designs
+
+- Number of tasks 
+	+ It is safe to use as many as 30 tasks on respondents from MTurk and Survey Sampling International's online panel without detectable degradation in response quality (Bansak et al., 2018)
+
+- Number of attributes
+	+ trade-off between masking and satisficing
+	+ Bansak et al. (2019) provide evidence that subjects resist even 10 attributes well.
+
+
+## Conjoint experiments: design issues
+
+- Outcome measures
+	+ Individual rating 
+	+ Forced choice outcomes
+
+
+## AMCEs
+
+Statistic of interest is the *average marginal component effect* (AMCE), which is the causal effect of each level of each feature on support for an overall profile.
+
+
+AMCE: *The effect of a particular attribute value of interest against another value of the same attribute while holding equal the joint distribution of the other attributes in the design, averaged over this distribution as well as the sampling distribution from the population. *
+
+
+Estimación: 
+
+- Nonparametric
+- OLS with dummy variables for each attribute value
+
+We can estimate this using (dummy variable) OLS, assuming:
+
+- Full randomization of attributes and randomized pairing of profiles
+- Even presentation of levels w/in features 
+- No profile ordering effects
+
+
+## Implementing a Conjoint
+
+Hope someone else can do it for you!
+	- Requires programming
+	- Not possible to manually create all possible combinations
+
+- Strezhnev et al.’s tool:
+https://github.com/astrezhnev/conjointsdt
+
+
+- Alex Meyer's conjoint for Qualtrics
+https://github.com/acmeyer/Conjoint-for-Qualtrics-Offline
+
+- Leeper's Example of conjoint experimental Design in Qualtrics:
+https://github.com/leeper/conjoint-example
+
+
+## Questions?
+
+
+
+## Write a pre-analysis plan 
+
+A complete planning document for how to design, implement, and analyze an experiment
+
+- Consider the EGAP form in the course materials. This is a general guide for experiments. 
+
+- In your survey experiment example, make sure you are considering:
+
+1. Theory/hypotheses 
+2. Instrumentation
+	- Manipulation(s) 
+	- Outcome(s) 
+	- Covariate(s) 
+	- Manipulation check(s)
+3. Sampling
+4. Implementation 
+5. Analysis
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+{com}. twoway (scatter Y X, ///
+>         mcolor(black) xline(0, lcolor(black))), ///
+>         graphregion(color(white)) ytitle(Outcome) ///
+>         xtitle(Score)

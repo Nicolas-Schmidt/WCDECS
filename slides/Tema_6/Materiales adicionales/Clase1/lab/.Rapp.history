@@ -1,0 +1,885 @@
+dt[prod_class=="Sachet" & proveedor!="P&G", share_importe_barra := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo)]
+a <- hist(#
+  dt[proveedor=="P&G", #
+  .(mean_share_barra = mean(share_importe_barra, na.rm=TRUE)),#
+  pdv_codigo]$mean_share_barra, #
+  main = "Share importe Sachet (P&G)", breaks = 100#
+)
+dt[prod_class=="Sachet" & proveedor=="P&G", share_importe_sachet := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo)]
+dt
+dt[prod_class=="Sachet" & proveedor!="P&G", share_importe_sachet := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo)]
+dt <- setDT(read.csv("/Users/slopezcariboni/Dropbox/Research/Papers/scann/Exp_Peru/Plantilla_Deos.csv"))
+#share barra#
+dt[, fact_pdv := sum(valor, na.rm=TRUE), fecha]#
+dt[prod_class=="Barra" & proveedor=="P&G", share_importe_barra := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo)]#
+dt[prod_class=="Barra" & proveedor!="P&G", share_importe_barra := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo)]#
+#
+a <- hist(#
+  dt[proveedor=="P&G", #
+  .(mean_share_barra = mean(share_importe_barra, na.rm=TRUE)),#
+  pdv_codigo]$mean_share_barra, #
+  main = "Share importe Barra (P&G)", breaks = 100#
+)#
+b <- hist(#
+  dt[proveedor!="P&G", #
+  .(mean_share_barra=mean(share_importe_barra, na.rm=TRUE)), pdv_codigo]$mean_share_barra, #
+  main = "Share importe Barra (otros)", breaks = 100#
+)#
+#
+par(mfrow= c(1,2))#
+plot(a, xlim= c(0,.2), xlab = "Share", main = "Barra - P&G") #
+plot(b, xlim= c(0,.2), xlab = "Share", main = "Barra - Otros")#
+par(mfrow= c(1,1))
+dt <- setDT(read.csv("/Users/slopezcariboni/Dropbox/Research/Papers/scann/Exp_Peru/Plantilla_Deos.csv"))
+print(#
+paste("PDVs:",#
+dt[, length(unique(pdv_codigo))]#
+))
+dt[, fact_pdv := sum(valor, na.rm=TRUE), fecha]
+dt[prod_class=="Barra" & proveedor=="P&G", share_importe_barra := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo)]
+dt
+dt[prod_class=="Barra" & proveedor=="P&G", share_importe_barra := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo)]
+dt
+dt[prod_class=="Barra" & proveedor!="P&G", share_importe_barra := ifelse(is.na(share_importe_barra),0, share_importe_barra), .(fecha, pdv_codigo)]
+dt
+a <- hist(#
+  dt[proveedor=="P&G", #
+  .(mean_share_barra = mean(share_importe_barra, na.rm=TRUE)),#
+  pdv_codigo]$mean_share_barra, #
+  main = "Share importe Barra (P&G)", breaks = 100#
+)
+dr
+dt
+dt  <- complete(dt, nesting(pdv_codigo, prod_class,proveedor), fecha)
+dt
+dt[, fact_pdv := sum(valor, na.rm=TRUE), fecha]
+setDT(dt)
+dt[, fact_pdv := sum(valor, na.rm=TRUE), fecha]
+dt
+dt[, fact_pdv := sum(valor, na.rm=TRUE), fecha]
+dt
+dt[prod_class=="Barra" & proveedor=="P&G", share_importe_barra := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo)]
+dt
+dt[, share_importe_barra := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo, prod_class, proveedor)]
+dt
+dt[, share_importe := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo, prod_class, proveedor)]
+dt[prod_class=="Barra", #
+  .(mean_share_barra = mean(share_importe, na.rm=TRUE)),#
+  pdv_codigo]
+dt[prod_class=="Barra" & proveedor == "P&G", #
+  .(mean_share_barra = mean(share_importe, na.rm=TRUE)),#
+  pdv_codigo]
+a <- hist(#
+  dt[prod_class=="Barra" & proveedor == "P&G", #
+  .(mean_share_barra = mean(share_importe, na.rm=TRUE)),#
+  pdv_codigo]$mean_share_barra, #
+  main = "Share importe Barra (P&G)", breaks = 100#
+)
+dt
+dt  <- complete(dt, pdv_codigo, fecha, prod_class,proveedor)
+dt
+setDT(dt)
+dt[, fact_pdv := sum(valor, na.rm=TRUE), fecha]
+dt[, share_importe := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo, prod_class, proveedor)]
+a <- hist(#
+  dt[prod_class=="Barra" & proveedor == "P&G", #
+  .(mean_share_barra = mean(share_importe, na.rm=TRUE)),#
+  pdv_codigo]$mean_share_barra, #
+  main = "Share importe Barra (P&G)", breaks = 100#
+)
+print(#
+paste("PDVs:",#
+dt[, length(unique(pdv_codigo))]#
+))
+dt <- setDT(read.csv("/Users/slopezcariboni/Dropbox/Research/Papers/scann/Exp_Peru/Plantilla_Deos.csv"))
+print(#
+paste("PDVs:",#
+dt[, length(unique(pdv_codigo))]#
+))#
+#
+dt  <- complete(dt, pdv_codigo, fecha, prod_class,proveedor)#
+setDT(dt)
+dt
+#share barra
+dt <- setDT(read.csv("/Users/slopezcariboni/Dropbox/Research/Papers/scann/Exp_Peru/Plantilla_Deos.csv"))
+dt
+table(prod_class=="")
+table(dt$prod_class=="")
+table(dt$proveedor=="")
+table(dt$pdv_codigo=="")
+table(dt$pdv_fecha=="")
+table(is.na(dt$pdv_fecha))
+table(dt$fecha=="")
+dt <- dt[prod_class!="",]
+dt <- complete(dt, pdv_codigo, fecha, prod_class,proveedor)#
+setDT(dt)
+dt
+dt[, valor = ifelse(is.na(valor), 0, valor)]
+dt[, valor := ifelse(is.na(valor), 0, valor)]
+dt
+dt <- setDT(read.csv("/Users/slopezcariboni/Dropbox/Research/Papers/scann/Exp_Peru/Plantilla_Deos.csv"))#
+#
+print(#
+paste("PDVs:",#
+dt[, length(unique(pdv_codigo))]#
+))#
+table(dt$prod_class=="")#
+table(dt$proveedor=="")#
+table(dt$pdv_codigo=="")#
+table(dt$fecha=="")#
+dt <- dt[prod_class!="",]#
+#
+dt <- complete(dt, pdv_codigo, fecha, prod_class,proveedor)#
+setDT(dt)#
+dt[, valor := ifelse(is.na(valor), 0, valor)]
+dt[, fact_pdv := sum(valor, na.rm=TRUE), fecha]
+dt[, share_importe := sum(valor, na.rm=TRUE)/fact_pdv, .(fecha, pdv_codigo, prod_class, proveedor)]
+a <- hist(#
+  dt[prod_class=="Barra" & proveedor == "P&G", #
+  .(mean_share_barra = mean(share_importe, na.rm=TRUE)),#
+  pdv_codigo]$mean_share_barra, #
+  main = "Share importe Barra (P&G)", breaks = 100#
+)
+b <- hist(#
+  dt[proveedor!="P&G", #
+  .(mean_share_barra=mean(share_importe_barra, na.rm=TRUE)), pdv_codigo]$mean_share_barra, #
+  main = "Share importe Barra (otros)", breaks = 100#
+)
+b <- hist(#
+  dt[prod_class=="Barra" & proveedor!="P&G", #
+  .(mean_share_barra=mean(share_importe, na.rm=TRUE)), pdv_codigo]$mean_share_barra, #
+  main = "Share importe Barra (otros)", breaks = 100#
+)
+par(mfrow= c(1,2))#
+plot(a, xlim= c(0,.2), xlab = "Share", main = "Barra - P&G") #
+plot(b, xlim= c(0,.2), xlab = "Share", main = "Barra - Otros")#
+par(mfrow= c(1,1))
+a <- hist(#
+  dt[prod_class=="Barra" & proveedor == "P&G", #
+  .(mean_share_barra = mean(share_importe, na.rm=TRUE)),#
+  pdv_codigo]$mean_share_barra, #
+  main = "Share importe Barra (P&G)", breaks = 100#
+)#
+b <- hist(#
+  dt[prod_class=="Barra" & proveedor!="P&G", #
+  .(mean_share_barra=mean(share_importe, na.rm=TRUE)), pdv_codigo]$mean_share_barra, #
+  main = "Share importe Barra (otros)", breaks = 100#
+)#
+#
+par(mfrow= c(1,2))#
+plot(a, xlim= c(0,.2), xlab = "Share", main = "Barra - P&G") #
+plot(b, xlim= c(0,.2), xlab = "Share", main = "Barra - Otros")#
+par(mfrow= c(1,1))
+plot(a, xlim= c(0,.05), xlab = "Share", main = "Barra - P&G")
+plot(b, xlim= c(0,.05), xlab = "Share", main = "Barra - Otros")
+par(mfrow= c(1,2))#
+plot(a, xlim= c(0,.05), xlab = "Share", main = "Barra - P&G") #
+plot(b, xlim= c(0,.05), xlab = "Share", main = "Barra - Otros")
+par(mfrow= c(1,2))
+plot(a, xlim= c(0.0001,.05), xlab = "Share", main = "Barra - P&G")
+plot(b, xlim= c(0.0001,.05), xlab = "Share", main = "Barra - Otros")
+par(mfrow= c(1,1))
+par(mfrow= c(1,2))
+plot(a, xlim= c(0.005,.05), xlab = "Share", main = "Barra - P&G")
+plot(b, xlim= c(0.005,.05), xlab = "Share", main = "Barra - Otros")
+par(mfrow= c(1,2))
+plot(a, xlim= c(0.005,.01), xlab = "Share", main = "Barra - P&G")
+plot(b, xlim= c(0.005,.01), xlab = "Share", main = "Barra - Otros")
+plot(a, xlim= c(0.0001,.01), xlab = "Share", main = "Barra - P&G") #
+plot(b, xlim= c(0.0001,.01), xlab = "Share", main = "Barra - Otros")
+dt[prod_class=="Barra" & proveedor == "P&G", #
+  .(mean_share_barra = mean(share_importe, na.rm=TRUE)),#
+  pdv_codigo][mean_share_barra!=0, ]
+dt[prod_class=="Barra" & proveedor == "P&G", #
+  .(mean_share_barra = mean(share_importe, na.rm=TRUE)),#
+  pdv_codigo]
+b <- dt[prod_class=="Barra" & proveedor!="P&G", #
+  .(mean_share_barra=mean(share_importe, na.rm=TRUE)), pdv_codigo]
+par(mfrow= c(1,2))
+plot(a[,], xlim= c(0,.01), xlab = "Share", main = "Barra - P&G")
+plot(b[,], xlim= c(0,.01), xlab = "Share", main = "Barra - Otros")
+par(mfrow= c(1,1))
+a <- dt[prod_class=="Barra" & proveedor == "P&G", #
+  .(mean_share_barra = mean(share_importe, na.rm=TRUE)),#
+  pdv_codigo]
+b <- dt[prod_class=="Barra" & proveedor!="P&G", #
+  .(mean_share_barra=mean(share_importe, na.rm=TRUE)), pdv_codigo]
+par(mfrow= c(1,2))
+plot(a[,], xlim= c(0,.01), xlab = "Share", main = "Barra - P&G")
+plot(b[,], xlim= c(0,.01), xlab = "Share", main = "Barra - Otros")
+par(mfrow= c(1,1))
+par(mfrow= c(1,2))#
+hist(a[,]$mean_share_barra, xlim= c(0,.01), xlab = "Share", main = "Barra - P&G") #
+hist(b[,]$mean_share_barra, xlim= c(0,.01), xlab = "Share", main = "Barra - Otros")#
+par(mfrow= c(1,1))
+par(mfrow= c(1,2))#
+hist(a[,]$mean_share_barra, xlim= c(0,.01), xlab = "Share", main = "Barra - P&G", breaks = "fd") #
+hist(b[,]$mean_share_barra, xlim= c(0,.01), xlab = "Share", main = "Barra - Otros", breaks = "fd")#
+par(mfrow= c(1,1))
+par(mfrow= c(1,2))#
+hist(a[,]$mean_share_barra, xlim= c(0,.005), xlab = "Share", main = "Barra - P&G", breaks = "fd") #
+hist(b[,]$mean_share_barra, xlim= c(0,.005), xlab = "Share", main = "Barra - Otros", breaks = "fd")#
+par(mfrow= c(1,1))
+par(mfrow= c(1,2))#
+hist(a[mean_share_barra!=0,]$mean_share_barra, xlim= c(0,.005), xlab = "Share", main = "Barra - P&G", breaks = "fd") #
+hist(b[mean_share_barra!=0,]$mean_share_barra, xlim= c(0,.005), xlab = "Share", main = "Barra - Otros", breaks = "fd")#
+par(mfrow= c(1,1))
+pdv_sales <- dt[prod_class=="Barra",sold_barra:= ifelese(valor>0, 1, 0), .(pdv_codigo, fecha) ]
+pdv_sales
+pdv_sales <- dt[prod_class=="Barra",sold_barra:= ifelse(valor>0, 1, 0), .(pdv_codigo, fecha) ]
+pdv_sales
+pdv_sales <- dt[prod_class=="Barra",sold_barra:= ifelse(mean_share_barra>0, 1, 0), .(pdv_codigo, fecha) ]
+pdv_sales <- a[prod_class=="Barra",sold_barra:= ifelse(sum(share_importe)>0, 1, 0), .(pdv_codigo, fecha) ]
+pdv_sales <- dt[prod_class=="Barra",sold_barra:= ifelse(sum(share_importe)>0, 1, 0), .(pdv_codigo, fecha) ]
+pdv_sales
+library(DeclareDesign)
+Ç regression_discontinuity_designer
+? regression_discontinuity_designer
+dt <- fread("https://www.dropbox.com/s/m201u6flm8ofex7/fiscal_deficit.xlsx?dl=1")
+knitr::opts_chunk$set(fig.align = "center", eval=TRUE, cache=FALSE, tidy=TRUE, message=FALSE)
+# Packages
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load("here", "data.table", "ggplot2", "dtplyr", "dplyr", "tidyverse", "rcompanion", "car", "estimatr", "huxtable", "texreg")
+dt <- fread("https://www.dropbox.com/s/m201u6flm8ofex7/fiscal_deficit.xlsx?dl=1")
+dt
+dt <- fread("https://www.dropbox.com/s/xfvkiljg2co4rzz/dtguay031820.csv?dl=1")
+dt
+dt <- fread("https://www.dropbox.com/s/m201u6flm8ofex7/fiscal_deficit.xlsx?dl=1")
+dt
+dt <- fread("https://www.dropbox.com/s/m201u6flm8ofex7/fiscal_deficit.xlsx?dl=1")
+dt
+dt <- fread("https://www.dropbox.com/s/m201u6flm8ofex7/fiscal_deficit.xlsx?dl=1")
+dt <- fread("https://www.dropbox.com/s/z058tmyazdry1dd/fiscal_deficit.csv?dl=0=1")
+dt <- fread("https://www.dropbox.com/s/z058tmyazdry1dd/fiscal_deficit.csv?dl=1")
+dt
+dt <- fread("https://www.dropbox.com/s/z058tmyazdry1dd/fiscal_deficit.csv?dl=1")
+dt
+plot(global_public_sector_debt~year, data=dt)
+plot(global_public_sector_debt~year, tipe="l", data=dt)
+plot(global_public_sector_debt~year, type="l", data=dt)
+ggplot(data=dt, aes(global_public_sector_debt~year))+#
+gg_lines()
+ggplot(data=dt, aes(global_public_sector_debt~year))+#
+gg_line()
+ggplot(data=dt, aes(global_public_sector_debt~year))
+ggplot(data=dt, aes(global_public_sector_debt, year))+#
+gg_line()
+ggplot(data=dt, aes(global_public_sector_debt, year))
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+ggline()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+gglines()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+ylim(c(.1, -.1))
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+ylim(c(.1, -.1))
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+ylim(c(-.1, .1))
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_hline(0)+#
+ylim(c(-.1, .1))
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_hline(c(0))+#
+ylim(c(-.1, .1))
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_hline(aes(0))+#
+ylim(c(-.1, .1))
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_hline(yintercept=0)+#
+ylim(c(-.1, .1))
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.1, .1))
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.1, .1))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.05, .1))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.01, .05))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.05, .05))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.1, .05))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_vline(xintercept=1999.2, color = "grey")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.1, .05))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_vline(xintercept=2019.2, color = "grey")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.1, .05))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_vline(xintercept=2020.2, color = "grey")+#
+geom_vline(xintercept=2019.8, color = "grey")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.1, .05))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+dt
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_vline(xintercept=2020.2, color = "grey")+#
+geom_vline(xintercept=2019.8, color = "grey")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.1, .05))+#
+xlim(c(1995, 2021))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_vline(xintercept=2020.2, color = "grey")+#
+geom_vline(xintercept=2019.8, color = "grey")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.1, .05))+#
+xlim(c(1995, 2024))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt, x=year))+#
+geom_line()+#
+geom_vline(xintercept=2020.2, color = "grey")+#
+geom_vline(xintercept=2019.8, color = "grey")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-.1, .05))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+geom_vline(xintercept=2020.2, color = "grey")+#
+geom_vline(xintercept=2019.8, color = "grey")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_vline(xintercept=2019.8, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = as.POSIXct("2020-02-01"), y = 34, label = "Some text")
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = as.POSIXct("2020-02-01"), y = 34, label = "Some text") +#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_vline(xintercept=2019.8, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = as.POSIXct("2020-12-01"), y = 34, label = "Some text") +#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_vline(xintercept=2019.8, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = as.POSIXct("2020-12-01"), y = 1, label = "Some text") +#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_vline(xintercept=2019.8, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = as.POSIXct("2020-01-01"), y = 1, label = "Some text") +#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_vline(xintercept=2019.8, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = as.POSIXct("2020-01-01"), y = 0, label = "Some text") +#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_vline(xintercept=2019.8, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+as.POSIXct("2020-01-01")
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = as.Date("2020-01-01"), y = 1, label = "Some text") +#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_vline(xintercept=2019.8, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2020, y = 1, label = "Some text") +#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_vline(xintercept=2019.8, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2020, y = 1, label = "Some text") +#
+geom_vline(xintercept=1999.8, color = "red")+#
+geom_vline(xintercept=2004.8, color = "red")+#
+geom_vline(xintercept=2009.8, color = "red")+#
+geom_vline(xintercept=2014.8, color = "red")+#
+geom_vline(xintercept=2019.8, color = "red")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2020, y = 1, label = "Some text") +#
+geom_vline(xintercept=1999.8, color = "grey")+#
+geom_vline(xintercept=2004.8, color = "grey")+#
+geom_vline(xintercept=2009.8, color = "grey")+#
+geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.8, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2020, y = 1, label = "Some text") +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+# geom_vline(xintercept=2019.8, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2020, y = 1, label = "Survey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+
+# geom_vline(xintercept=2004.8, color = "grey")+
+# geom_vline(xintercept=2009.8, color = "grey")+
+# geom_vline(xintercept=2014.8, color = "grey")+
+# geom_vline(xintercept=2019.8, color = "grey")+
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2021, y = 1, label = "Survey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+# geom_vline(xintercept=2019.8, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2022, y = 1, label = "Survey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+# geom_vline(xintercept=2019.8, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2022, y = 1, label = "Survey \n date") +#
+# geom_vline(xintercept=1999.8, color = "grey")+
+# geom_vline(xintercept=2004.8, color = "grey")+
+# geom_vline(xintercept=2009.8, color = "grey")+
+# geom_vline(xintercept=2014.8, color = "grey")+
+# geom_vline(xintercept=2019.8, color = "grey")+
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2022, y = 1, label = "Survey \n date", size=2) +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+# geom_vline(xintercept=2019.8, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2022, y = 1, label = "Survey \n date", size=4) +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+# geom_vline(xintercept=2019.8, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2022, y = 1, label = "Survey \n date", size=2.4) +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+# geom_vline(xintercept=2019.8, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2022, y = -5, label = "Survey \n date", size=2.4) +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+# geom_vline(xintercept=2019.8, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2018, y = -6, label = "Survey \n date", size=2.4) +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+# geom_vline(xintercept=2019.8, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2018, y = -7, label = "Survey \n date", size=2.4) +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+# geom_vline(xintercept=2019.8, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2018, y = -7, label = "Survey \n date", size=2.4) +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2018, y = -7, label = "Survey \n date", size=2.4, color = "blue") +#
+annotate("text", x = 2018, y = -7, label = "Election \n date", size=2.4, color = "grey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2018, y = -2, label = "Survey \n date", size=2.4, color = "blue") +#
+annotate("text", x = 2018, y = -4, label = "Election \n date", size=2.4, color = "grey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2018, y = -1, label = "Survey \n date", size=2.4, color = "blue") +#
+annotate("text", x = 2018, y = -3, label = "Election \n date", size=2.4, color = "grey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2021, y = -1, label = "Survey \n date", size=2.4, color = "blue") +#
+annotate("text", x = 2018, y = -3, label = "Election \n date", size=2.4, color = "grey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2022))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2022, y = -1, label = "Survey \n date", size=2.4, color = "blue") +#
+annotate("text", x = 2018, y = -2, label = "Election \n date", size=2.4, color = "grey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "grey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2024))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2022, y = -1, label = "Survey \n date", size=2.4, color = "blue") +#
+annotate("text", x = 2018, y = -2, label = "Election \n date", size=2.4, color = "darkgrey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "darkgrey")+#
+geom_vline(xintercept=2020.2, color = "blue")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2024))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2022, y = -1, label = "Survey \n date", size=2.4, color = "red") +#
+annotate("text", x = 2018, y = -2, label = "Election \n date", size=2.4, color = "darkgrey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+ey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "darkgrey")+#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2024))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2022, y = -1, label = "Survey \n date", size=2.4, color = "red") +#
+annotate("text", x = 2018, y = -2, label = "Election \n date", size=2.4, color = "darkgrey") +#
+# geom_vline(xintercept=1999.8, color = "grey")+#
+# geom_vline(xintercept=2004.8, color = "grey")+#
+# geom_vline(xintercept=2009.8, color = "grey")+#
+# geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "darkgrey")+#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2024))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2021, y = -1, label = "Survey \n date", size=2.4, color = "red") +#
+annotate("text", x = 2018, y = -2, label = "Election \n date", size=2.4, color = "darkgrey") +#
+geom_vline(xintercept=1999.8, color = "grey")+#
+geom_vline(xintercept=2004.8, color = "grey")+#
+geom_vline(xintercept=2009.8, color = "grey")+#
+geom_vline(xintercept=2014.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "darkgrey")+#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2024))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+ggplot(data=dt, aes(y=global_public_sector_debt*100, x=year))+#
+geom_line()+#
+annotate("text", x = 2021, y = -1, label = "Survey \n date", size=2.4, color = "red") +#
+annotate("text", x = 2018, y = -2, label = "Election \n date", size=2.4, color = "darkgrey") +#
+geom_vline(xintercept=2004.8, color = "grey")+#
+geom_vline(xintercept=2019.6, color = "darkgrey")+#
+geom_vline(xintercept=2020.2, color = "red")+#
+geom_hline(yintercept=0, color = "grey")+#
+ylim(c(-10, 5))+#
+xlim(c(1995, 2024))+#
+labs(x = "Year", y = "Government fiscal deficit / GDP")+#
+    theme_minimal()
+setwd("~/Dropbox/Research/Teaching/SurveyExperiments/Clase1/lab")
+library(gsheet)
+dat <- rio::import("https://docs.google.com/spreadsheets/d/1SKWljS1EeNkAV5V0NZUwrKOu3LQFILVMB37xfTxyrPM/edit#gid=778386445")
+dat <- read.delim("activity01.tsv")
+dat
+dat
+dat
+names(dat) <- c('Timestamp', 'Group', 'Guess')
+dat
+dat[["Guess"]] <- as.numeric(gsub("[[:punct:]]", "", dat[["Guess"]]))
+dat <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1JFhZ3vrgMMBWy7Ln6vfgaeYIgeg_TgEh6ah2ztyGaOk/edit?usp=sharing")
+dat <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1JFhZ3vrgMMBWy7Ln6vfgaeYIgeg_TgEh6ah2ztyGaOk/edit?usp=sharing")
+names(dat) <- c('Timestamp', 'Group', 'Guess')
+dat
+t.test(Guess ~ Group, data = dat) # unequal variances assumed
+s <- summary(m <- lm(Guess ~ Group, data = dat))
+sandwich::vcovHC(m)
+s$coefficients[,2] <- sqrt(diag(sandwich::vcovHC(m)))
+s$coefficients[,3] <- s$coefficients[,1]/s$coefficients[,2]
+s$coefficients[,4] <- 2*(1-pt(s$coef[,3], df = nrow(dat)-2L))
+s
+dat <- rio::import("https://docs.google.com/spreadsheets/d/1SKWljS1EeNkAV5V0NZUwrKOu3LQFILVMB37xfTxyrPM/edit#gid=778386445")#
+# dat <- read.delim("activity01.tsv")#
+dat#
+# cleanup data slightly#
+dat[["Guess"]] <- as.numeric(gsub("[[:punct:]]", "", dat[["Guess"]]))#
+#
+# anayze experiment ##
+#
+## t-test#
+t.test(Guess ~ Group, data = dat) # unequal variances assumed#
+t.test(Guess ~ Group, data = dat, var.equal = TRUE)#
+#
+plot()#
+#
+## OLS regression#
+s <- summary(m <- lm(Guess ~ Group, data = dat))#
+#
+### OLS /w heteroskedasticity consistent standard errors#
+#install.packages("sandwich")#
+sandwich::vcovHC(m)#
+s$coefficients[,2] <- sqrt(diag(sandwich::vcovHC(m)))#
+s$coefficients[,3] <- s$coefficients[,1]/s$coefficients[,2]#
+s$coefficients[,4] <- 2*(1-pt(s$coef[,3], df = nrow(dat)-2L))#
+s
+plot(dat)
+plot(Gues~Group, dat)
+plot(Guess~Group, dat)
+s
+plot(Guess~Group, dat)
+plot(Guess~Group, na.omit(dat))
+na.omit(dat)
+plot(Guess~as.factor(Group), na.omit(dat))
+plot(Guess~as.factor(Group), dat)
+# plot#
+plot(Guess~as.factor(Group), dat)
+dat <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1JFhZ3vrgMMBWy7Ln6vfgaeYIgeg_TgEh6ah2ztyGaOk/edit?usp=sharing")
+names(dat) <- c('Timestamp', 'Group', 'Guess')
+dat
+plot(Guess~as.factor(Group), dat)
+t.test(Guess ~ Group, data = dat) # unequal variances assumed
+1.0e+07
+1.0e+07 - 10
+t.test(Guess ~ Group, data = dat) # unequal variances assumed

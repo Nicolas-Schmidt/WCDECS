@@ -1,0 +1,482 @@
+---
+title: |
+ | Diseño e Implementación de experimentos en ciencias sociales
+ | Experimentos de Laboratorio
+author: |
+ | Lucía Suarez Ferrer
+ | *Departamento de Economía (UdelaR)*
+format: beamer
+
+output:
+  beamer_presentation:
+    toc: no
+    keep_tex: yes
+    slide_level: 2
+    includes:
+      in_header: header.tex
+  slidy_presentation: default
+number_sections: no
+theme: default
+fonttheme: professionalfonts
+---
+
+# Experimentos de Laboratorio
+
+## Lecturas
+
+-   Falk & Heckman, 2009: Las Experiments Are a Major Source of Knowledge in the Social Sciences
+-   Levine & Palfrey, 2007: The Paradox of Voter Participation? A Laboratory Study
+-   Levitt & List, 2007: What Do Laboratory Experiments Measuring Social Preferences Reveal About the Real World?
+
+## Objetivos de los Experimentos
+
+1.  Testear teorías
+
+    -   Podemos implementar las condiciones de la teoría
+    -   Comparar la predicción teórica con el resultado experimental
+    -   Explorar las causas por las que una teoría falla
+
+2.  Ofrecer modelos comportamentales
+
+    -   Estos describen el comportamiento en un contexto particular
+
+3.  Establecer regularidades empíricas como base de nuevas teorías
+
+4.  Testear instituciones y ambientes
+
+5.  Evaluar propuestas de políticas
+
+6.  Revelación de las preferencias
+
+    -   Valoración
+    -   Parámetros de la función de utilidad (tolerancia al riesgo, preferencia temporal, cooperación)
+
+## Experimentos para medir preferencias sociales
+
+![](images/lab_social_preferences1.png){fig-align="center"}
+
+## Experimentos para medir preferencias sociales
+
+![](images/lab_social_preferences2.png){fig-align="center"}
+
+## Ventajas de los experimentos de laboratorio
+
+-   Variación controlada:
+    -   Podemos mantener todo lo demás constante y cambiar de a una variable a la vez
+    -   Permite un control estricto de los entornos de decisión, de las covariables
+    -   Esto aplica, en particular, para testear modelos y supuestos comportamentales (teoría de juegos)
+-   Replicabilidad
+    -   Suele ser más difícil en los otros tipos de experimentos
+
+## Limitaciones de los experimentos de laboratorio
+
+1.  \textit{Los experimentos no son realistas}
+    -   La simplicidad es una virtud: permite centrarse en los elementos clave
+2.  \textit{Los experimentos son artificiales}
+    -   Grupo de sujetos sesgado (estudiantes)
+        -   Se puede utilizar otros sujetos
+    -   Número reducido de participantes
+        -   Se puede aumentar el número de participantes
+    -   Sujetos inexpertos
+        -   Se puede reclutar participantes con experiencia
+3.  \textit{Límites de los experimentos}
+    -   El control nunca es perfecto
+        -   El tiempo, el entorno del laboratorio condiciona el comportamiento
+        -   No hay control real sobre los demás motivos
+4.  Los problemas de siempre (también los tienen otros tipos de experimentos):
+    -   Autoselección de los participantes
+    -   Validez externa
+
+# ¿Qué hay que diseñar?
+
+## ¿Qué hay que diseñar?
+
+-   Pensar sobre los datos necesarios para responder la pregunta
+    -   Recolectar todo lo relevante
+    -   Obtener información sobre confounders siempre que se pueda
+    -   Asegurarse que la cantidad de jugadores sea suficiente para encontrar significancia (a través de simulaciones, por ej.)
+-   Intentar que las instrucciones sean claras y el juego simple
+    -   Se puede realizar un pre-test (piloto)
+
+## ¿Qué hay que diseñar?
+
+\textbf{Hay que pensar varias cosas a la hora de diseñar un experimento de laboratorio}
+
+-   El ambiente:
+    -   Agentes (cantidad, tipo -estudiantes o no-, motivación)
+    -   Materias primas: ¿Sobre qué se toman las decisiones?
+    -   Dotaciones: ¿De qué disponen al iniciar el experimento los tomadores de decisiones?
+    -   Mecanismo por el que puede producirse el aprendizaje (oportunidades de búsqueda, práctica)
+-   Institución:
+    -   Decisiones a disposición de los sujetos
+    -   Reglas sobre las decisiones
+    -   Reglas sobre la comunicación
+    -   Conexión entre decisiones y retribuciones
+
+## ¿Reclutar estudiantes o población general?
+
+Estudiantes:
+
+-   Normalmente más fáciles de reclutar
+
+-   Se pueden conducir experimentos más difíciles
+
+-   Aprenden más rápido
+
+-   Tienen limitada experiencia de la "vida real"
+
+-   Evitar estudiantes de misma clase o grupo (salvo que sea el objetivo del estudio)
+
+## ¿Participantes conocidos o extraños?
+
+-   Conocidos:
+    -   El grupo está formado por los mismos sujetos
+    -   Comportamiento estratégico
+-   Extraños:
+    -   En cada período se creará un nuevo grupo con nuevos sujetos
+-   Extraños perfectos:
+    -   Los sujetos nunca se encontrarán con los mismos sujetos en el futuro
+
+## ¿Cuántos?
+
+-   Depende del tipo de experimento
+-   Regla general: no menos que los experimentos previos en el área
+-   Asegurarse que hay suficientes participantes para cada sesión:
+    -   Reclutar algunos más de los necesarios
+
+    -   Esto es más importante aún cuando los participantes interactúan
+
+\textbf{Algunas reglas sobre el reclutamiento}
+
+-   No promesas falsas
+-   No decirles cuánto dinero ganarán, pero sí decirles que van a ganar algo de dinero incluyendo un pago por presentarse
+-   Decirles que es un experimento que estudia comportamiento humano o toma de decisiones
+
+## ¿Un período o varios períodos?
+
+::: columns
+::: {.column width="50%"}
+Un período
+
+-   No hay incentivos estratégicos
+
+-   No hay derrames entre períodos
+
+-   Fácil y rápido de conducir
+:::
+
+::: {.column width="50%"}
+Varios períodos
+
+-   Hay incentivos estratégicos
+
+-   Efectos dinámicos
+
+    -   Ej: convergencia hacia 0 contribución en juego de bienes públicos
+
+-   Efectos de aprendizaje
+
+-   Más observaciones
+:::
+:::
+
+## Recompensas
+
+-   Pueden ser en:
+
+    -   Efectivo
+    -   Tokens
+
+-   Calibrar con una ganancia media en torno al coste de oportunidad de lo sujetos
+
+-   Si es posible que se produzcan pérdidas, esto debe indicarse claramente, incluyendo cómo cubrir las pérdidas (ej, con el pago por participación) y si los sujetos pueden dejar de participar en el experimento en caso de sufrir pérdidas
+
+\textbf{Condiciones para los incentivos}
+
+-   Los sujetos deben preferir obtener más recompensa, y no saciarse
+-   La recompensa depende de las acciones del sujeto (sin contar el pago por participación)
+-   Los cambios en la utilidad de un sujeto a partir del experimento provienen predominantemente de la recompensa
+-   Si se cumplen estas condiciones, el experimentador controla las preferencias de los sujetos
+
+## A tener en cuenta:
+
+-   Los beneficios para los demás pueden ser importantes para un participante
+    -   Envidia
+    -   Equidad
+-   Deseo de complacer al experimentador
+    -   Hace que las personas tomen acciones que no tomarían en al vida real
+-   Posibles soluciones
+    -   Hacer que el cambio en los beneficios monetarios sea lo suficientemente grande
+    -   Evitar la información pública sobre los beneficios
+    -   No dar pistas sobre el objetivo del experimento
+    -   Utilizar un lenguaje neutro en las instrucciones
+
+## Rondas de práctica
+
+-   Sirven para incrementar el entendimiento del experimento
+
+-   Pero puede afectar el comportamiento futuro
+
+    -   Las personas pueden inferir a partir del comportamiento en las rondas de práctica
+
+-   Pérdida de información sobre las acciones en el primer período
+
+## Cuestionarios
+
+-   Preguntas socio-económicas
+-   Preguntas sobre los motivos del comportamiento en el experimento
+-   Preguntas sobre comprensión del experimento
+
+## ¿Experimento en papel o informatizado?
+
+Los experimentos informatizados tienen las siguientes ventajas:
+
+-   Son más simples y rápidos de correr
+-   Menos errores
+-   Menos interacción con el experimentalista
+-   Los datos se recogen automáticamente
+-   Interacción en directo
+-   Interfaces dinámicas
+
+Pero:
+
+-   No es visible
+-   Lleva tiempo la programación
+-   No es posible en todas las circunstancias
+
+## Programas informáticos especializados
+
+-   z-Tree (Fischbacher, 2007)
+    -   Zurich Toolbox for Readymade Economic Experiments - http://www.iew.unizh.ch/ztree/index.php
+    -   Se ejecuta localmente
+-   oTree (Chen, Schonger y Wickens, 2016)
+    -   Es un software emergente
+    -   Independiente de la plataforma, basado en la web
+
+# Ejemplo
+
+## Ejemplo
+
+![](images/pol_and_group_coop-01.png){fig-align="center" width="95%"}
+
+## Sobre el experimento
+
+-   Experimento online
+-   Participaron 456 partidarios políticos estadounidenses
+-   Jugaron un Juego de Bienes Públicos de 10 periodos en grupos fijos de 3 personas
+-   Diseño 2x2 donde variaron independientemente si los participantes de cada miembro del grupo y si podían participar en un castigo costoso
+
+## Reclutamiento de los participantes partidarios
+
+-   Muestra nacional de demócratas y republicanos que participaron sincrónicamente
+-   Pagos diferenciales en función del resultado del juego
+-   Hicieron diferentes pruebas previas para asegurarse de que los participantes estuvieran atentos, y fueran partidarios y entendieran el juego y los incentivos
+-   La asignación a los tratamientos se realizó después de que excluyeran a quienes fallaban en alguna de las tareas previas y se quedaran solamente con los participantes que pasaban los controles de comprensión
+
+## La asignación
+
+-   Una vez pasaron los controles de comprensión, los participantes tenían una pantalla de espera
+-   A medida que otros 2 participantes estuvieran listos, se crearon grupos de 3 participantes y el grupo se asignó de forma aleatoria a una condición de tratamiento:
+    -   Mitad de los grupos asignados a la condición de No castigo
+        -   Veían una página que les recordaba las instrucciones y comenzaban el juego
+    -   Mitad de los grupos asignados a la condición de Castigo
+        -   En este caso recibían información adicional de cómo reducir las ganancias de otros
+-   De forma independiente:
+    -   1/5 de los grupos fueron asignados a la condición de No-partidarios
+    -   4/5 de los grupos fueron asignados a la condición de Partidarios
+        -   estos veían la afiliación política de cada miembro del grupo antes de comenzar el juego
+
+## El juego de bienes públicos repetido (10 periodos)
+
+Cada período consistía de 2 etapas:
+
+1.  Recibían una dotación de 20 tokens y elegía cuánto contribuir a un "proyecto grupal". Se les explicaba que todas las contribuciones al proyecto grupal serían duplicadas y luego divididas de forma igualitaria entre los 3 miembros del grupo. Mientras que cada token que se guardaban, daría un retorno de 1.
+2.  Aprendían el total de contribuciones del grupo, su pago de la primera etapa y las contribuciones individuales de cada miembro del grupo. En todas las condiciones los jugadores tenían una ID (participante A, B o C), y esa información era conocida desde el inicio.
+    -   \textbf{No partidarios}: se mostraba la contribución de cada ID
+    -   \textbf{Partidarios}: se mostraba la contribución de cada ID, junto a la afiliación partidaria
+
+## El juego de bienes públicos repetido
+
+-   \textbf{No castigo}: etapa 2 sólo informativa
+    -   Veían las contribuciones y ganancias de cada miembro del grupo (y quizás su afiliación partidaria) y luego clickeaban un botón para continuar al siguiente periodo
+-   \textbf{Castigo}: cada participante tiene una decisión adicional en la etapa 2:
+    -   Cuántos puntos de castigo ("puntos de deducción") asignar a cada uno de los otros dos miembros del grupo
+    -   Cada punto de castigo que el participante asignaba reducía sus ganancias en 1 y las del otro participante en 3
+    -   Las personas no pueden tener ganancias negativas por los castigos recibidos, pero sí pueden tener ganancias negativas por los castigos impuestos
+
+## Pantalla 1: instrucciones previas
+
+Thank you for your responses. We will now ask you to participate in the experiment. You will receive an additional at bonus payment of \$2 if you complete the game and could earn also earn bonuses up to an extra \$4. You will be able to participate only if you correctly answer the comprehension questions in a couple of pages so please read the instructions carefully.
+
+This is an experiment on decision making. Your earnings will be based on the decisions made by you and others. It is therefore very important that you read these instructions carefully.
+
+Both how you will be paid and the participation of other people are exactly as we describe in the instructions. During the experiment, you will earn tokens. At the end of the experiment, you will be paid \$0.01 US dollars per token you have earned (as described on the next page), plus the \$0.25 for filling out the initial survey and the at payment of \$2 for completing the game.
+
+This experiment is divided into different periods. There will be 10 periods in total.
+
+Participants are divided into groups of three. You are with the same people in a group for all ten periods.
+
+## Pantalla 2: instrucciones previas
+
+In each period you will be given tokens and have to decide how many tokens you would like to contribute to a project. Your earnings in the period will depend on the decisions made by you and the other two group members.
+
+Each period consists of two stages:
+
+In the first stage, you will receive tokens and have to decide how many tokens you contribute to a group project.
+
+In the second stage, you will learn how much each member of your group contributed to the project.
+
+The following pages describe the course of the experiment in detail.
+
+## Pantalla 3: explicación sobre los pagos "The first stage"
+
+At the beginning of each period, each participant in your group receives 20 tokens. In the first stage, you have to choose how many tokens you want to contribute to a group project and how many of them to keep for yourself. You can contribute any number of the 20 tokens to the group project. Each person will make this same choice.
+
+Your earnings consists of two parts:
+
+Your earnings from tokens kept: For each token that you keep for yourself you earn 1 token.
+
+Your earnings from the group project: The tokens contributed to the group project are doubled and equally divided among the three group members. Thus your earnings from the group project are: (Total contributions to the project by all members) x 2/3 Your total earnings for the period is therefore:
+
+(20 - your contribution to the project) + 0.67 (total contributions to the project)
+
+## Pantalla 3: explicación sobre los pagos "The first stage"
+
+The earnings of each group member from the project is calculated in the same way. Assume, for example, that the sum of the contributions of all group members is 9 tokens. This amount is doubled and then divided three ways, so each group member receives 9 x 2 / 3 = 6 tokens from the project, and your earnings for the period are equal to 6 plus however many tokens you personally kept.
+
+Notice that, for each token which you keep for yourself, you earn 1 token. If, instead, you contribute this token to the group project, then the total contribution to the project will rise by one token. Your income from the group project will rise by 0.67 tokens. Moreover, each of the other group members? income from the project will rise by 0.67 tokens. Your contribution to the group project therefore also raises the income of the other group members. For each token contributed to the project the total earnings of the group will rise by 2 tokens. Similarly, you also earn tokens for each token contributed to the group project by the other group members. For each token contributed by any member you earn 0.67 tokens.
+
+In summary, your earnings in tokens at the first stage of a period are equal to: 20 - your contribution + (2/3) (sum of contributions)
+
+## Pantalla 3: explicación sobre los pagos "The second stage"
+
+Each member in the group will be assigned an ID: either Participant A, Participant B, or Participant C. This ID will be the same for all ten periods.
+
+After you have viewed your earnings for the period, you will see an information screen showing how much each group member contributed to the project. Specifically, the screen will report the contributions as well as the first stage earnings for Participant A, Participant B, and Participant C.
+
+After the second stage, the period is over and the next period commences. You will be matched with the same group of people for all 10 periods. (True/False) If each person keeps all 20 tokens (that is, contributes 0 tokens), what will your payment be for that period? (0/14/20/40)
+
+If each person contributes all 20 tokens, what will your payment be for that period? (0/14/20/40)
+
+If the other two people each contribute 20 tokens and you contribute 0 tokens, what will you payment be for that period? (0/14/20/40/47)
+
+(Those who pass the comprehension check are then bounced to oTree and see the following screens)
+
+## Pantalla 4:
+
+In your group, the three participants will be labeled: Participant A, Participant B, and Participant C. These roles will the stay the same for all 10 periods.
+
+You are Participant A.
+
+\[This part appears for those in the Partisan conditions with Democrat and Republican color coded as blue or red respectively\]
+
+Your group is as follows: - Participant A (you) - Democrat - Participant B - Republican - Participant C - Democrat
+
+## Pantalla 5: No punishment condition
+
+You will play the game for 10 periods. Each period will have two stages.
+
+Stage 1: Each person will decide how many of their 20 tokens to contribute the group account.
+
+Stage 2: After you have viewed your earnings for the period, you will see an information screen showing how much Participant A, Participant B, and Participant C contributed to the group account. You will then decide whether to reduce their earnings in the first stage by distributing points to them.
+
+## Pantalla 5: Punishment condition
+
+You will play the game for 10 periods. Each period will have two stages.
+
+Stage 1: Each person will decide how many of their 20 tokens to contribute the group account.
+
+Stage 2: After you have viewed your earnings for the period, you will see an information screen showing how much Participant A, Participant B, and Participant C contributed to the group account and their earnings.
+
+In Stage 2 you can decide whether to decrease the earnings of each other group member by assigning deduction points. The other group members can also decrease your earnings if they wish to. You will have to decide how many deduction points to assign to each of the other two group members. You can assign up to 5 points to each group member, or assign 0 points if you don't wish to change a group member's earnings. For each deduction point that you allocate to another group member his or her earnings are reduced by 3 tokens and your own earnings are reduced by 1 token.
+
+## Pantalla 5: Punishment condition
+
+Note that you will not be allowed to reduce the earnings of a group member to less than zero. After everyone has made a decision, you will be informed how many deduction points you received from the other group members and also what your total earnings in tokens for that period are. Note that you do not get to know how individual group members spend their deduction points.
+
+Your total earnings for the period will equal: Stage 1 earnings - 3 x deduction points received - deduction points allocated It is, in principle, possible that you make negative earnings in a period. However, you can always avoid negative earnings with certainty through your own choices.
+
+## Resultados
+
+![](images/results.png){fig-align="center"}
+
+# oTree
+
+## Sobre oTree
+
+-   Está basado en Python para ejecutar experimentos controlados
+    -   Juegos: p. ej., juegos de bienes públicos (PGG)
+    -   Toma de decisiones individuales: p. ej., tareas de obtención de riesgos
+    -   Encuestas y tests: por ejemplo, el test de Raven
+-   Tiene amplio soporte de la comunidad
+    -   Foros
+    -   Códigos desarrollados por otros
+-   Es de código abierto,
+    -   Licenciado bajo una adaptación de la licencia MIT (hay que citarlos al usarlo)
+
+## Funcionamiento
+
+-   La configuración básica consiste en
+
+    1.  Una aplicación (experimento) escrita en oTree
+    2.  Una computadora que funcione de servidor
+        -   Servidor en la nube, PC local ...
+    3.  Dispositivos de los partipantes con un navegador
+        -   PC, portátil, tableta, teléfono móvil
+
+-   oTree crea una sesión en el servidor y genera enlaces para todos los participantes
+
+-   Los participantes hacen clic en los enlaces y son enviados a una página personal
+
+    -   Envían sus respuestas, que son recogidas por el servidor
+    -   El experimentalista puede comprobar el progreso en el servidor
+
+## Funcionamiento
+
+![](images/servidor.png){fig-align="center" width="85%"}
+
+## Visión general de la app oTree
+
+![](images/overview.png){fig-align="center" width="65%"}
+
+-   Session
+    -   Los participantes realizan una serie de tareas
+-   Subsession
+    -   Secciones de una sesión
+        -   Ejemplo: Un PGG (Public Goods Game) es la subsesión 1 y un cuestionario es la subsesión 2. Las repeticiones de la misma tarea se realizan en distintas subsesiones (periodos)
+-   Page
+    -   Secciones de una subsesión
+        -   Ejemplo: El PGG consta de 4 páginas (instrucciones, prueba, juego), y el cuestionario de 2 páginas
+-   Groups
+    -   Cada subsesión puede dividirse en grupos de jugadores
+    -   Los grupos se pueden barajar entre las subsesiones
+
+## Jerarquía de los objetos
+
+::: columns
+::: {.column width="50%"}
+Las entidades de oTree se organizan con la siguiente jerarquía:
+
+1.  Session
+
+2.  Subsession
+
+3.  Group
+
+4.  Player
+
+5.  Page
+:::
+
+::: {.column width="50%"}
+![](images/jerarquia.png){fig-align="center" width="95%"}
+:::
+:::
+
+-   Una sesión es una serie de subsesiones
+-   Una subsesión contiene varios grupos
+-   Un grupo contiene varios jugadores
+-   Cada jugador pasa por varias páginas
+-   Player y participant tienen significados diferentes
+    -   Player es una sección de un Participant
+        -   similar a Subsession y Session

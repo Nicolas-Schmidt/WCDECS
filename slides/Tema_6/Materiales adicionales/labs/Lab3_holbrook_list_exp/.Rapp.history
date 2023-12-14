@@ -1,0 +1,604 @@
+mean(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"], na.rm=TRUE)
+print(#
+  paste("The pre-treatment mean in the outcome 'share importe Value' is:  ",#
+  round(mean(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"]$share_importe_value),3))#
+)
+print(#
+  paste("The pre-treatment mean in the outcome 'share importe Value' is:  ",#
+  round(mean(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"]$share_importe_value, na.rm=TRUE),3))#
+)
+dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"]
+dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"][,2]
+hist(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"][,2])
+hist(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"][[,2]])
+hist(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"]$share_importe_value)
+print(#
+  paste("The pre-treatment mean in the outcome 'share importe Value' is:  ",#
+  round(mean(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"]$share_importe_value, na.rm=TRUE),6))#
+)
+print(#
+  paste("The pre-treatment mean in the outcome 'share importe Value' is:  ",#
+  round(mean(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"]$share_importe_value, na.rm=TRUE),4))#
+)
+print(#
+  paste("The pre-treatment mean in the outcome 'share importe Value' is:  ",#
+  round(mean(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"]$share_importe_value, na.rm=TRUE),4)*100)#
+)
+print(#
+  paste("An effect size of 10% of the Standard Deviation in the outcome 'share importe Value' is:  ",#
+  round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"]$share_importe_value, na.rm=TRUE),4)*.1)#
+)
+print(#
+  paste("An effect size of 10% of the Standard Deviation in the outcome 'share importe Value' is:  ",#
+  round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= "pdv_codigo"]$share_importe_value, na.rm=TRUE),4)*.1*100)#
+)
+data <- dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe, na.rm=TRUE)), by= c("pdv_codigo","fecha")]
+m <- lm(share_importe ~ as.factor(pdv_codigo), data = data)
+m <- lm(share_importe_value ~ as.factor(pdv_codigo), data = data)
+m
+print(paste(#
+    "The explained variation by POS dummies: " , #
+    summary(m)$adj.r.squared#
+)#
+)
+anova(m)
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .02)
+rd05 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))
+diagnosis05 <- diagnose_design(rd05, sims = 100)
+diagnosis05 <- get_diagnosands(diagnosis05)
+diagnosis05$ate <- paste(round(sd(dt[producto=="FNC", .("share_importe_value"=mean(share_importe_value)), by= "pdv_codigo"][share_importe_value<1, ]$share_importe_value)*.05,3)*100, "%")
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.05,#
+                                                 sd_cluster = .05,#
+                                                 ate = .04)
+rd075 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))
+diagnosis075 <- diagnose_design(rd075, sims = 100)
+diagnosis075 <- get_diagnosands(diagnosis075)
+diagnosis075$ate <- paste(round(sd(dt[producto=="FNC", .("share_importe_value"=mean(share_importe_value)), by= "pdv_codigo"][share_importe_value<1, ]$share_importe_value)*.075,3)*100, "%")
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.4,#
+                                                 sd_cluster = .05,#
+                                                 ate = .8)#
+rd1 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis1 <- diagnose_design(rd1, sims = 100) #
+diagnosis1 <- get_diagnosands(diagnosis1)#
+diagnosis1$ate <- paste(round(sd(dt[producto=="FNC", .("share_importe_value"=mean(share_importe_value)), by= "pdv_codigo"][share_importe_value<1, ]$share_importe_value)*.1,3)*100, "%")
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .1)#
+rd15 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis15 <- diagnose_design(rd15, sims = 100)
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .02)#
+# get_design_code(block_var2)#
+rd05 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis05 <- diagnose_design(rd05, sims = 100)#
+diagnosis05 <- get_diagnosands(diagnosis05)#
+diagnosis05$ate <- paste(round(sd(dt[producto=="FNC", .("share_importe_value"=mean(share_importe_value)), by= "pdv_codigo"][share_importe_value<1, ]$share_importe_value)*.05,3)*100, "%")#
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.05,#
+                                                 sd_cluster = .05,#
+                                                 ate = .04)#
+rd075 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis075 <- diagnose_design(rd075, sims = 100) #
+diagnosis075 <- get_diagnosands(diagnosis075)#
+diagnosis075$ate <- paste(round(sd(dt[producto=="FNC", .("share_importe_value"=mean(share_importe_value)), by= "pdv_codigo"][share_importe_value<1, ]$share_importe_value)*.075,3)*100, "%")#
+#
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.4,#
+                                                 sd_cluster = .05,#
+                                                 ate = .8)#
+rd1 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis1 <- diagnose_design(rd1, sims = 100) #
+diagnosis1 <- get_diagnosands(diagnosis1)#
+diagnosis1$ate <- paste(round(sd(dt[producto=="FNC", .("share_importe_value"=mean(share_importe_value)), by= "pdv_codigo"][share_importe_value<1, ]$share_importe_value)*.1,3)*100, "%")#
+#
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .1)#
+rd15 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis15 <- diagnose_design(rd15, sims = 100) #
+diagnosis15 <- get_diagnosands(diagnosis15)#
+diagnosis15$ate <- paste(round(sd(dt[producto=="FNC", .("share_importe_value"=mean(share_importe_value)), by= "pdv_codigo"][share_importe_value<1, ]$share_importe_value)*.15,3)*100, "%") #
+#
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .2)#
+rd2 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis2 <- diagnose_design(rd2, sims = 100) #
+diagnosis2 <- get_diagnosands(diagnosis2)#
+diagnosis2$ate <- paste(round(sd(dt[producto=="FNC", .("share_importe_value"=mean(share_importe_value)), by= "pdv_codigo"][share_importe_value<1, ]$share_importe_value)*.2,3)*100, "%")
+diagnosis05$ate
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .02)
+rd05 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))
+diagnosis05 <- diagnose_design(rd05, sims = 100)
+diagnosis05 <- get_diagnosands(diagnosis05)
+diagnosis05$ate
+sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)
+sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.05
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .05)#
+# get_design_code(block_var2)#
+rd05 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis05 <- diagnose_design(rd05, sims = 100)#
+diagnosis05 <- get_diagnosands(diagnosis05)#
+diagnosis05$ate <- paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.05,3)*100, "%")#
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .075)#
+rd075 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis075 <- diagnose_design(rd075, sims = 100) #
+diagnosis075 <- get_diagnosands(diagnosis075)#
+diagnosis075$ate <- paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.075,3)*100, "%")#
+#
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .1)#
+rd1 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis1 <- diagnose_design(rd1, sims = 100) #
+diagnosis1 <- get_diagnosands(diagnosis1)#
+diagnosis1$ate <- paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.1,3)*100, "%")#
+#
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .15)#
+rd15 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis15 <- diagnose_design(rd15, sims = 100) #
+diagnosis15 <- get_diagnosands(diagnosis15)#
+diagnosis15$ate <- paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.15,3)*100, "%") #
+#
+block_var2     <- block_cluster_two_arm_designer(N_blocks = 30, #
+                                                 N_clusters_in_block = 2,#
+                                                 N_i_in_cluster = 7*4, #
+                                                 sd_block =.04,#
+                                                 sd_cluster = .05,#
+                                                 ate = .15)#
+rd2 <- redesign(block_var2, N_i_in_cluster = list(7*3, 7*4, 7*5, 7*6))#
+diagnosis2 <- diagnose_design(rd2, sims = 100) #
+diagnosis2 <- get_diagnosands(diagnosis2)#
+diagnosis2$ate <- paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.2,3)*100, "%")
+change_the_parameters <- rbind(diagnosis05, diagnosis075, diagnosis1, diagnosis15, diagnosis2)#
+#
+change_the_parameters %>%#
+  mutate(N_i_in_cluster = factor(N_i_in_cluster),#
+         ate = factor(ate)) %>% #
+  ggplot(aes(N_i_in_cluster, power, fill = ate)) +#
+  geom_bar(position = "dodge", stat = "identity") +#
+  geom_errorbar(aes(ymin = power - 1.96*`se(power)`, #
+                    ymax = power + 1.96*`se(power)`,#
+                    width = .3),#
+                position = position_dodge(width = .9)) +#
+  geom_hline(yintercept = 0.8) +#
+  labs(title = "Power at each Nr of WEEKS and EFFECT SIZE (ate)",#
+       subtitle = "95% Confidence Intervals")
+change_the_parameters
+change_the_parameters %>%#
+  mutate(N_i_in_cluster = factor(N_i_in_cluster),#
+         ate = factor(ate))
+diagnosis05
+diagnosis075
+diagnosis1
+diagnosis15
+diagnosis2
+paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.05,3)*100, "%")
+dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value
+sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)
+diagnosis05$ate <- paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.05,6)*100, "%")
+diagnosis05$ate
+diagnosis075$ate <- paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.075,6)*100, "%")
+diagnosis1$ate <- paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.1,6)*100, "%")
+diagnosis15$ate <- paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.15,6)*100, "%")
+diagnosis2$ate <- paste(round(sd(dt[prod_class=="Barra", .("share_importe_value"=mean(share_importe)), by= "pdv_codigo"]$share_importe_value)*.2,6)*100, "%")
+change_the_parameters <- rbind(diagnosis05, diagnosis075, diagnosis1, diagnosis15, diagnosis2)
+change_the_parameters %>%#
+  mutate(N_i_in_cluster = factor(N_i_in_cluster),#
+         ate = factor(ate)) %>% #
+  ggplot(aes(N_i_in_cluster, power, fill = ate)) +#
+  geom_bar(position = "dodge", stat = "identity") +#
+  geom_errorbar(aes(ymin = power - 1.96*`se(power)`, #
+                    ymax = power + 1.96*`se(power)`,#
+                    width = .3),#
+                position = position_dodge(width = .9)) +#
+  geom_hline(yintercept = 0.8) +#
+  labs(title = "Power at each Nr of WEEKS and EFFECT SIZE (ate)",#
+       subtitle = "95% Confidence Intervals")
+change_the_parameters <- rbind(diagnosis05, diagnosis075, diagnosis1, diagnosis15, diagnosis2)
+change_the_parameters
+change_the_parameters %>%#
+  mutate(N_i_in_cluster = factor(N_i_in_cluster),#
+         ate = factor(ate))
+change_the_parameters %>%#
+  mutate(N_i_in_cluster = factor(N_i_in_cluster),#
+         ate = factor(ate)) %>% #
+  ggplot(aes(N_i_in_cluster, power, fill = ate))
+change_the_parameters %>%#
+  mutate(N_i_in_cluster = factor(N_i_in_cluster),#
+         ate = factor(ate)) %>% #
+  ggplot(aes(N_i_in_cluster, power, fill = ate)) +#
+  geom_bar(position = "dodge", stat = "identity")
+dev.off()
+change_the_parameters %>%#
+  mutate(N_i_in_cluster = factor(N_i_in_cluster),#
+         ate = factor(ate)) %>% #
+  ggplot(aes(N_i_in_cluster, power, fill = ate)) +#
+  geom_bar(position = "dodge", stat = "identity") +#
+  geom_errorbar(aes(ymin = power - 1.96*`se(power)`, #
+                    ymax = power + 1.96*`se(power)`,#
+                    width = .3),#
+                position = position_dodge(width = .9)) +#
+  geom_hline(yintercept = 0.8) +#
+  labs(title = "Power at each Nr of WEEKS and EFFECT SIZE (ate)",#
+       subtitle = "95% Confidence Intervals")
+n_blocks <- 25
+possible.ns <- seq(from=100, to=2000, by=50) # The sample sizespossible.ns <- seq(from=100, to=2000, by=50) # The sample sizes
+possible.ns
+powers <- rep(NA, length(possible.ns))       # Empty object to collect simulation estimates
+powers
+alpha <- 0.05                                # Standard significance level
+alpha
+sims <- 500                                  # Number of simulations to conduct for each N
+sims
+i
+i=1
+rnorm(n=N, mean=60, sd=20)
+rnorm
+N
+possible.ns
+N = 100
+i=1
+N <- possible.ns[j]                        # Pick the jth value for N
+possible.ns
+j = 100
+i=1
+N <- possible.ns[j]                        # Pick the jth value for N
+N
+j = 1
+j=1
+i=1
+sims <- 500                                  # Number of simulations to conduct for each N
+possible.ns <- seq(from=100, to=2000, by=50) # The sample sizespossible.ns <- seq(from=100, to=2000, by=50) # The sample sizes#
+powers <- rep(NA, length(possible.ns))       # Empty object to collect simulation estimates#
+alpha <- 0.05                                # Standard significance level#
+sims <- 500                                  # Number of simulations to conduct for each N
+j=1
+i=1
+N <- possible.ns[j]                        # Pick the jth value for N
+N
+significant.experiments <- rep(NA, sims)   # Empty object to count significant experiments
+significant.experiments
+rnorm(n=N, mean=60, sd=20)              # control potential outcome
+rnorm(n=N, mean=60, sd=20)
+# Power Analysis#
+possible.ns <- seq(from=100, to=2000, by=50) # The sample sizespossible.ns <- seq(from=100, to=2000, by=50) # The sample sizes#
+powers <- rep(NA, length(possible.ns))       # Empty object to collect simulation estimates#
+alpha <- 0.05                                # Standard significance level#
+sims <- 500                                  # Number of simulations to conduct for each N#
+#
+# Try the first vaues to understand the code below#
+# j=1#
+# i=1#
+#
+#### Outer loop to vary the number of subjects #####
+for (j in 1:length(possible.ns)){#
+  N <- possible.ns[j]                        # Pick the jth value for N#
+  significant.experiments <- rep(NA, sims)   # Empty object to count significant experiments#
+  #### Inner loop to conduct experiments "sims" times over for each N #####
+  for (i in 1:sims){#
+    Y0 <-  rnorm(n=N, mean=60, sd=20)              # control potential outcome#
+    tau <- 5                                       # Hypothesize treatment effect#
+    Y1 <- Y0 + tau                                 # treatment potential outcome#
+    Z.sim <- rbinom(n=N, size=1, prob=.5)          # Do a random assignment#
+    Y.sim <- Y1*Z.sim + Y0*(1-Z.sim)               # Reveal outcomes according to assignment#
+    fit.sim <- lm(Y.sim ~ Z.sim)                   # Do analysis (Simple regression)#
+    p.value <- summary(fit.sim)$coefficients[2,4]  # Extract p-values (assuming #
+                                                   # equal variance in treatement and #
+                                                   # control groups)#
+    significant.experiments[i] <- (p.value <= alpha) # Determine significance according to #
+                                                     #p <= 0.05#
+  }#
+  powers[j] <- mean(significant.experiments) # store average success rate (power) for each N#
+}
+plot(possible.ns, powers, ylim=c(0,1), #
+     main= expression(paste("Power Calculation Different Sample Size (", tau, " = 5, SD = 20)")),#
+     xlab = "Sample size - N")#
+abline(h=0.8, col="red")
+rnorm(n=N, mean=60, sd=20)              # control potential outcome
+plot(Y0)
+hist(Y0)
+tau <- 5                                       # Hypothesize treatment effect
+Y1 <- Y0 + tau                                 # treatment potential outcome
+hist(Y1)
+plot(Y1, Y0)
+cbind(Y0, Y1)
+i
+j=1
+i=1
+Y0 <-  rnorm(n=N, mean=60, sd=20)              # control potential outcome
+tau <- 5                                       # Hypothesize treatment effect
+Y1 <- Y0 + tau                                 # treatment potential outcome
+head(cbind(Y0, Y1))
+head(cbind(Y0, Y1, tau))
+Z.sim <- rbinom(n=N, size=1, prob=.5)          # Do a random assignment
+rbinom(n=N, size=1, prob=.5)
+Y0 <-  rnorm(n=N, mean=60, sd=20)              # control potential outcome#
+    tau <- 5                                       # Hypothesize treatment effect#
+    Y1 <- Y0 + tau                                 # treatment potential outcome#
+    Z.sim <- rbinom(n=N, size=1, prob=.5)          # Do a random assignment#
+    Y.sim <- Y1*Z.sim + Y0*(1-Z.sim)               # Reveal outcomes according to assignment#
+    fit.sim <- lm(Y.sim ~ Z.sim)                   # Do analysis (Simple regression)#
+    p.value <- summary(fit.sim)$coefficients[2,4]  # Extract p-values (assuming
+head(cbind(Y0, Y1, tau, Z.sim, Y.sim))
+fit.sim <- lm(Y.sim ~ Z.sim)                   # Do analysis (Simple regression)
+fit.sim
+summary(fit.sim)
+summary(fit.sim)$coefficients
+significant.experiments
+power.t.test(#
+# sample size (leave blank!) n=,#
+  # minimum detectable effect size#
+  delta = 0.4, sd = 1,#
+  # alpha and power (1-kappa)#
+  sig.level = 0.05, power = 0.8,#
+  # two-tailed vs. one-tailed test#
+  alternative = "two.sided"#
+)
+power.t.test(#
+# sample size (leave blank!) n=,#
+  # minimum detectable effect size#
+  delta = 0.2, sd = 1,#
+  # alpha and power (1-kappa)#
+  sig.level = 0.05, power = 0.8,#
+  # two-tailed vs. one-tailed test#
+  alternative = "two.sided"#
+)
+power.t.test
+?power.t.test
+power.t.test(#
+  n=100,#
+  delta = 0.2, sd = 1,   # minimum detectable effect size#
+  # alpha and power (1-kappa)#
+  sig.level = 0.05, power = 0.8,#
+  # two-tailed vs. one-tailed test#
+  alternative = "two.sided"#
+)
+power.t.test(#
+  delta = 0.2, sd = 1,   # minimum detectable effect size#
+  # alpha and power (1-kappa)#
+  sig.level = 0.05, power = 0.8,#
+  # two-tailed vs. one-tailed test#
+  alternative = "two.sided"#
+)
+power.t.test(#
+# sample size (leave blank!) n=,#
+# minimum detectable effect size#
+  delta = 5, sd = 20,#
+# alpha and power (1-kappa)#
+  sig.level = 0.05, power = 0.8,#
+# two-tailed vs. one-tailed test#
+  alternative = "two.sided"#
+)
+# #
+power.t.test(#
+# sample size (leave blank!) n=,#
+# minimum detectable effect size#
+  delta = 5, sd = 20,#
+# alpha and power (1-kappa)#
+  sig.level = 0.05, power = 0.8,#
+# two-tailed vs. one-tailed test#
+  alternative = "two.sided"#
+)
+load("/Users/slopezcariboni/Google Drive/Female_Candidates_paper/plot.Rds")
+read.Rds("/Users/slopezcariboni/Google Drive/Female_Candidates_paper/plot.Rds")
+readRds("/Users/slopezcariboni/Google Drive/Female_Candidates_paper/plot.Rds")
+readRDS("/Users/slopezcariboni/Google Drive/Female_Candidates_paper/plot.Rds")
+x <- c("plm", "mgcv", "tidyverse", "data.table", "fasttime", 'magrittr', "lubridate", "Formula")
+# install.packages("tidyverse") # warning: uncommenting this may take a number of minutes
+lapply(x, library, character.only = TRUE) # load the required packages
+library("stats")#
+if (!requireNamespace("remotes")) {#
+    # installing github packages#
+    install.packages("remotes")#
+    requireNamespace("remotes")#
+}#
+if (!requireNamespace("rio")) {#
+    # data loading#
+    install.packages("rio")#
+    requireNamespace("rio")#
+}#
+if (!requireNamespace("dplyr")) {#
+    # convenience functions for working with data recoding#
+    install.packages("dplyr")#
+    requireNamespace("dplyr")#
+}#
+if (!requireNamespace("margins")) {#
+    # marginal effects#
+    install.packages("margins")#
+    requireNamespace("margins")#
+}
+cohensd <- function(x, y) {#
+    # x treatment group indicator vector#
+    # y outcome vector#
+    if (nlevels(factor(x)) != 2) {#
+        stop("Number of group levels not equal to 2.")#
+    }#
+    # calculate mean-difference#
+    dif <- diff(tapply(y, x, mean, na.rm = TRUE))#
+    # calculate sigma#
+    ngroups <- tapply(y, x, length)#
+    v <- tapply(y, x, var, na.rm = TRUE)#
+    sigma <- sqrt(sum((ngroups - 1L) * v, na.rm = TRUE)/(sum(ngroups, na.rm = TRUE) - 2L))#
+    # return#
+    return(unname(dif/sigma))#
+}
+if ("data.dta" %in% dir()) {#
+    schuldt <- rio::import("data.dta")#
+} else {#
+    utils::download.file("http://www.tessexperiments.org/data/zip/Schuldt301.zip", "Schuldt301.zip", mode = "wb")#
+    schuldt <- rio::import("Schuldt301.zip", which = "TESS2_117_Schuldt_Client.sav")#
+}#
+names(schuldt)#
+dim(schuldt)
+dir()
+setwd("/Users/slopezcariboni/Dropbox/Research/Teaching/SurveyExperiments/slides/clase3/LAB")
+schuldt <- rio::import("data.dta")
+schuldt <- rio::import("data.dta")
+names(schuldt)
+dim(schuldt)
+table(schuldt[["XTESS117"]])
+schuldt[["gw"]] <- ifelse(schuldt[["XTESS117"]] %in% c(1,3,5,7), 1L, 0L)
+schuldt[["gw"]]
+table(schuldt[["Q3A"]], useNA = "always")#
+table(schuldt[["Q3B"]], useNA = "always")
+schuldt[["Q3A"]] <- ifelse(is.nan(schuldt[["Q3A"]]), NA_real_, schuldt[["Q3A"]])#
+schuldt[["Q3B"]] <- ifelse(is.nan(schuldt[["Q3B"]]), NA_real_, schuldt[["Q3B"]])#
+#
+# tidy these using mcode:#
+schuldt[["outcome"]] <- dplyr::coalesce(schuldt[["Q3A"]], schuldt[["Q3B"]])#
+schuldt[["outcome"]] <- ifelse(schuldt[["outcome"]] == -1, NA_real_, schuldt[["outcome"]])#
+table(schuldt[["outcome"]])#
+mean(schuldt[["outcome"]], na.rm = TRUE)#
+var(schuldt[["outcome"]], na.rm = TRUE)#
+sd(schuldt[["outcome"]], na.rm = TRUE)
+aggregate(outcome ~ gw, data = schuldt, mean, na.rm = TRUE)
+t.test(outcome ~ gw, data = schuldt)
+summary(lm(outcome ~ gw, data = schuldt))
+t.test(outcome ~ gw, data = schuldt, var.equal = TRUE)
+cohensd(x = schuldt[["gw"]], y = schuldt[["outcome"]])
+power.t.test(, delta = .17, sd = 1, sig.level = 0.05, power = 0.8, type = "two.sample", alternative = "two.sided")
+table(schuldt[["PARTY7"]], useNA = "always")
+schuldt[["republican"]] <- ifelse(schuldt[["PARTY7"]] %in% 1:3, 1L, #
+                                  ifelse(schuldt[["PARTY7"]] %in% 5:7, 0L, NA_real_))
+table(schuldt[["PARTY7"]], schuldt[["republican"]], useNA = "always")
+aggregate(outcome ~ gw + republican, data = schuldt, mean, na.rm = TRUE)
+t.test(outcome ~ gw, data = schuldt[schuldt[["republican"]] == 1L,])
+t.test(outcome ~ gw, data = schuldt[schuldt[["republican"]] == 0L,])
+with(schuldt[schuldt[["republican"]] == 1L,], cohensd(x = gw, y = outcome))#
+with(schuldt[schuldt[["republican"]] == 0L,], cohensd(x = gw, y = outcome))
+summary(m_by_party <- lm(outcome ~ gw * republican, data = schuldt))#
+summary(margins::margins(m_by_party))#
+margins::cplot(m_by_party, x = "republican", dx = "gw", what = "effect")
+summary(m_by_party2 <- lm(outcome ~ gw * PARTY7, data = schuldt))#
+margins::cplot(m_by_party2, x = "PARTY7", dx = "gw")#
+margins::cplot(m_by_party2, x = "PARTY7", dx = "gw", what = "effect")
+schuldt[["pfactor"]] <- as.factor(schuldt[["PARTY7"]])#
+margins::cplot(lm(outcome ~ gw * pfactor, data = schuldt), x = "pfactor", dx = "gw")#
+margins::cplot(lm(outcome ~ gw * pfactor, data = schuldt), x = "pfactor", dx = "gw", what = "effect")
+margins::cplot(lm(outcome ~ gw * pfactor, data = schuldt), x = "pfactor", dx = "gw")
+margins::cplot(lm(outcome ~ gw * pfactor, data = schuldt), x = "pfactor", dx = "gw", what = "effect")
+margins::cplot(m_by_party2, x = "PARTY7", dx = "gw")
+margins::cplot(m_by_party2, x = "PARTY7", dx = "gw", what = "effect")
+schuldt[["pfactor"]]
+schuldt[["pfactor"]] <- as.factor(schuldt[["PARTY7"]])
+margins::cplot(lm(outcome ~ gw * pfactor, data = schuldt), x = "pfactor", dx = "gw")
+margins::cplot(lm(outcome ~ gw * pfactor, data = schuldt), x = "pfactor", dx = "gw", what = "effect")
+summary(m_by_party2 <- lm(outcome ~ gw * PARTY7, data = schuldt))
+shuldt$PARTY7
+schuldt$PARTY7
+hist(schuldt)
+hist(schuldt$PARTY7)
+covariates <- c("gw", "republican", "PPGENDER", "PPAGE", "IDEO", "PPEDUC")
+mhetero <- lm(outcome ~ gw * (. + I(IDEO^2)), data = schuldt[, c(covariates, "outcome"), drop = FALSE])
+summary(mhetero)
+summary(margins::margins(mhetero))
+mhetero <- lm(outcome ~ (. + I(IDEO^2)), data = schuldt[, c(covariates, "outcome"), drop = FALSE])
+summary(mhetero)
+margins::cplot(mhetero, x = "republican", dx = "gw", what = "effect")
+covariates <- c("gw", "republican", "PPGENDER", "PPAGE", "IDEO", "PPEDUC")
+mhetero <- lm(outcome ~ gw * (. + I(IDEO^2)), data = schuldt[, c(covariates, "outcome"), drop = FALSE])
+summary(mhetero)
+summary(margins::margins(mhetero))
+margins::cplot(mhetero, x = "republican", dx = "gw", what = "effect")
+margins::cplot(mhetero, x = "PPGENDER", dx = "gw", what = "effect")
+margins::cplot(lm(outcome ~ gw * pfactor, data = schuldt), x = "pfactor", dx = "gw")
+margins::cplot(lm(outcome ~ gw * pfactor, data = schuldt), x = "pfactor", dx = "gw", what = "effect")
+?margins
+schuldt[["outcome"]]
+# load data
+setwd("/Users/slopezcariboni/Dropbox/Research/Teaching/SurveyExperiments/labs/holbrook_list_exp")
+holbrook <- rio::import("data.dta"
+names(holbrook)
+dim(holbrook)
+setwd("/Users/slopezcariboni/Dropbox/Research/Teaching/SurveyExperiments/labs/holbrook_list_exp")
+holbrook <- rio::import("data.dta")
+names(holbrook)
+dim(holbrook)
+holbrook[["tr"]] <- ifelse(!is.na(holbrook[["TESSQ1"]]), 1, ifelse(!is.na(holbrook[["TESSQ2"]]), 0, NA_real_))
+holbrook[["voted"]] <- dplyr::coalesce(holbrook[["TESSQ1"]], holbrook[["TESSQ2"]])
+holbrook[["voted"]] <- ifelse(holbrook[["voted"]] == 1, 1, ifelse(holbrook[["voted"]] == 2, 0, NA_real_))
+holbrook[["tr"]]
+holbrook[["TESSQ1"]]
+holbrook[["TESSQ2"]]
+holbrook[["tr"]] <- ifelse(!is.na(holbrook[["TESSQ1"]]), 1, ifelse(!is.na(holbrook[["TESSQ2"]]), 0, NA_real_))
+holbrook[["voted"]] <- dplyr::coalesce(holbrook[["TESSQ1"]], holbrook[["TESSQ2"]])
+coalesce(holbrook[["TESSQ1"]]
+coalesce(holbrook[["TESSQ1"]]
+coalesce(holbrook[["TESSQ1"]], holbrook[["TESSQ2"]])
+coalesce(holbrook[["TESSQ1"]], holbrook[["TESSQ2"]])
+coalesce(holbrook[["TESSQ1"]], holbrook[["TESSQ2"]])
+dplyr::coalesce(holbrook[["TESSQ1"]], holbrook[["TESSQ2"]])
+holbrook[["voted"]] <- dplyr::coalesce(holbrook[["TESSQ1"]], holbrook[["TESSQ2"]])
+holbrook[["voted"]] <- ifelse(holbrook[["voted"]] == 1, 1, ifelse(holbrook[["voted"]] == 2, 0, NA_real_))
+holbrook[["voted"]]
+t.test(voted ~ tr, data = holbrook)
+t.test(voted ~ tr, data = holbrook, var.equal = TRUE)
+summary(lm(voted ~ tr, data = holbrook))
+holbrook[["trlist"]] <- ifelse(!is.na(holbrook[["TESSQ3"]]), 0, ifelse(!is.na(holbrook[["TESSQ4"]]), 1, NA_real_))
+holbrook[["listcount"]] <- dplyr::coalesce(holbrook[["TESSQ3"]], holbrook[["TESSQ4"]])
+aggregate(listcount ~ trlist, data = holbrook, FUN = mean, na.rm = TRUE)
+holbrook[["trlist"]]
+holbrook[["TESSQ3"]]
+holbrook[["TESSQ4"]]
+aggregate(listcount ~ trlist, data = holbrook, FUN = mean, na.rm = TRUE)
+NA_real_
+holbrook[["tr"]] <- ifelse(!is.na(holbrook[["TESSQ1"]]), 1, ifelse(!is.na(holbrook[["TESSQ2"]]), 0, NA_real_))
+holbrook[["voted"]] <- dplyr::coalesce(holbrook[["TESSQ1"]], holbrook[["TESSQ2"]])
+holbrook[["voted"]] <- ifelse(holbrook[["voted"]] == 1, 1, ifelse(holbrook[["voted"]] == 2, 0, NA_real_))
+t.test(voted ~ tr, data = holbrook)
+?coalesce
+dplyr::coalesce(holbrook[["TESSQ1"]], holbrook[["TESSQ2"]])
+holbrook
+head(holbrook)
