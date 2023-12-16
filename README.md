@@ -1,29 +1,32 @@
 <div class="navbar">
-
-<a href="#informacion-general">Información General</a>
-<a href="#descripcion">Descripción</a> <a href="#programa">Programa</a>
-<a href="#objetivos">Objetivos</a>
-<a href="#bibliografia">Bibliografía</a>
-<a href="#cronograma">Cronograma</a>
-<a href="#materiales">Materiales</a>
-
+  <a href="#informacion-general">Información General</a>
+  <a href="#descripcion">Descripción</a>
+  <a href="#programa">Programa</a>
+  <a href="#objetivos">Objetivos</a>
+  <a href="#bibliografia">Bibliografía</a>
+  <a href="#cronograma">Cronograma</a>
+  <a href="#materiales">Materiales</a>
 </div>
 
 <style>
-&#10;h1 {
+
+h1 {
     display: none;
   }
-  &#10;  body {
+  
+  body {
     font-family: Arial, sans-serif;
     background-color: #FFFFFF;
     margin: 0;
     padding: 0;
   }
-&#10;  .navbar {
+
+  .navbar {
     background-color: #8a2be2; 
     overflow: hidden;
   }
-&#10;  .navbar a {
+
+  .navbar a {
     float: left;
     display: block;
     color: white;
@@ -31,14 +34,18 @@
     padding: 14px 16px;
     text-decoration: none;
   }
-&#10;  .navbar a:hover {
+
+  .navbar a:hover {
     background-color: #ddd;
     color: black;
   }
-&#10;  h2 {
+
+  h2 {
     margin-top: 20px;
   }
 </style>
+
+
 
 ## Diseño e implementacion de experimentos en ciencias sociales <a name="informacion-general"></a>
 
@@ -90,7 +97,7 @@ El programa del curso está disponible
   través de la simulación
 - Adquirir experiencia replicando el diseño y análisis de experimentos
   publicados destacados
-- Cómo diseñar un experimento y preparar un pre-registro completo.
+- Cómo diseñar un experimento y preparar un pre-registro completo
 
 ## Bibliografía general <a name="bibliografia"></a>
 
@@ -152,4 +159,4 @@ La literatura del curso está disponible
 | 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | [Experimentos de Encuestas - Qualtrics](https://drive.google.com/file/d/10GOzGsxcG_Kb93XEzRaefCPD4RGQr1Ut/view?usp=sharing); [Tipos de Experimentos](https://drive.google.com/file/d/10NvXg9FUUU0muewzUiHE0CgGXWOo_wpK/view?usp=sharing); [Experimentos de laboratorio](https://drive.google.com/file/d/1iVrSDTSJtu4G7u-j2Tg7Wm0kZPZryBSS/view?usp=sharing), [Experimentos Naturales con RDD.pdf](https://drive.google.com/file/d/1DDAqPEdh-ytKcQ9ri7y0a2KUzQ5ZrTpl/view?usp=sharing); [VIDEO: clase RDD y Experimentos de laboratorio](https://salavirtual-udelar.zoom.us/rec/share/hQFQRPxFhYmKtyHHAIt1WDRQHSY9Ve-MwOqTzys59zHZjm5voHeYg7gQSG3ztgzn.S4HDFr5gU2VSAAj0) | [.zip](https://drive.google.com/file/d/1tl7wGmp-MpVOC6SCJIX4wWr6kTbD6baR/view?usp=sharing)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | 7      | Pre-registro de experimentos                              | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | [PDF](https://drive.google.com/u/0/uc?id=1FGDnnDUPCmuI_AJxZq17Hym2IMj7vyXA&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [Fromulario_Registro.html](https://drive.google.com/u/0/uc?id=1FEM_wvJr1olLHnb5pZhivvdKlPfrCOCv&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-###### \*Actulización: 2023-12-16 09:44:58
+###### \*Actulización: 2023-12-16 09:48:47
