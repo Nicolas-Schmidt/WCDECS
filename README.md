@@ -1,32 +1,29 @@
 <div class="navbar">
-  <a href="#informacion-general">Información General</a>
-  <a href="#descripcion">Descripción</a>
-  <a href="#programa">Programa</a>
-  <a href="#objetivos">Objetivos</a>
-  <a href="#bibliografia">Bibliografía</a>
-  <a href="#cronograma">Cronograma</a>
-  <a href="#materiales">Materiales</a>
+
+<a href="#informacion-general">Información General</a>
+<a href="#descripcion">Descripción</a> <a href="#programa">Programa</a>
+<a href="#objetivos">Objetivos</a>
+<a href="#bibliografia">Bibliografía</a>
+<a href="#cronograma">Cronograma</a>
+<a href="#materiales">Materiales</a>
+
 </div>
 
 <style>
-
-h1 {
+&#10;h1 {
     display: none;
   }
-  
-  body {
+  &#10;  body {
     font-family: Arial, sans-serif;
     background-color: #FFFFFF;
     margin: 0;
     padding: 0;
   }
-
-  .navbar {
+&#10;  .navbar {
     background-color: #8a2be2; 
     overflow: hidden;
   }
-
-  .navbar a {
+&#10;  .navbar a {
     float: left;
     display: block;
     color: white;
@@ -34,17 +31,14 @@ h1 {
     padding: 14px 16px;
     text-decoration: none;
   }
-
-  .navbar a:hover {
+&#10;  .navbar a:hover {
     background-color: #ddd;
     color: black;
   }
-
-  h2 {
+&#10;  h2 {
     margin-top: 20px;
   }
 </style>
-
 
 ## Diseño e implementacion de experimentos en ciencias sociales <a name="informacion-general"></a>
 
@@ -96,7 +90,7 @@ El programa del curso está disponible
   través de la simulación
 - Adquirir experiencia replicando el diseño y análisis de experimentos
   publicados destacados
-- Cómo diseñar un experimento y preparar un pre-registro completo
+- Cómo diseñar un experimento y preparar un pre-registro completo.
 
 ## Bibliografía general <a name="bibliografia"></a>
 
@@ -155,7 +149,7 @@ La literatura del curso está disponible
 | 3      | Estrategias de aleatorización y análisis basado en diseño | Moore 2012 [pdf](https://drive.google.com/uc?id=15MRIai-gAEJfOSvzTrIMHi0xLEMNZcve&export=download) Moore & Moore 2013 [pdf](https://drive.google.com/uc?id=15Kifc2ULatuk1Wlkmi1dsRnAJ0U_Kqns&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [AsignacionBloques.pdf](https://drive.google.com/u/0/uc?id=1ETPauKMzngZQ2LWx1woXnzGhoyg_Uf1p&export=download) [PotenciaEstadistica.pdf](https://drive.google.com/file/d/14ijDQFe4rBo4vJripGDwi3B1AH6HVd7u/view?usp=sharing) [Estimacion Lin-Bloques-Clusters.pdf](https://drive.google.com/file/d/15IYxoBhxM4e9FeeA92jrJfO8TPTfKrst/view), [VIDEO: clase potencia estadística](https://drive.google.com/file/d/1gQwaUNHga-Fa0cByxX8X9NIBSPEvRfOE/view?usp=sharing); [VIDEO: clase asignación por Bloques](https://salavirtual-udelar.zoom.us/rec/share/uNj8IEaHTgeV6JydtVlGYc4tAMyUnrpFo0r_5wgvv8RNQCREoBdwKiTBm8MJoNUx.ewDR4rj2p9_-KR-r)                               | Lab 3: Power: [HTML](https://drive.google.com/file/d/1EfgP-mGvNiFq-sADAsNF49bQtnnRDFjn/view?usp=sharing), [Rmd](https://drive.google.com/file/d/1Ee2wSvcGqZQ1DERMDSX3y150tDVYGqoi/view?usp=sharing) Lab 4: Blocked Designs: [HTML](https://drive.google.com/file/d/1EfhqKDisWm8rtUTTta1owjCYrOKa4lMD/view?usp=sharing), [Rmd](https://drive.google.com/file/d/1EfKT1pL9Egdfzoxb_qwpgfoXgY3rpXCD/view?usp=sharing), Lab 5 : Clusters[Rmd](https://drive.google.com/u/0/uc?id=1frrMkWwsT1b4HAdSsT8XztM9J_llTXdT&export=download), [HTML](https://drive.google.com/u/0/uc?id=1jY6fkenog2qwxmQz3KwtBMXUJu84VICB&export=download) |
 | 4      | Diseños experimentales                                    | Athey & Imbens 2017 [pdf](https://drive.google.com/uc?id=15H9wLR8hk0NTVUULcjfr-GXCFMKuhtpP&export=download) Egami 2018 [pdf](https://drive.google.com/uc?id=15UwQw-nz4aG52nzdj8uIv8HDTsVQ7Svj&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | [Diseños de Aliento (IV).pdf](https://drive.google.com/uc?id=1GibnDUaXJoRjbGAnm3xDAFuwEVefa9WL&export=download) [Diseños factoriales.pdf](https://drive.google.com/file/d/1AKmQLHQ-yn9fB0533-gTXhF1XAVFuGpG/view?usp=sharing) [Mediacion.pdf](https://drive.google.com/file/d/1BmkVIionkJ_jr30WgVESpIZJk3yt420d/view?usp=sharing); [VIDEO: clase diseños factoriales](https://salavirtual-udelar.zoom.us/rec/share/GGGdhrxRmmn4BtdejhVPfVMs6ZeGZC0Sa8T8VaHEhGnVUglTvuKT9rfqpRkV0ux5.AGyMPixdrmpWu4dv)                                                                                                                                                                   | Lab 6: Cumplimiento imperfecto y variables instrumentales [HTML](https://drive.google.com/u/0/uc?id=1AgYwrIxK0SYlYJHBHJMz0QnnMqfKdWPQ&export=download), [.Rmd](https://drive.google.com/u/0/uc?id=1ANq7qSyIw-IqFXJXfuQ2LnCQN_aK6OlG&export=download), Lab 8: Mediación [HTML](https://drive.google.com/file/d/1BV2hmgTjOyGRrO_1hcVxakQSZOou5ZtG/view?usp=sharing), [.Rmd](https://drive.google.com/file/d/1B4pl1u8xX0j7y50o6SjItY606OLHVjxx/view?usp=sharing)                                                                                                                                                                |
 | 5      | Análisis estadístico de experimentos                      | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Lab 7: Interacción causal en diseños Factoriales [HTML](https://drive.google.com/u/0/uc?id=1GkMu98kl8oT_7WSq0p_TMtRNeoUKmPAk&export=download) [.Rmd](Lab7_efectos_heterogeneos)                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | [Experimentos de Encuestas - Qualtrics](https://drive.google.com/file/d/10GOzGsxcG_Kb93XEzRaefCPD4RGQr1Ut/view?usp=sharing); [Tipos de Experimentos](https://drive.google.com/file/d/10A4EJFGWfebygOzYqxJxFSMew-zIN9r7/view?usp=sharing); [Experimentos de laboratorio](https://drive.google.com/file/d/1iVrSDTSJtu4G7u-j2Tg7Wm0kZPZryBSS/view?usp=sharing), [Experimentos Naturales con RDD.pdf](https://drive.google.com/file/d/1DDAqPEdh-ytKcQ9ri7y0a2KUzQ5ZrTpl/view?usp=sharing); [VIDEO: clase RDD y Experimentos de laboratorio](https://salavirtual-udelar.zoom.us/rec/share/hQFQRPxFhYmKtyHHAIt1WDRQHSY9Ve-MwOqTzys59zHZjm5voHeYg7gQSG3ztgzn.S4HDFr5gU2VSAAj0) | [.zip](https://drive.google.com/file/d/1tl7wGmp-MpVOC6SCJIX4wWr6kTbD6baR/view?usp=sharing)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | [Experimentos de Encuestas - Qualtrics](https://drive.google.com/file/d/10GOzGsxcG_Kb93XEzRaefCPD4RGQr1Ut/view?usp=sharing); [Tipos de Experimentos](https://drive.google.com/file/d/10NvXg9FUUU0muewzUiHE0CgGXWOo_wpK/view?usp=sharing); [Experimentos de laboratorio](https://drive.google.com/file/d/1iVrSDTSJtu4G7u-j2Tg7Wm0kZPZryBSS/view?usp=sharing), [Experimentos Naturales con RDD.pdf](https://drive.google.com/file/d/1DDAqPEdh-ytKcQ9ri7y0a2KUzQ5ZrTpl/view?usp=sharing); [VIDEO: clase RDD y Experimentos de laboratorio](https://salavirtual-udelar.zoom.us/rec/share/hQFQRPxFhYmKtyHHAIt1WDRQHSY9Ve-MwOqTzys59zHZjm5voHeYg7gQSG3ztgzn.S4HDFr5gU2VSAAj0) | [.zip](https://drive.google.com/file/d/1tl7wGmp-MpVOC6SCJIX4wWr6kTbD6baR/view?usp=sharing)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | 7      | Pre-registro de experimentos                              | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | [PDF](https://drive.google.com/u/0/uc?id=1FGDnnDUPCmuI_AJxZq17Hym2IMj7vyXA&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [Fromulario_Registro.html](https://drive.google.com/u/0/uc?id=1FEM_wvJr1olLHnb5pZhivvdKlPfrCOCv&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-###### \*Actulización: 2023-12-14 08:53:39
+###### \*Actulización: 2023-12-16 09:44:58
