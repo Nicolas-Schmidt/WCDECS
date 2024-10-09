@@ -93,15 +93,621 @@ El programa del curso está disponible
 
 ## Cronograma <a name="cronograma"></a>
 
-| Módulo | Tema                                                      | Lecturas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Presentaciones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Laboratorios                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|--------|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1      | Inferencia causal                                         | Gerber  & Green 2012. FEDAI [Descarga](https://drive.google.com/drive/folders/14HDw0lx7v8cduNtj2XNvvZ5fm_lQ7Z6y?usp=sharing) Barabas & Jerit 2010 [pdf](https://drive.google.com/u/0/uc?id=15SqCaheQIA_Eg8Q6CxkkF5Gdt2dPdK1Y&export=download) Aronow & Sami 2015 [pdf](https://drive.google.com/uc?id=15TBaGM4Vek3eGtyKhkKs8RPcHguBpOsn&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | [Inferencia](https://drive.google.com/u/0/uc?id=14ocI_63vA0eF2ixw4rOMzs0H6vzGTv4H&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Lab 1: Introducción a la aleatorización simple,completa, y por bloques: [HTML](https://drive.google.com/u/0/uc?id=1J6pjygV39O6g-A_VqCOC-A64s9vlZSd_&export=download), [Rmd](https://drive.google.com/u/0/uc?id=1JAns64_qRpMvtEWVIQC39CLFNQhEMoCz&export=download)                                                                                                                                                                                                                                                                                                                                                            |
-| 2      | Análisis bajo asignación aleatoria simple                 | Banjeree & Duflo 2017 [pdf](https://drive.google.com/uc?id=15Q9Bz5dOwA0j_hB9sjNF7sMtsQBk__0M&export=download) Ding, Feller & Miratrix 2015 [pdf](https://drive.google.com/uc?id=15P9qLcjj_aoIhe7ciMijrHSROJqqo9_M&export=download) Duflo, Glennester & Klemer 2007 [pdf](https://drive.google.com/uc?id=15PTsNN46mFAQ6mEDYtaYtVu8D9DLQudX&export=download) Freedman 2008 [pdf](https://drive.google.com/uc?id=15P2BC-eNSbX4oECTlPVsVBkfpoXPpisR&export=download) Lin 2013 [pdf](https://drive.google.com/uc?id=15NIlPp_3Q5zA-JdoVI0cM78HAH7ZeYmX&export=download) Nolen 2011 [pdf](https://drive.google.com/uc?id=15Llmro84jRR-4_jQvxRt3zYFinC3U7sc&export=download) Samii & Aronow 2012 [pdf](https://drive.google.com/uc?id=1TmrWjQDkAB8o8ubISLlJu2LZi9AlVygm&export=download) Wager et al 2016 [pdf](https://drive.google.com/uc?id=15NGuSOcPxU3kMTYCrPxE8WnYyTkgXIcE&export=download) | [AsignacionAleatoria.pdf](https://drive.google.com/u/0/uc?id=1EVxaJUyUSdxeGnfZmJG-Vvmcw-ba2Era&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Lab 2: RI: [HTML](https://drive.google.com/file/d/1-JyeCf7fnkAD5yinoPHoOwRv4L2B28RS/view?usp=sharing), [Rmd](https://drive.google.com/file/d/1xRH8NtGT5Sbc_Vp9HG_sKGht02ZHIMiZ/view?usp=sharing)                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| 3      | Estrategias de aleatorización y análisis basado en diseño | Moore 2012 [pdf](https://drive.google.com/uc?id=15MRIai-gAEJfOSvzTrIMHi0xLEMNZcve&export=download) Moore & Moore 2013 [pdf](https://drive.google.com/uc?id=15Kifc2ULatuk1Wlkmi1dsRnAJ0U_Kqns&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [AsignacionBloques.pdf](https://drive.google.com/u/0/uc?id=1ETPauKMzngZQ2LWx1woXnzGhoyg_Uf1p&export=download) [PotenciaEstadistica.pdf](https://drive.google.com/file/d/14ijDQFe4rBo4vJripGDwi3B1AH6HVd7u/view?usp=sharing) [Estimacion Lin-Bloques-Clusters.pdf](https://drive.google.com/file/d/15IYxoBhxM4e9FeeA92jrJfO8TPTfKrst/view), [VIDEO: clase potencia estadística](https://drive.google.com/file/d/1gQwaUNHga-Fa0cByxX8X9NIBSPEvRfOE/view?usp=sharing); [VIDEO: clase asignación por Bloques](https://salavirtual-udelar.zoom.us/rec/share/uNj8IEaHTgeV6JydtVlGYc4tAMyUnrpFo0r_5wgvv8RNQCREoBdwKiTBm8MJoNUx.ewDR4rj2p9_-KR-r)                               | Lab 3: Power: [HTML](https://drive.google.com/file/d/1EfgP-mGvNiFq-sADAsNF49bQtnnRDFjn/view?usp=sharing), [Rmd](https://drive.google.com/file/d/1Ee2wSvcGqZQ1DERMDSX3y150tDVYGqoi/view?usp=sharing) Lab 4: Blocked Designs: [HTML](https://drive.google.com/file/d/1EfhqKDisWm8rtUTTta1owjCYrOKa4lMD/view?usp=sharing), [Rmd](https://drive.google.com/file/d/1EfKT1pL9Egdfzoxb_qwpgfoXgY3rpXCD/view?usp=sharing), Lab 5 : Clusters[Rmd](https://drive.google.com/u/0/uc?id=1frrMkWwsT1b4HAdSsT8XztM9J_llTXdT&export=download), [HTML](https://drive.google.com/u/0/uc?id=1jY6fkenog2qwxmQz3KwtBMXUJu84VICB&export=download) |
-| 4      | Diseños experimentales                                    | Athey & Imbens 2017 [pdf](https://drive.google.com/uc?id=15H9wLR8hk0NTVUULcjfr-GXCFMKuhtpP&export=download) Egami 2018 [pdf](https://drive.google.com/uc?id=15UwQw-nz4aG52nzdj8uIv8HDTsVQ7Svj&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | [Diseños de Aliento (IV).pdf](https://drive.google.com/uc?id=1GibnDUaXJoRjbGAnm3xDAFuwEVefa9WL&export=download) [Diseños factoriales.pdf](https://drive.google.com/file/d/1AKmQLHQ-yn9fB0533-gTXhF1XAVFuGpG/view?usp=sharing) [Mediacion.pdf](https://drive.google.com/file/d/1BmkVIionkJ_jr30WgVESpIZJk3yt420d/view?usp=sharing); [VIDEO: clase diseños factoriales](https://salavirtual-udelar.zoom.us/rec/share/GGGdhrxRmmn4BtdejhVPfVMs6ZeGZC0Sa8T8VaHEhGnVUglTvuKT9rfqpRkV0ux5.AGyMPixdrmpWu4dv)                                                                                                                                                                   | Lab 6: Cumplimiento imperfecto y variables instrumentales [HTML](https://drive.google.com/u/0/uc?id=1AgYwrIxK0SYlYJHBHJMz0QnnMqfKdWPQ&export=download), [.Rmd](https://drive.google.com/u/0/uc?id=1ANq7qSyIw-IqFXJXfuQ2LnCQN_aK6OlG&export=download), Lab 8: Mediación [HTML](https://drive.google.com/file/d/1BV2hmgTjOyGRrO_1hcVxakQSZOou5ZtG/view?usp=sharing), [.Rmd](https://drive.google.com/file/d/1B4pl1u8xX0j7y50o6SjItY606OLHVjxx/view?usp=sharing)                                                                                                                                                                |
-| 5      | Análisis estadístico de experimentos                      | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Lab 7: Interacción causal en diseños Factoriales [HTML](https://drive.google.com/u/0/uc?id=1GkMu98kl8oT_7WSq0p_TMtRNeoUKmPAk&export=download) [.Rmd](Lab7_efectos_heterogeneos)                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| 6      | Tipos de experimentos en ciencias sociales                | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | [Experimentos de Encuestas - Qualtrics](https://drive.google.com/file/d/10GOzGsxcG_Kb93XEzRaefCPD4RGQr1Ut/view?usp=sharing); [Tipos de Experimentos](https://drive.google.com/file/d/10NvXg9FUUU0muewzUiHE0CgGXWOo_wpK/view?usp=sharing); [Experimentos de laboratorio](https://drive.google.com/file/d/1iVrSDTSJtu4G7u-j2Tg7Wm0kZPZryBSS/view?usp=sharing), [Experimentos Naturales con RDD.pdf](https://drive.google.com/file/d/1DDAqPEdh-ytKcQ9ri7y0a2KUzQ5ZrTpl/view?usp=sharing); [VIDEO: clase RDD y Experimentos de laboratorio](https://salavirtual-udelar.zoom.us/rec/share/hQFQRPxFhYmKtyHHAIt1WDRQHSY9Ve-MwOqTzys59zHZjm5voHeYg7gQSG3ztgzn.S4HDFr5gU2VSAAj0) | [.zip](https://drive.google.com/file/d/1tl7wGmp-MpVOC6SCJIX4wWr6kTbD6baR/view?usp=sharing)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| 7      | Pre-registro de experimentos                              | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | [PDF](https://drive.google.com/u/0/uc?id=1FGDnnDUPCmuI_AJxZq17Hym2IMj7vyXA&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [Fromulario_Registro.html](https://drive.google.com/u/0/uc?id=1FEM_wvJr1olLHnb5pZhivvdKlPfrCOCv&export=download)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+<div id="jxxvzlmtkh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jxxvzlmtkh table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+&#10;#jxxvzlmtkh thead, #jxxvzlmtkh tbody, #jxxvzlmtkh tfoot, #jxxvzlmtkh tr, #jxxvzlmtkh td, #jxxvzlmtkh th {
+  border-style: none;
+}
+&#10;#jxxvzlmtkh p {
+  margin: 0;
+  padding: 0;
+}
+&#10;#jxxvzlmtkh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+&#10;#jxxvzlmtkh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+&#10;#jxxvzlmtkh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+&#10;#jxxvzlmtkh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+&#10;#jxxvzlmtkh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+&#10;#jxxvzlmtkh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+&#10;#jxxvzlmtkh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+&#10;#jxxvzlmtkh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+&#10;#jxxvzlmtkh .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+&#10;#jxxvzlmtkh .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+&#10;#jxxvzlmtkh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+&#10;#jxxvzlmtkh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+&#10;#jxxvzlmtkh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+&#10;#jxxvzlmtkh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+&#10;#jxxvzlmtkh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#jxxvzlmtkh .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+&#10;#jxxvzlmtkh .gt_row_group_first td {
+  border-top-width: 2px;
+}
+&#10;#jxxvzlmtkh .gt_row_group_first th {
+  border-top-width: 2px;
+}
+&#10;#jxxvzlmtkh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#jxxvzlmtkh .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+&#10;#jxxvzlmtkh .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#jxxvzlmtkh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+&#10;#jxxvzlmtkh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#jxxvzlmtkh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+&#10;#jxxvzlmtkh .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+&#10;#jxxvzlmtkh .gt_left {
+  text-align: left;
+}
+&#10;#jxxvzlmtkh .gt_center {
+  text-align: center;
+}
+&#10;#jxxvzlmtkh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+&#10;#jxxvzlmtkh .gt_font_normal {
+  font-weight: normal;
+}
+&#10;#jxxvzlmtkh .gt_font_bold {
+  font-weight: bold;
+}
+&#10;#jxxvzlmtkh .gt_font_italic {
+  font-style: italic;
+}
+&#10;#jxxvzlmtkh .gt_super {
+  font-size: 65%;
+}
+&#10;#jxxvzlmtkh .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+&#10;#jxxvzlmtkh .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+&#10;#jxxvzlmtkh .gt_indent_1 {
+  text-indent: 5px;
+}
+&#10;#jxxvzlmtkh .gt_indent_2 {
+  text-indent: 10px;
+}
+&#10;#jxxvzlmtkh .gt_indent_3 {
+  text-indent: 15px;
+}
+&#10;#jxxvzlmtkh .gt_indent_4 {
+  text-indent: 20px;
+}
+&#10;#jxxvzlmtkh .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" style="table-layout: fixed;; width: 100%" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <colgroup>
+    <col style="width:50px;"/>
+    <col style="width:100px;"/>
+    <col style="width:400px;"/>
+    <col/>
+    <col/>
+  </colgroup>
+  <thead>
+    &#10;    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="Clase">Clase</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="Fecha">Fecha</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="Tema">Tema</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="Presentación">Presentación</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="Lab">Lab</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Clase" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;">1</td>
+<td headers="Fecha" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;">2024-10-22</td>
+<td headers="Tema" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'><p><b>T1: Inferencia Causal</b></p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>El modelo de causalidad Neyman–Rubin</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/u/0/uc?id=14ocI_63vA0eF2ixw4rOMzs0H6vzGTv4H&amp;export=download">Inferencia</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p>Lab 1: Introducción a la aleatorización simple,completa, y por bloques: <a href="https://drive.google.com/u/0/uc?id=1J6pjygV39O6g-A_VqCOC-A64s9vlZSd_&amp;export=download">HTML</a>, <a href="https://drive.google.com/u/0/uc?id=1JAns64_qRpMvtEWVIQC39CLFNQhEMoCz&amp;export=download">Rmd</a></p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Experimentos aleatorizados y validez</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Asignación aleatoria simple</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Estimandos (ATE, ITT, CACE, SATE, PATE, ATT, CATE, mediación)</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;">2</td>
+<td headers="Fecha" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;">2024-10-24</td>
+<td headers="Tema" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'><p><b>T2: Análisis bajo asignación aleatoria simple</b></p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Inferencia de aleatorización (p-valores exactos para hipótesis nulas nítidas)</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/u/0/uc?id=1EVxaJUyUSdxeGnfZmJG-Vvmcw-ba2Era&amp;export=download">AsignacionAleatoria.pdf</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p>Lab 2: RI: <a href="https://drive.google.com/file/d/1-JyeCf7fnkAD5yinoPHoOwRv4L2B28RS/view?usp=sharing">HTML</a>, <a href="https://drive.google.com/file/d/1xRH8NtGT5Sbc_Vp9HG_sKGht02ZHIMiZ/view?usp=sharing">Rmd</a></p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Regresión y ajuste por covariables</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"></td>
+<td headers="Fecha" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"></td>
+<td headers="Tema" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'><p><b>T3: Estrategias de aleatorización y análisis basado en diseño</b></p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right">3</td>
+<td headers="Fecha" class="gt_row gt_right">2024-10-29</td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Poder estadístico. Fórmula analítica y simulaciones</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/file/d/14ijDQFe4rBo4vJripGDwi3B1AH6HVd7u/view?usp=sharing">PotenciaEstadistica.pdf</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p>Lab 3: Power: <a href="https://drive.google.com/file/d/1EfgP-mGvNiFq-sADAsNF49bQtnnRDFjn/view?usp=sharing">HTML</a>, <a href="https://drive.google.com/file/d/1Ee2wSvcGqZQ1DERMDSX3y150tDVYGqoi/view?usp=sharing">Rmd</a></p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right">4</td>
+<td headers="Fecha" class="gt_row gt_right">2024-10-31</td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Uso de covariables en el diseño. Asignación por bloques y análisis.</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/u/0/uc?id=1ETPauKMzngZQ2LWx1woXnzGhoyg_Uf1p&amp;export=download">AsignacionBloques.pdf</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p>Lab 4: Blocked Designs: <a href="https://drive.google.com/file/d/1EfhqKDisWm8rtUTTta1owjCYrOKa4lMD/view?usp=sharing">HTML</a>, <a href="https://drive.google.com/file/d/1EfKT1pL9Egdfzoxb_qwpgfoXgY3rpXCD/view?usp=sharing">Rmd</a></p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right">5</td>
+<td headers="Fecha" class="gt_row gt_right">2024-11-04</td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Asignación aleatoria por clusters y análisis.</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/file/d/15IYxoBhxM4e9FeeA92jrJfO8TPTfKrst/view">Estimacion Lin-Bloques-Clusters.pdf</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p>Lab 5 : Clusters<a href="https://drive.google.com/u/0/uc?id=1frrMkWwsT1b4HAdSsT8XztM9J_llTXdT&amp;export=download">Rmd</a>, <a href="https://drive.google.com/u/0/uc?id=1jY6fkenog2qwxmQz3KwtBMXUJu84VICB&amp;export=download">HTML</a></p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;">6</td>
+<td headers="Fecha" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;">2024-11-07</td>
+<td headers="Tema" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'><p><b>T4: Diseños experimentales</b></p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Diseños de aliento y cumplimiento imperfecto. Diseños Multi-rama. Diseños factoriales.</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/uc?id=1GibnDUaXJoRjbGAnm3xDAFuwEVefa9WL&amp;export=download">Diseños de Aliento (IV).pdf</a> <a href="https://drive.google.com/file/d/1AKmQLHQ-yn9fB0533-gTXhF1XAVFuGpG/view?usp=sharing">Diseños factoriales.pdf</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p>Lab 6: Cumplimiento imperfecto y variables instrumentales <a href="https://drive.google.com/u/0/uc?id=1AgYwrIxK0SYlYJHBHJMz0QnnMqfKdWPQ&amp;export=download">HTML</a></p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Diseños de mediación. Diseños para estimar efectos de derrame. Diseños adaptativos. Diagnóstico de diseños.</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/file/d/1BmkVIionkJ_jr30WgVESpIZJk3yt420d/view?usp=sharing">Mediacion.pdf</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p>Lab 7: Mediación <a href="https://drive.google.com/file/d/1BV2hmgTjOyGRrO_1hcVxakQSZOou5ZtG/view?usp=sharing">HTML</a></p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;">7</td>
+<td headers="Fecha" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;">2024-11-11</td>
+<td headers="Tema" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'><p><b>T6: Análisis estadísitco de experimentos</b></p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Análisis de efectos heterogéneos y variables pre-tratamiento</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p>Lab 8: Interacción causal en diseños Factoriales <a href="https://drive.google.com/u/0/uc?id=1GkMu98kl8oT_7WSq0p_TMtRNeoUKmPAk&amp;export=download">HTML</a> <a href="Lab7_efectos_heterogeneos">.Rmd</a></p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Corrección por hipótesis múltiples</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p>Lab9: Corrección por hipótesis múltiples</p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Spillovers (contaminación)</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Non-compliance</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Atrición</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;">8</td>
+<td headers="Fecha" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;">2024-11-14</td>
+<td headers="Tema" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'><p><b>T7: Pre-registro de experimentos / Presentación del trabajo final</b></p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Elaboración de un plan de análisis</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/u/0/uc?id=1FGDnnDUPCmuI_AJxZq17Hym2IMj7vyXA&amp;export=download">PDF</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Ética en la investigación experimental</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Materiales de pre-registro</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/u/0/uc?id=1FEM_wvJr1olLHnb5pZhivvdKlPfrCOCv&amp;export=download">Fromulario_Registro.html</a></p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"></td>
+<td headers="Fecha" class="gt_row gt_right" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"></td>
+<td headers="Tema" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'><p><b>T8: Tipos de experimentos de en ciencias sociales</b></p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td>
+<td headers="Lab" class="gt_row gt_left" style="border-top-width: 3px; border-top-style: solid; border-top-color: black;"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right">9</td>
+<td headers="Fecha" class="gt_row gt_right">2024-11-19</td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Experimentos de campo</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/file/d/10A4EJFGWfebygOzYqxJxFSMew-zIN9r7/view?usp=sharing">Tipos de Experimentos</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right"></td>
+<td headers="Fecha" class="gt_row gt_right"></td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Experimentos naturales</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/file/d/1DDAqPEdh-ytKcQ9ri7y0a2KUzQ5ZrTpl/view?usp=sharing">Experimentos Naturales con RDD.pdf</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'></div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right">10</td>
+<td headers="Fecha" class="gt_row gt_right">2024-11-21</td>
+<td headers="Tema" class="gt_row gt_left"><div class='gt_from_md'><p>Experimentos de encuesta</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://drive.google.com/file/d/10GOzGsxcG_Kb93XEzRaefCPD4RGQr1Ut/view?usp=sharing">Experimentos de Encuestas - Qualtrics</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left"><div class='gt_from_md'><p>Lab10: experimentos de encuesta <a href="https://drive.google.com/file/d/1tl7wGmp-MpVOC6SCJIX4wWr6kTbD6baR/view?usp=sharing">.zip</a></p>
+</div></td></tr>
+    <tr><td headers="Clase" class="gt_row gt_right" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;"></td>
+<td headers="Fecha" class="gt_row gt_right" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;"></td>
+<td headers="Tema" class="gt_row gt_left" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;"><div class='gt_from_md'><p>Experimentos de laboratorio</p>
+</div></td>
+<td headers="Presentación" class="gt_row gt_left" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;"><div class='gt_from_md'><p><a href="https://drive.google.com/file/d/1iVrSDTSJtu4G7u-j2Tg7Wm0kZPZryBSS/view?usp=sharing">Experimentos de laboratorio</a></p>
+</div></td>
+<td headers="Lab" class="gt_row gt_left" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;"><div class='gt_from_md'><p>Lab11: experimentos de laboratorio</p>
+</div></td></tr>
+  </tbody>
+  &#10;  
+</table>
+</div>
 
 ## Bibliografía general <a name="bibliografia"></a>
 
@@ -133,4 +739,4 @@ La literatura del curso está disponible
 
 ------------------------------------------------------------------------
 
-###### **Actulización web: 2024-10-09 17:33:35**
+###### **Actulización web: 2024-10-09 17:40:30**
