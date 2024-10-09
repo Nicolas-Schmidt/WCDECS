@@ -1,3 +1,4 @@
+
 <div class="navbar">
 
 <a href="#informacion-general">Información General</a>
@@ -7,11 +8,9 @@
 <a href="#cronograma">Cronograma</a>
 <a href="#cronograma">Materiales</a>
 
-
 </div>
 
 <style>
-
 &#10;h1 {
     display: none;
   }
@@ -40,10 +39,7 @@
 &#10;  h2 {
     margin-top: 20px;
   }
-  
 </style>
-
-
 
 ## Diseño e implementacion de experimentos en ciencias sociales <a name="informacion-general"></a>
 
@@ -97,20 +93,20 @@ El programa del curso está disponible
 
 ## Cronograma <a name="cronograma"></a>
 
-<div id="yshhaptede" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yshhaptede table {
+<div id="lunzsgurnk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lunzsgurnk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#yshhaptede thead, #yshhaptede tbody, #yshhaptede tfoot, #yshhaptede tr, #yshhaptede td, #yshhaptede th {
+&#10;#lunzsgurnk thead, #lunzsgurnk tbody, #lunzsgurnk tfoot, #lunzsgurnk tr, #lunzsgurnk td, #lunzsgurnk th {
   border-style: none;
 }
-&#10;#yshhaptede p {
+&#10;#lunzsgurnk p {
   margin: 0;
   padding: 0;
 }
-&#10;#yshhaptede .gt_table {
+&#10;#lunzsgurnk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -135,11 +131,11 @@ El programa del curso está disponible
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_caption {
+&#10;#lunzsgurnk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#yshhaptede .gt_title {
+&#10;#lunzsgurnk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -150,7 +146,7 @@ El programa del curso está disponible
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#yshhaptede .gt_subtitle {
+&#10;#lunzsgurnk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -161,7 +157,7 @@ El programa del curso está disponible
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#yshhaptede .gt_heading {
+&#10;#lunzsgurnk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -172,12 +168,12 @@ El programa del curso está disponible
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_bottom_border {
+&#10;#lunzsgurnk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_col_headings {
+&#10;#lunzsgurnk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -191,7 +187,7 @@ El programa del curso está disponible
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_col_heading {
+&#10;#lunzsgurnk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -210,7 +206,7 @@ El programa del curso está disponible
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#yshhaptede .gt_column_spanner_outer {
+&#10;#lunzsgurnk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -221,13 +217,13 @@ El programa del curso está disponible
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#yshhaptede .gt_column_spanner_outer:first-child {
+&#10;#lunzsgurnk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#yshhaptede .gt_column_spanner_outer:last-child {
+&#10;#lunzsgurnk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#yshhaptede .gt_column_spanner {
+&#10;#lunzsgurnk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -238,10 +234,10 @@ El programa del curso está disponible
   display: inline-block;
   width: 100%;
 }
-&#10;#yshhaptede .gt_spanner_row {
+&#10;#lunzsgurnk .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#yshhaptede .gt_group_heading {
+&#10;#lunzsgurnk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -266,7 +262,7 @@ El programa del curso está disponible
   vertical-align: middle;
   text-align: left;
 }
-&#10;#yshhaptede .gt_empty_group_heading {
+&#10;#lunzsgurnk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -280,13 +276,13 @@ El programa del curso está disponible
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#yshhaptede .gt_from_md > :first-child {
+&#10;#lunzsgurnk .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#yshhaptede .gt_from_md > :last-child {
+&#10;#lunzsgurnk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#yshhaptede .gt_row {
+&#10;#lunzsgurnk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -304,7 +300,7 @@ El programa del curso está disponible
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#yshhaptede .gt_stub {
+&#10;#lunzsgurnk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -316,7 +312,7 @@ El programa del curso está disponible
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#yshhaptede .gt_stub_row_group {
+&#10;#lunzsgurnk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -329,13 +325,13 @@ El programa del curso está disponible
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#yshhaptede .gt_row_group_first td {
+&#10;#lunzsgurnk .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#yshhaptede .gt_row_group_first th {
+&#10;#lunzsgurnk .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#yshhaptede .gt_summary_row {
+&#10;#lunzsgurnk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -344,14 +340,14 @@ El programa del curso está disponible
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#yshhaptede .gt_first_summary_row {
+&#10;#lunzsgurnk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_first_summary_row.thick {
+&#10;#lunzsgurnk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#yshhaptede .gt_last_summary_row {
+&#10;#lunzsgurnk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -360,7 +356,7 @@ El programa del curso está disponible
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_grand_summary_row {
+&#10;#lunzsgurnk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -369,7 +365,7 @@ El programa del curso está disponible
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#yshhaptede .gt_first_grand_summary_row {
+&#10;#lunzsgurnk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -378,7 +374,7 @@ El programa del curso está disponible
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_last_grand_summary_row_top {
+&#10;#lunzsgurnk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -387,10 +383,10 @@ El programa del curso está disponible
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_striped {
+&#10;#lunzsgurnk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#yshhaptede .gt_table_body {
+&#10;#lunzsgurnk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -398,7 +394,7 @@ El programa del curso está disponible
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_footnotes {
+&#10;#lunzsgurnk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -411,7 +407,7 @@ El programa del curso está disponible
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_footnote {
+&#10;#lunzsgurnk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -419,7 +415,7 @@ El programa del curso está disponible
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#yshhaptede .gt_sourcenotes {
+&#10;#lunzsgurnk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -432,57 +428,57 @@ El programa del curso está disponible
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#yshhaptede .gt_sourcenote {
+&#10;#lunzsgurnk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#yshhaptede .gt_left {
+&#10;#lunzsgurnk .gt_left {
   text-align: left;
 }
-&#10;#yshhaptede .gt_center {
+&#10;#lunzsgurnk .gt_center {
   text-align: center;
 }
-&#10;#yshhaptede .gt_right {
+&#10;#lunzsgurnk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#yshhaptede .gt_font_normal {
+&#10;#lunzsgurnk .gt_font_normal {
   font-weight: normal;
 }
-&#10;#yshhaptede .gt_font_bold {
+&#10;#lunzsgurnk .gt_font_bold {
   font-weight: bold;
 }
-&#10;#yshhaptede .gt_font_italic {
+&#10;#lunzsgurnk .gt_font_italic {
   font-style: italic;
 }
-&#10;#yshhaptede .gt_super {
+&#10;#lunzsgurnk .gt_super {
   font-size: 65%;
 }
-&#10;#yshhaptede .gt_footnote_marks {
+&#10;#lunzsgurnk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#yshhaptede .gt_asterisk {
+&#10;#lunzsgurnk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#yshhaptede .gt_indent_1 {
+&#10;#lunzsgurnk .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#yshhaptede .gt_indent_2 {
+&#10;#lunzsgurnk .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#yshhaptede .gt_indent_3 {
+&#10;#lunzsgurnk .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#yshhaptede .gt_indent_4 {
+&#10;#lunzsgurnk .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#yshhaptede .gt_indent_5 {
+&#10;#lunzsgurnk .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -743,17 +739,4 @@ La literatura del curso está disponible
 
 ------------------------------------------------------------------------
 
-###### **Actulización web: 2024-10-09 18:15:11**
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=README.html">
-  </head>
-  <body>
-    <p>Redirecting to <a href="README.html">README.html</a></p>
-  </body>
-</html>
-
-
+###### **Actulización web: 2024-10-09 18:24:07**
