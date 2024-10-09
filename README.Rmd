@@ -149,7 +149,6 @@ url <- "https://docs.google.com/spreadsheets/d/1DOO5tUWOpI2laLfvPuAPzlN2dWzgnr3-
 #data <- read_excel(temp)
 #unlink(temp)
 
-
 destfile <- file.path(getwd(), "archivo_descargado.xlsx")
 download.file(url, destfile = destfile, mode = "wb")
 data <- read_excel(destfile)
@@ -181,9 +180,9 @@ table_gt <- df %>%
         Tema = "Tema"
     ) %>%
     cols_width(
-        Fecha ~ px(100),  
+        Fecha ~ px(120),  
         Clase ~ px(50), 
-        Tema ~ px(400)
+        Tema ~ px(350)
     ) %>%
     tab_options(
         table.width = pct(100),  
