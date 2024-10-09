@@ -9,7 +9,7 @@ output: github_document
   <a href="#objetivos">Objetivos</a>
   <a href="#bibliografia">Bibliografía</a>
   <a href="#cronograma">Cronograma</a>
-  <a href="#materiales">Materiales</a>
+  <a href="#cronograma">Materiales</a>
 </div>
 
 <style>
@@ -52,9 +52,9 @@ h1 {
 
 ## Diseño e implementacion de experimentos en ciencias sociales <a name="informacion-general"></a>
 
-Curso dictado en la Maestría en Economía (dECON - FCS)
 
-Año 2023
+
+Año `r substring(Sys.time(), 1, 4)`
 
 ***Santiago López-Cariboni***
 
@@ -102,6 +102,130 @@ El programa del curso está disponible
   publicados destacados
 - Cómo diseñar un experimento y preparar un pre-registro completo
 
+
+## Cronograma <a name="cronograma"></a>
+
+```{r, results='asis', echo=FALSE, eval=FALSE}
+
+datos <- rio::import("Cronograma.xlsx")
+datos$Fecha <- as.character(datos$Fecha)
+filas <- nrow(datos)
+colum <- ncol(datos)
+
+cat(paste("|", names(datos)), "\n")
+cat(paste(c(rep("|------", colum), "|" ), collapse = ""),"\n")
+
+for (i in 1:filas) {
+    cat(paste("|", paste(datos[i,], collapse = "|"), "|", "\n"))
+}
+```
+
+
+
+```{r, results='asis', echo=FALSE, eval=FALSE}
+## Materiales del Curso <a name="materiales"></a>
+datos <- rio::import("Clases.xlsx")
+filas <- nrow(datos)
+colum <- ncol(datos)
+
+cat(paste("|", names(datos)), "\n")
+cat(paste(c(rep("|------", colum), "|" ), collapse = ""),"\n")
+
+for (i in 1:filas) {
+    cat(paste("|", paste(datos[i,], collapse = "|"), "|", "\n"))
+}
+
+```
+
+
+```{r echo=FALSE, warning=FALSE, message=FALSE, escape = FALSE}
+library(gt)
+library(tidyverse)
+library(readxl)
+
+url <- "https://docs.google.com/spreadsheets/d/1DOO5tUWOpI2laLfvPuAPzlN2dWzgnr3-/export?format=xlsx"
+temp <- tempfile(fileext = ".xlsx")
+download.file(url, destfile = temp, mode = "wb")
+data <- read_excel(temp)
+unlink(temp)
+
+
+
+df <- data %>%
+    mutate(
+        Tema = gsub("(T\\d+:.*)", "<b>\\1</b>", Tema), 
+        #Presentación = ifelse(!is.na(Presentación), paste0('[', gsub("^(.*?)(\\(.*\\))$", "\\1", Presentación), '](\\2)'), ""),
+        #Lab = ifelse(!is.na(Lab), paste0('[', gsub("^(.*?)(\\(.*\\))$", "\\1", Lab), '](\\2)'), ""),
+        across(everything(), ~ replace_na(as.character(.), ""))
+    )
+
+
+
+table_gt <- df %>% 
+    gt() %>%
+    tab_style(
+        style = list(
+            cell_text(weight = "bold")  
+        ),
+        locations = cells_column_labels()  
+    ) %>%
+    cols_label(
+        Clase = "Clase",
+        Fecha = "Fecha",
+        Tema = "Tema"
+    ) %>%
+    cols_width(
+        Fecha ~ px(100),  
+        Clase ~ px(50), 
+        Tema ~ px(400)
+    ) %>%
+    tab_options(
+        table.width = pct(100),  
+        table.border.top.width = px(3),  
+        table.border.bottom.width = px(3)  
+    ) %>%
+    fmt_markdown(columns = c("Presentación", "Lab", "Tema"))  
+
+
+for (i in seq_len(nrow(df))) {
+    if (grepl("T\\d+:", df$Tema[i])) {
+        table_gt <- table_gt %>%
+            tab_style(
+                style = list(
+                    cell_borders(
+                        sides = "top",
+                        color = "black",
+                        weight = px(3)  
+                    )
+                ),
+                locations = cells_body(
+                    rows = i  
+                )
+            )
+    }
+}
+
+table_gt <- table_gt %>%
+    tab_style(
+        style = list(
+            cell_borders(
+                sides = "bottom",
+                color = "black",
+                weight = px(3) 
+            )
+        ),
+        locations = cells_body(
+            rows = nrow(df)  
+        )
+    )
+
+table_gt
+
+
+
+```
+
+
 ## Bibliografía general <a name="bibliografia"></a>
 
 Gerber, Alan S., and Donald P. Green. 2012. *Field Experiments: Design,
@@ -130,38 +254,18 @@ EGAP](https://lilymedina.github.io/theory_and_practice_of_field_experiments/)
 La literatura del curso está disponible
 [aquí](https://drive.google.com/drive/folders/154rb3NLmaPQQB8L9xvvFmakDQ1wMudYQ?usp=sharing)
 
-## Cronograma <a name="cronograma"></a>
 
-```{r, results='asis', echo=FALSE}
 
-datos <- rio::import("Cronograma.xlsx")
-datos$Fecha <- as.character(datos$Fecha)
-filas <- nrow(datos)
-colum <- ncol(datos)
 
-cat(paste("|", names(datos)), "\n")
-cat(paste(c(rep("|------", colum), "|" ), collapse = ""),"\n")
 
-for (i in 1:filas) {
-    cat(paste("|", paste(datos[i,], collapse = "|"), "|", "\n"))
-}
-```
 
-## Materiales del Curso <a name="materiales"></a>
 
-```{r, results='asis', echo=FALSE}
 
-datos <- rio::import("Clases.xlsx")
-filas <- nrow(datos)
-colum <- ncol(datos)
 
-cat(paste("|", names(datos)), "\n")
-cat(paste(c(rep("|------", colum), "|" ), collapse = ""),"\n")
 
-for (i in 1:filas) {
-    cat(paste("|", paste(datos[i,], collapse = "|"), "|", "\n"))
-}
 
-```
 
-###### *Actulización: `r Sys.time()`
+
+
+---
+###### **Actulización web: `r Sys.time()`**
