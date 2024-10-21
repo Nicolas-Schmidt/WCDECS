@@ -2,8 +2,6 @@
 output:
   github_document:
 ---
-
-
 <div class="navbar">
   <a href="#informacion-general">Información General</a>
   <a href="#descripcion">Descripción</a>
