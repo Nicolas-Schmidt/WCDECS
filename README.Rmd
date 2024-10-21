@@ -3,20 +3,21 @@ output:
   github_document:
 ---
 
-<head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+<!-- Enlazar al archivo CSS -->
+<link rel="stylesheet" type="text/css" href="styles.css">
 
+<!-- Barra de Navegación -->
 <nav class="navbar">
-  <ul>
-    <li><a href="#informacion-general">Información General</a></li>
-    <li><a href="#descripcion">Descripción</a></li>
-    <li><a href="#programa">Programa</a></li>
-    <li><a href="#objetivos">Objetivos</a></li>
-    <li><a href="#bibliografia">Bibliografía</a></li>
-    <li><a href="#cronograma">Cronograma</a></li>
-    <li><a href="#materiales">Materiales</a></li>
-  </ul>
+    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button> <!-- Ícono de hamburguesa -->
+    <ul>
+        <li><a href="#informacion-general">Información General</a></li>
+        <li><a href="#descripcion">Descripción</a></li>
+        <li><a href="#programa">Programa</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#bibliografia">Bibliografía</a></li>
+        <li><a href="#cronograma">Cronograma</a></li>
+        <li><a href="#materiales">Materiales</a></li>
+    </ul>
 </nav>
 
 
@@ -239,7 +240,12 @@ EGAP](https://lilymedina.github.io/theory_and_practice_of_field_experiments/)
 
 
 
-
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        const navList = document.querySelector('.navbar ul');
+        navList.classList.toggle('collapsed'); // Alterna la clase "collapsed"
+    });
+</script>
 
 
 
