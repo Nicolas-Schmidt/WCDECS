@@ -1,32 +1,35 @@
-/* Oculta el título del repositorio y sus enlaces */
-h1, header div.d-flex {
-    display: none !important;
+/* Oculta el título del repositorio */
+h1 {
+    display: none;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 /* Ajustes para la barra de navegación */
 .navbar {
     background-color: #8a2be2;
-    overflow: hidden;
     position: fixed;
     top: 0;
-    width: 100%; /* Barra al 100% del ancho del viewport */
-    max-width: 1200px; /* Ancho máximo para centrado */
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    z-index: 9999; /* Asegura que la barra esté al frente */
+    width: 100%;
+    z-index: 1000;
 }
 
-/* Elimina márgenes y alinea los enlaces */
+/* Elimina márgenes y alinea la lista */
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-around; /* Enlaces distribuidos */
+    display: flex; /* Muestra los elementos en una fila */
+    flex-wrap: wrap; /* Permite que los elementos se apilen */
+    justify-content: space-around; /* Distribuye los enlaces */
 }
 
-/* Estilo de los enlaces */
+/* Estilos de los enlaces */
 .navbar a {
     display: block;
     color: white;
@@ -35,20 +38,25 @@ h1, header div.d-flex {
     text-decoration: none;
 }
 
+/* Estilo de los enlaces al pasar el mouse */
 .navbar a:hover {
     background-color: #ddd;
     color: black;
 }
 
-/* Asegura que el contenido no se solape con la barra */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #FFFFFF;
+/* Asegura que el contenido no se superponga con la barra */
+h2, p {
+    margin-top: 80px; /* Asegura que el contenido no esté detrás de la barra */
 }
 
-h2, p, .repository-content {
-    margin-top: 80px; /* Deja espacio para la barra fija */
-}
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar ul {
+        justify-content: center; /* Centra los enlaces en pantallas pequeñas */
+    }
 
+    .navbar a {
+        flex: 1 1 100%; /* Hace que los enlaces ocupen el 100% del ancho disponible */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+}
