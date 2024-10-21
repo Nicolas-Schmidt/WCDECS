@@ -227,6 +227,8 @@ Medina, [La teoría y la práctica de los experimentos de campo: Una
 introducción de los Learning Days de
 EGAP](https://lilymedina.github.io/theory_and_practice_of_field_experiments/)
 
+## Materiales
+
 **La literatura del curso está disponible**
 [aquí](https://drive.google.com/drive/folders/154rb3NLmaPQQB8L9xvvFmakDQ1wMudYQ?usp=sharing)
 

@@ -1,54 +1,41 @@
-/* Oculta el título del repositorio */
-h1 {
-  display: none;
-}
-
-/* Estilo general del cuerpo */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #FFFFFF;
-  margin: 0;
-  padding: 0;
-}
-
-/* Barra de navegación fija */
+/* Ajustes para la barra de navegación */
 .navbar {
-  background-color: #8a2be2;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+    background-color: #8a2be2;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%; /* Mantiene el ancho al 100% del viewport */
+    max-width: 1200px; /* Controla el ancho máximo para que no exceda */
+    margin: 0 auto; /* Centra la barra */
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
-/* Lista de navegación sin viñetas y sin márgenes */
+/* Elimina márgenes y alinea la lista */
 .navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Distribuye los enlaces */
 }
 
-/* Alineación horizontal de los elementos */
-.navbar li {
-  float: left;
-}
-
-/* Enlaces de la barra de navegación */
+/* Estilos de los enlaces */
 .navbar a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-/* Efecto al pasar el ratón sobre los enlaces */
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+    background-color: #ddd;
+    color: black;
 }
 
-/* Asegura que el contenido no se superponga con la barra fija */
+/* Asegura que el contenido no se superponga con la barra */
 h2, p {
-  margin-top: 80px;
+    margin-top: 80px;
 }
