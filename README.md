@@ -1,10 +1,12 @@
 <div class="navbar">
+
 <a href="#informacion-general">Información General</a>
 <a href="#descripcion">Descripción</a> <a href="#programa">Programa</a>
 <a href="#objetivos">Objetivos</a>
 <a href="#bibliografia">Bibliografía</a>
 <a href="#cronograma">Cronograma</a>
-<a href="#cronograma">Materiales</a>
+<a href="#materiales">Materiales</a>
+
 </div>
 
 <style>
