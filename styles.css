@@ -15,8 +15,12 @@ body {
     background-color: #8a2be2;
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 1000;
+    width: 100%; /* Ocupa todo el ancho del viewport */
+    z-index: 1200; /* Barra al frente */
+    display: flex;
+    justify-content: space-between; /* Alineación flexible */
+    padding: 10px 15px;
+    box-sizing: border-box; /* Asegura que padding no afecte el tamaño total */
 }
 
 /* Elimina márgenes y alinea la lista */
