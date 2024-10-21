@@ -80,20 +80,20 @@ El programa del curso está disponible
 
 ## Cronograma <a name="cronograma"></a>
 
-<div id="tycteaagco" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tycteaagco table {
+<div id="ykzxkzmdjy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ykzxkzmdjy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#tycteaagco thead, #tycteaagco tbody, #tycteaagco tfoot, #tycteaagco tr, #tycteaagco td, #tycteaagco th {
+&#10;#ykzxkzmdjy thead, #ykzxkzmdjy tbody, #ykzxkzmdjy tfoot, #ykzxkzmdjy tr, #ykzxkzmdjy td, #ykzxkzmdjy th {
   border-style: none;
 }
-&#10;#tycteaagco p {
+&#10;#ykzxkzmdjy p {
   margin: 0;
   padding: 0;
 }
-&#10;#tycteaagco .gt_table {
+&#10;#ykzxkzmdjy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -118,11 +118,11 @@ El programa del curso está disponible
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_caption {
+&#10;#ykzxkzmdjy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#tycteaagco .gt_title {
+&#10;#ykzxkzmdjy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -133,7 +133,7 @@ El programa del curso está disponible
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#tycteaagco .gt_subtitle {
+&#10;#ykzxkzmdjy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -144,7 +144,7 @@ El programa del curso está disponible
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#tycteaagco .gt_heading {
+&#10;#ykzxkzmdjy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -155,12 +155,12 @@ El programa del curso está disponible
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_bottom_border {
+&#10;#ykzxkzmdjy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_col_headings {
+&#10;#ykzxkzmdjy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -174,7 +174,7 @@ El programa del curso está disponible
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_col_heading {
+&#10;#ykzxkzmdjy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -193,7 +193,7 @@ El programa del curso está disponible
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#tycteaagco .gt_column_spanner_outer {
+&#10;#ykzxkzmdjy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -204,13 +204,13 @@ El programa del curso está disponible
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#tycteaagco .gt_column_spanner_outer:first-child {
+&#10;#ykzxkzmdjy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#tycteaagco .gt_column_spanner_outer:last-child {
+&#10;#ykzxkzmdjy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#tycteaagco .gt_column_spanner {
+&#10;#ykzxkzmdjy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -221,10 +221,10 @@ El programa del curso está disponible
   display: inline-block;
   width: 100%;
 }
-&#10;#tycteaagco .gt_spanner_row {
+&#10;#ykzxkzmdjy .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#tycteaagco .gt_group_heading {
+&#10;#ykzxkzmdjy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -249,7 +249,7 @@ El programa del curso está disponible
   vertical-align: middle;
   text-align: left;
 }
-&#10;#tycteaagco .gt_empty_group_heading {
+&#10;#ykzxkzmdjy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -263,13 +263,13 @@ El programa del curso está disponible
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#tycteaagco .gt_from_md > :first-child {
+&#10;#ykzxkzmdjy .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#tycteaagco .gt_from_md > :last-child {
+&#10;#ykzxkzmdjy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#tycteaagco .gt_row {
+&#10;#ykzxkzmdjy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -287,7 +287,7 @@ El programa del curso está disponible
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#tycteaagco .gt_stub {
+&#10;#ykzxkzmdjy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -299,7 +299,7 @@ El programa del curso está disponible
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#tycteaagco .gt_stub_row_group {
+&#10;#ykzxkzmdjy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -312,13 +312,13 @@ El programa del curso está disponible
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#tycteaagco .gt_row_group_first td {
+&#10;#ykzxkzmdjy .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#tycteaagco .gt_row_group_first th {
+&#10;#ykzxkzmdjy .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#tycteaagco .gt_summary_row {
+&#10;#ykzxkzmdjy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -327,14 +327,14 @@ El programa del curso está disponible
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#tycteaagco .gt_first_summary_row {
+&#10;#ykzxkzmdjy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_first_summary_row.thick {
+&#10;#ykzxkzmdjy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#tycteaagco .gt_last_summary_row {
+&#10;#ykzxkzmdjy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -343,7 +343,7 @@ El programa del curso está disponible
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_grand_summary_row {
+&#10;#ykzxkzmdjy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -352,7 +352,7 @@ El programa del curso está disponible
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#tycteaagco .gt_first_grand_summary_row {
+&#10;#ykzxkzmdjy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -361,7 +361,7 @@ El programa del curso está disponible
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_last_grand_summary_row_top {
+&#10;#ykzxkzmdjy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -370,10 +370,10 @@ El programa del curso está disponible
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_striped {
+&#10;#ykzxkzmdjy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#tycteaagco .gt_table_body {
+&#10;#ykzxkzmdjy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -381,7 +381,7 @@ El programa del curso está disponible
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_footnotes {
+&#10;#ykzxkzmdjy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -394,7 +394,7 @@ El programa del curso está disponible
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_footnote {
+&#10;#ykzxkzmdjy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -402,7 +402,7 @@ El programa del curso está disponible
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#tycteaagco .gt_sourcenotes {
+&#10;#ykzxkzmdjy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -415,57 +415,57 @@ El programa del curso está disponible
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#tycteaagco .gt_sourcenote {
+&#10;#ykzxkzmdjy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#tycteaagco .gt_left {
+&#10;#ykzxkzmdjy .gt_left {
   text-align: left;
 }
-&#10;#tycteaagco .gt_center {
+&#10;#ykzxkzmdjy .gt_center {
   text-align: center;
 }
-&#10;#tycteaagco .gt_right {
+&#10;#ykzxkzmdjy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#tycteaagco .gt_font_normal {
+&#10;#ykzxkzmdjy .gt_font_normal {
   font-weight: normal;
 }
-&#10;#tycteaagco .gt_font_bold {
+&#10;#ykzxkzmdjy .gt_font_bold {
   font-weight: bold;
 }
-&#10;#tycteaagco .gt_font_italic {
+&#10;#ykzxkzmdjy .gt_font_italic {
   font-style: italic;
 }
-&#10;#tycteaagco .gt_super {
+&#10;#ykzxkzmdjy .gt_super {
   font-size: 65%;
 }
-&#10;#tycteaagco .gt_footnote_marks {
+&#10;#ykzxkzmdjy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#tycteaagco .gt_asterisk {
+&#10;#ykzxkzmdjy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#tycteaagco .gt_indent_1 {
+&#10;#ykzxkzmdjy .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#tycteaagco .gt_indent_2 {
+&#10;#ykzxkzmdjy .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#tycteaagco .gt_indent_3 {
+&#10;#ykzxkzmdjy .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#tycteaagco .gt_indent_4 {
+&#10;#ykzxkzmdjy .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#tycteaagco .gt_indent_5 {
+&#10;#ykzxkzmdjy .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -760,4 +760,4 @@ EGAP](https://lilymedina.github.io/theory_and_practice_of_field_experiments/)
 
 ------------------------------------------------------------------------
 
-###### **Actulización web: 2024-10-21 15:45:47**
+###### **Actulización web: 2024-10-21 15:52:01**
