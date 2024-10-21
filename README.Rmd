@@ -29,7 +29,7 @@ body {
   padding: 0;
 }
 
-/* Barra de navegación violeta */
+/* Barra de navegación fija */
 .navbar {
   background-color: #8a2be2;
   overflow: hidden;
@@ -39,19 +39,19 @@ body {
   z-index: 1000;
 }
 
-/* Lista de la navegación sin viñetas */
+/* Lista de navegación sin viñetas y sin márgenes */
 .navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* Alineación horizontal de los enlaces */
+/* Alineación horizontal de los elementos */
 .navbar li {
   float: left;
 }
 
-/* Enlaces de la navegación */
+/* Enlaces de la barra de navegación */
 .navbar a {
   display: block;
   color: white;
@@ -60,19 +60,19 @@ body {
   text-decoration: none;
 }
 
-/* Estilo al pasar el ratón sobre un enlace */
+/* Efecto al pasar el ratón sobre los enlaces */
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Margen superior para el contenido después de la barra fija */
-h2 {
+/* Asegura que el contenido no se superponga con la barra fija */
+h2, p {
   margin-top: 80px;
 }
 </style>
 
-## Diseño e implementacion de experimentos en ciencias sociales <a name="informacion-general"></a>
+## Diseño e implementación de experimentos en ciencias sociales <a name="informacion-general"></a>
 
 
 
