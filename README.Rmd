@@ -2,53 +2,75 @@
 output:
   github_document:
 ---
-<div class="navbar">
-  <a href="#informacion-general">Información General</a>
-  <a href="#descripcion">Descripción</a>
-  <a href="#programa">Programa</a>
-  <a href="#objetivos">Objetivos</a>
-  <a href="#bibliografia">Bibliografía</a>
-  <a href="#cronograma">Cronograma</a>
-  <a href="#cronograma">Materiales</a>
-</div>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="#informacion-general">Información General</a></li>
+    <li><a href="#descripcion">Descripción</a></li>
+    <li><a href="#programa">Programa</a></li>
+    <li><a href="#objetivos">Objetivos</a></li>
+    <li><a href="#bibliografia">Bibliografía</a></li>
+    <li><a href="#cronograma">Cronograma</a></li>
+    <li><a href="#materiales">Materiales</a></li>
+  </ul>
+</nav>
 
 <style>
-
+/* Oculta el título del repositorio */
 h1 {
-    display: none;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #FFFFFF;
-    margin: 0;
-    padding: 0;
-  }
+  display: none;
+}
 
-  .navbar {
-    background-color: #8a2be2; 
-    overflow: hidden;
-  }
+/* Estilo general del cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
 
-  .navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+/* Barra de navegación violeta */
+.navbar {
+  background-color: #8a2be2;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+/* Lista de la navegación sin viñetas */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  h2 {
-    margin-top: 20px;
-  }
+/* Alineación horizontal de los enlaces */
+.navbar li {
+  float: left;
+}
+
+/* Enlaces de la navegación */
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Estilo al pasar el ratón sobre un enlace */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Margen superior para el contenido después de la barra fija */
+h2 {
+  margin-top: 80px;
+}
 </style>
-
 
 ## Diseño e implementacion de experimentos en ciencias sociales <a name="informacion-general"></a>
 
@@ -256,7 +278,7 @@ Medina, [La teoría y la práctica de los experimentos de campo: Una
 introducción de los Learning Days de
 EGAP](https://lilymedina.github.io/theory_and_practice_of_field_experiments/)
 
-La literatura del curso está disponible
+**La literatura del curso está disponible**
 [aquí](https://drive.google.com/drive/folders/154rb3NLmaPQQB8L9xvvFmakDQ1wMudYQ?usp=sharing)
 
 
