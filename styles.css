@@ -1,8 +1,6 @@
-/* Oculta el título del repositorio y márgenes innecesarios */
-h1, .repository-content h1 {
-    display: none;
-    margin: 0;
-    padding: 0;
+/* Oculta el título del repositorio y sus enlaces */
+h1, header div.d-flex {
+    display: none !important;
 }
 
 /* Ajustes para la barra de navegación */
@@ -12,23 +10,23 @@ h1, .repository-content h1 {
     position: fixed;
     top: 0;
     width: 100%; /* Barra al 100% del ancho del viewport */
-    max-width: 1200px; /* Controla el ancho máximo */
-    margin: 0 auto; /* Centra la barra */
+    max-width: 1200px; /* Ancho máximo para centrado */
+    margin: 0 auto;
     left: 0;
     right: 0;
-    z-index: 9999; /* Asegura que la barra esté por encima de otros elementos */
+    z-index: 9999; /* Asegura que la barra esté al frente */
 }
 
-/* Elimina márgenes y alinea la lista */
+/* Elimina márgenes y alinea los enlaces */
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around; /* Distribuye los enlaces uniformemente */
+    justify-content: space-around; /* Enlaces distribuidos */
 }
 
-/* Estilos de los enlaces */
+/* Estilo de los enlaces */
 .navbar a {
     display: block;
     color: white;
@@ -42,7 +40,7 @@ h1, .repository-content h1 {
     color: black;
 }
 
-/* Elimina márgenes innecesarios en el contenido de la página */
+/* Asegura que el contenido no se solape con la barra */
 body {
     margin: 0;
     padding: 0;
@@ -50,8 +48,7 @@ body {
     background-color: #FFFFFF;
 }
 
-/* Asegura que el contenido no quede cubierto por la barra */
 h2, p, .repository-content {
-    margin-top: 80px; /* Espacio para evitar que el contenido quede oculto */
+    margin-top: 80px; /* Deja espacio para la barra fija */
 }
 
