@@ -1,0 +1,108 @@
+---
+title: |
+ | Ejercicio domiciliario 3: Cumplimiento imperfecto y variables instrumentales
+output:
+  html_document:
+    toc: true
+    number_sections: false
+    toc_depth: 2
+    toc_float: true
+    theme: spacelab
+    highlight: tango
+urlcolor: BrickRed
+fontsize: 24pt
+---
+
+***
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(fig.align = "center", eval=TRUE)
+```
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+</style>
+
+
+## Leer datos - programa de inserción laboral
+
+En el país "A", durante el año 2009 se implementó un programa para apoyar la inserción laboral de personas que enfrentaban problemas de acceso al sector formal. Por restricciones presupuestales sólo hubo disponibilidad para 3022 cupos, los que se asignaron por sorteo. En el programa se inscribieron 8328 personas, y quienes no salieron sorteados como titulares quedaron como suplentes (5306 personas). Algunos de los convocados a participar finalmente no participaron, en cuyo caso fueron sustituidos por suplentes. Se cuenta con datos de los 8328 inscriptos, en particular respecto a las siguientes variables:
+
+- `cotizacion`	cotizacion=1 si la persona registra al menos una cotización en un empleo formal entre 2010 y 2011; cotizacion=0 en otro caso
+- `participa`	participa=1 si la persona participó efectivamente del programa; participa= 0 en otro caso
+- `cprevia`	cprevia=1 si la persona registra haber tenido un empleo formal en 2007 o 2008 ; y cprevia=0 en otro caso
+- `Sorteo`	sorteo=1 la persona fue convocada a participar del programa
+
+
+```{r, message = FALSE, warning = FALSE, message = FALSE}
+
+# install.packages("readstata13") # Instalar si no existe este paquete en tu biblioteca
+library(readstata13)
+
+df <- read.dta13("https://www.dropbox.com/s/y4oix826u2pr5fc/taller1_2020.dta?dl=1")
+```
+
+***
+
+
+
+## Estimación
+
+1. Estime el impacto de la política utilizando variables instrumentales mediante mínimos cuadrados en dos etapas.
+
+*Etapa 1*
+
+
+```{r}
+etapa1 <- lm(participa ~ sorteo, data = df)
+summary(etapa1)
+
+participa_gorro <- fitted(etapa1)
+
+```
+*Etapa 2*
+
+```{r}
+etapa2 <- lm(cotizacion ~ participa_gorro, data = df)
+summary(etapa2)
+
+```
+
+
+  + Describa brevemente cada una de las etapas
+
+
+
+2. Realice la misma estimación utilizando el comando `ivreg`
+
+
+```{r , message = FALSE}
+# install.packages("AER")
+library(AER)
+modelo.iv <- ivreg(cotizacion ~ participa | sorteo, data = df)
+summary(modelo.iv)
+
+```
+
+
+
+<!-- ```{r}
+summary(modelo.iv, vcov = sandwich, diagnostics = TRUE)
+```
+ -->
+
+
+3. Interprete los resultados:
+  + ¿Cuál es la magnitud del efecto de la política?
+  + ¿Cuál es la diferencia entre las dos estimaciones?
+
+
+
+
+
+
+
+
+
+

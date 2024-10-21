@@ -1,0 +1,466 @@
+---
+title: | 
+  | \large Programa de Curso
+  | \LARGE Diseño e Implementación de Experimentos en Ciencias Sociales
+  | \large Maestría en Políticas Públicas (2014)
+author:
+date: 
+output:
+  pdf_document
+header-includes:
+   - \usepackage{fancyhdr}
+   - \fancyhf{}
+   - \fancypagestyle{plain}{\pagestyle{fancy}}
+   - \fancyfoot[LE,RO]{\thepage}
+   - \lhead{\includegraphics[width=1cm]{Picture1.png}\includegraphics[width=4cm]{Picture2.png}}
+   - \usepackage{setspace}
+   - \singlespacing
+   - \usepackage[]{mathpazo}
+fontsize: 12pt
+urlcolor: blue
+---
+
+
+
+### Docentes
+
+*Santiago López Cariboni* (18hs)  \newline
+e-mail: santiago.lopez@cienciassociales.edu.uy \newline
+Personal website: \url{https://www.lopez-cariboni.info/}  
+*Luciana Cantera* (4 hs)\newline
+email: luciana.cantera@cienciassociales.edu.uy  
+*Nicolás Schmidt* (4 hs) \newline
+email: nschmidt@cienciassociales.edu.uy   
+*Lucía Suárez* (4 hs) \newline
+e-mail: lucia.suarez@cienciassociales.edu.uy
+
+### Créditos
+
+6 
+
+### Régimen de cursado
+
+Teórico y taller
+
+
+### Carga horaria y distribución: 
+
+30 horas de clase presencial
+
+
+# Conocimientos previos recomendados
+
+Este curso presupone una familiaridad con la estadística al nivel de grado, tal como probabilidad y distribuciones, estadística inferencial, regresión meidante mínimos cuadrados. Los estudiantes que no tomaron métodos en ciencias sociales pueden ponerse en contacto con el equipo docente antes de inscribirse en el curso para discutir su preparación. El curso asume también un conocimiento básico de programación en R. Sin embargo estudiantes sin conocimientos previos de R pueden contactar al equipo docente para adquirir de forma guiada esos conocimientos durante la semana previa al inicio del curso.
+
+
+# Contenidos y organización del curso
+
+
+Este curso abarca el diseño, la realización y el análisis de experimentos en ciencias sociales. Revisa los experimentos de campo, experimentos naturales, de encuesta y de laboratorio. 
+
+Los objetivos de aprendizaje son los siguientes: 
+
+- Cómo identificar y abordar las principales amenazas para los diseños experimentales
+- Cómo implementar componentes clave del diseño y análisis experimental en código
+- Cómo evaluar las opciones de diseño en sus propios experimentos a través de la simulación
+- Adquirir experiencia replicando el diseño y análisis de experimentos publicados destacados
+- Cómo diseñar un experimento y preparar un pre-registro completo.
+
+Los materiales del curso se encuentran en la siguiente página web, donde se irán actualizando con el correr de las clases: https://nicolas-schmidt.github.io/Curso_Experimentos
+
+
+### Contenidos
+
+
+#### Tema 1. Inferencia causal
+
+- *El modelo de causalidad Neyman–Rubin*
+- *Experimentos aleatorizados y validez*
+- *Asignación aleatoria simple*
+- *Estimandos (ATE, ITT, CACE, SATE, PATE, ATT, CATE, mediación)*
+
+
+### Tema 2. Análisis bajo asignación aleatoria simple
+
+- *Inferencia de aleatorización (p-valores exactos para hipótesis nulas nítidas)*
+- *Regresión y ajuste por covariables*
+
+
+### Tema 3. Estrategias de aleatorización y análisis basado en diseño
+
+- *Poder estadístico. Fórmula analítica y simulaciones.*
+- *Uso de covariables en el diseño. Asignación por bloques y análisis* 
+- *Asignación aleatoria por clusters y análisis* 
+
+### Tema 4. Diseños experimentales (4 clases)
+
+- *Diseños de aliento y cumplimiento imperfecto*
+- *Diseños multi-rama*
+<!-- placebo -->
+- *Diseños factoriales*
+<!-- conjoint y 2X2 -->
+- *Diseños de mediación*
+- *Diseños para estimar efectos de derrame*
+- *Diseños adaptativos*
+- *Diagnóstico de diseños*
+
+
+### Tema 5. Análisis estadístico de experimentos
+
+- *Análisis de efectos heterogéneos y variables pre-tratamiento* 
+- *Corrección por hipótesis múltiples*
+- *Spillovers (contaminación)* 
+- *Non-compliance*
+- *Atrición*
+<!-- - *Procedimientos de ponderación*  -->
+
+
+### Tema 6. Tipos de experimentos en ciencias sociales
+
+- *Experimentos de campo*
+- *Experimentos naturales*
+- *Experimentos de encuesta*
+- *Experimentos de laboratorio*
+
+
+### Tema 7. Pre-registro de experimentos
+
+- *Elaboración de un plan de análisis*
+- *Ética en la investigación experimental*
+- *Materiales de pre-registro*
+
+
+
+## Método de enseñanza
+
+Se realizará en la modalidad de clases teóricas y taller. Los estudiantes deben realizar lecturas previas a cada clase y trabajar de manera individual o en grupo durante los talleres.
+
+
+
+## Sistema de evaluación 
+
+El curso se evalúa en base a ejercicios de trabajos prácticos y un examen final. El examen consiste en el diseño completo de un experimento original. Adquieren derecho a realizar el examen aquellos alumnos que a) hayan hecho entrega de los trabajos prácticos (talleres) que realizan durante el curso y b) hayan asistido al mínimo obligatorio de clases según el reglamento de la Maestría en Economía.
+
+
+## Bibliografía 
+
+### Obgligatoria
+
+Gerber, Alan S., y Donald P. Green. 2012. *Field Experiments: Design, Analysis, and Interpretation.* New York: W.W. Norton. (FEDAI).
+
+Imbens, G. W., & Rubin, D. B. (2015). Causal inference in statistics, social, and biomedical sciences. Cambridge University Press. (CISSBS)
+
+Athey, Susan, y Guido W Imbens. 2017. “The Econometrics of Randomized Experiments.” In Handbook of Economic Field Experiments, Elsevier, 73–140. (ERE)
+
+Blair, Graeme, Jasper Cooper, Alexander Coppock, y Macartan Humphreys. *Research Design in the Social Sciences Declaration, Diagnosis, and Redesign*.  Forthcoming, Princeton University Press. (R3DR). Disponible online en: \url{https://book.declaredesign.org/}
+
+Glennerster, Rachel, y Kudzai Takavarasha. 2013. *Running Randomized Evaluations: A Practical Guide*. Princeton: Princeton UP.(RRE)
+
+Jake Bowers, Maarten Voors, y Nahomi Ichino. Traducido por Lily Medina, [La teoría y la práctica de los experimentos de campo:
+Una introducción de los Learning Days de EGAP](https://lilymedina.github.io/theory_and_practice_of_field_experiments/)
+
+### Recursos computacionales:
+
+- Grolemund, Garrett and Hadley Wickham. [R for Data Science (2e)](https://r4ds.hadley.nz/)
+- [Computational Social Science Bootcamp](https://sicss.io/boot_camp/)
+- [DeclareDesign](https://declaredesign.org/getting-started/) software
+- [\texttt{tidyverse} cheat sheets](https://posit.co/resources/cheatsheets/)
+- Compilado de tutoriales de [\texttt{R} y otros recursos](https://github.com/Chris-Engelhardt/data_sci_guide/) 
+- [RStudio \texttt{R} primers](https://posit.cloud/learn/primers)
+- Paquetes de \texttt{R} útiles para experimentalistas \texttt{R}:
+    + \texttt{randomizr}: facilita esquemas de aleatorización comunes
+    + \texttt{estimatr}: estimadores para experimentos basados en diseño
+    + \texttt{blockTools}: construir bloques/estratos para experimentos aleatorios por bloques
+    + \texttt{ri2} y \texttt{RItools}: implementan inferencia de aleatorización
+    + [R multtest]: corrección por hipótesis múltiples
+    + \texttt{GRF}: [generalized random forests](https://grf-labs.github.io/grf/)
+    + rlearner: [R-learner for Quasi-Oracle Estimation of Heterogeneous Treatment Effects](https://github.com/xnie/rlearner)".
+- [\texttt{oTree}](https://www.otree.org/). Plataforma para programar expeirmentos de laboratorio.
+- [\texttt{Qualtrics}](https://www.qualtrics.com/). Plataforma para programar expeirmentos de encuesta.
+
+
+## Lecturas por tema
+
+
+### Tema 1. Inferencia causal
+
+- *El modelo de causalidad Neyman–Rubin*
+- *Experimentos aleatorizados y validez*
+- *Asignación aleatoria simple* 
+- *Estimandos (ATE, ITT, CACE, SATE, PATE, ATT, CATE, mediación)*
+
+FEDAI, capítulos 1-2 
+
+CISSBS, capítulos 1-2.
+
+[10 Types of Treatment Effect You Should Know About](https://egap.org/resource/10-types-of-treatment-effect-you-should-know-about/)
+
+Aronow, P. M. and Samii, C. (2016). "Does regression produce representative estimates of causal effects?" *American Journal of Political Science*, 60(1):250–267
+
+Barabas, J. and Jerit, J. (2010). "Are survey experiments externally valid?" *American Political Science Review*, 104(2):226–242
+
+
+### Tema 2. Análisis bajo asignación aleatoria simple
+
+- *Inferencia de aleatorización (p-valores exactos para hipótesis nulas nítidas)*
+
+FEDAI, capítulo 3 
+
+CISSBS capítulos 5 y 6, capítulo 9 (secciones 9.3 y 9.8), capítulo 10 (sección 10.3)
+
+Duflo, E., Glennerster, R., & Kremer, M. (2007). Using randomization in development economics research: A toolkit. Handbook of development economics, 4, 3895-3962. (capítulos 4 y 7)
+
+EGAP, [10 Things to Know About Randomization Inference](https://egap.org/resource/10-things-to-know-about-hypothesis-testing/)
+
+Bowers, Jake, Mark Fredrickson, y Ben Hansen. "RItools: Randomization inference tools." R package version 0.1-11 (2010).
+
+
+Peng Ding, Avi Feller, y Luke Miratrix (2016), “Randomization Inference for Treatment Effect Variation,” Journal of the Royal Statistical Society, Series B 78: 655–671
+
+Samii, C., & Aronow, P. M. (2012). On equivalencies between design-based and regression-based variance estimators for randomized experiments. Statistics & Probability Letters, 82(2), 365–370.
+
+
+- *Regresión y ajuste por covariables*
+
+FEDAI, secciones 4.1, 4.2, y 4.3.
+
+Freedman, David A. 2008. “On Regression Adjustments in Experiments with Several Treatments.” *Annals of Applied Statistics* 2(1): 176–96.
+
+Lin, Winston. 2013. “Agnostic Notes on Regression Adjustments to Experimental Data: Reexamining Freedman’s Critique.” *The Annals of Applied Statistics* 7(1): 295–318.
+
+<!-- Negi, Akanksha, and Jeffrey M. Wooldridge. 2019. “Revisiting Regression Adjustment in Experiments with a Heterogeneous Treatment Effects Model.” : 1–49.  -->
+
+Wager, Stefan, Wenfei Du, Jonathan Taylor, y Robert J. Tibshirani. 2016. “High-Dimensional Regression Adjustments in Randomized Experiments.” *Proceedings of the National Academy of Sciences of the United States of America* 113(45): 12673–78.
+
+
+
+
+### Tema 3. Estrategias de aleatorización y análisis basado en diseño
+
+- *Poder estadístico. Fórmula analítica y simulaciones.*
+
+EGAP, [10 Things to Know About Statistical Power](https://egap.org/resource/10-things-to-know-about-statistical-power/)
+
+- *Uso de covariables en el diseño. Asignación por bloques y análisis* 
+<!-- - *Asignación por emaprejados*  -->
+
+FEDAI, capítulos 3.6.1, 4.4, y 4.5. 
+
+EGAP, [10 Things to Know About Multisite or Block-Randomized Trials](https://egap.org/resource/10-things-to-know-about-multisite-or-block-randomized-trials/
+)
+
+Moore, Ryan T. 2012. “Multivariate Continuous Blocking to Improve Political Science Experiments.” *Political Analysis* 20(4): 460–79.
+
+Moore, Ryan T., y Sally A. Moore. 2013. “Blocking for Sequential Political Experiments.” *Political Analysis* 21(4): 507–23.
+
+Coppock, Alexander. 2019. “Randomizr: Easy-to-Use Tools for Common Forms of Random Assignment and Sampling.”
+
+Moore, Ryan T., y Keith Schnakenberg. 2016. “BlockTools: Blocking, Assignment, and Diagnosing Interference in Randomized Experiments.”
+
+Hansen, Ben B., y Jake Bowers. "Covariate balance in simple, stratified and clustered comparative studies." Statistical Science (2008): 219-236.
+
+
+- *Asignación aleatoria por clusters y análisis* 
+
+FEDAI, capítulo 3.6.2.
+
+EGAP, [10 Things to Know About Cluster Randomization](https://egap.org/resource/10-things-to-know-about-cluster-randomization/)
+
+Hansen, Ben B., y Jake Bowers. "Attributing effects to a cluster-randomized get-out-the-vote campaign." Journal of the American Statistical Association 104.487 (2009): 873-885.
+
+### Tema 4. Diseños experimentales
+
+- *Diseños de aliento y cumplimiento imperfecto*
+
+
+FEDAI, capítulos 5-6.
+
+Athey, Susan, y Guido W Imbens. 2017. “The Econometrics of Randomized Experiments.” In Handbook of Economic Field Experiments, Elsevier, 73–140.
+
+
+- *Diseños multi-rama*
+<!-- placebo -->
+
+Gerber, Alan S, y Donald P Green. 2012. *Field Experiments: Design, Analysis, and Interpretation*. WW Norton.
+
+
+Athey, Susan, y Guido W Imbens. 2017. “The Econometrics of Randomized Experiments.” In Handbook of Economic Field Experiments, Elsevier, 73–140.
+
+
+- *Diseños factoriales*
+<!-- conjoint y 2X2 -->
+
+Egami, Naoki, y Kosuke Imai. 2018. “Causal Interaction in Factorial Experiments: Application to Conjoint Analysis.” *Journal of the American Statistical Association*: 1–34. 
+
+
+Tom Pepinsky, [Factorial Experiments, Conjoints, AMEs, y AMCEs](https://tompepinsky.com/2022/10/19/factorial-experiments-conjoints-ames-and-amces/)
+
+- *Diseños de mediación*
+
+FEDAI, capítulo 10.
+
+Imai, Kosuke, Luke Keele, Dustin Tingley, y Teppei Yamamoto. 2011. “Unpacking the Black Box of Causality: Learning about Causal Mechanisms from Experimental and Observational Studies.” *American Political Science Review* 105(4): 765–89.
+
+Imai, Kosuke, Dustin Tingley, y Teppei Yamamoto. 2013. “Experimental Designs for Identifying Causal Mechanisms.” *Journal of the Royal Statistical Society. Series A: Statistics in Society* 176(1): 5–51.
+
+Imai, Kosuke, y Teppei Yamamoto. 2013. “Identification and Sensitivity Analysis for Multiple Causal Mechanisms: Revisiting Evidence from Framing Experiments.” *Political Analysis* 21(02): 141–71.
+
+Tingley, Dustin et al. 2014. “Mediation: R Package for Causal Mediation Analysis.” Journal of Statistical Software 59(5): 1–38.
+
+<!-- Acharya, Avidit, Matthew Blackwell, and Maya Sen. 2016. “Explaining Causal Findings without Bias: Detecting and Assessing Direct Effects.” *American Political Science Review* 110(3): 512–29.
+
+Zhou, Xiang, and Geoffrey T. Wodtke. 2019. “A Regression-with-Residuals Method for Estimating Controlled Direct Effects.” *Political Analysis* 27(3): 360–69.
+ -->
+<!-- Wodtke, Geoffrey T., Zahide Alaca, and Xiang Zhou. 2020. “Regression-with-Residuals Estimation of Marginal Effects: A Method of Adjusting for Treatment-Induced Confounders That May Also Be Effect Modifiers.” Journal of the Royal Statistical Society. Series A: Statistics in Society 183(1): 311–32. -->
+
+
+<!-- mediation analysis y diseño -->
+- *Diseños para estimar efectos de derrame*
+
+Nickerson, D. W. (2008). "Is voting contagious? Evidence from two field experiments."
+*American political Science Review*, 49-57.
+
+Sinclair, B., McConnell, M., & Green, D. P. (2012). "Detecting spillover effects: Design and analysis of multilevel experiments." *American Journal of Political Science*, 56(4), 1055-1069.
+
+- *Diseños adaptativos*
+
+Offer-westort, Molly, and Alexander Coppock. 2018. “Adaptive Experimental Design : Prospects and Applications in Political Science Prepared for Presentation at the Annual Meeting of the American Political.”
+
+
+- *Diagnóstico de diseños y potencia estadística*
+
+Blair, Graeme, Jasper Cooper, Alexander Coppock, y Macartan Humphreys. 2019. “Declaring and Diagnosing Research Designs.” *American Political Science Review* 113(3): 838–59.
+
+
+### Tema 5. Análisis estadístico de experimentos
+
+- *Análisis de efectos heterogéneos y variables pre-tratamiento* 
+
+
+FEDAI, capítulo 9.
+
+
+EGAP, [10 Things to Know About Heterogeneous Treatment Effects](https://egap.org/resource/10-things-to-know-about-heterogeneous-treatment-effects/)
+
+
+Sesgo post-tratamiento:
+
+Montgomery, Jacob M., Brendan Nyhan, y Michelle Torres. 2018. “How Conditioning on Posttreatment Variables Can Ruin Your Experiment and What to Do about It.” *American Journal of Political Science* 62(3): 760–75.
+
+Variables pre-tratamiento:
+
+Carneiro, Pedro, Sokbae Lee, y Daniel Wilhelm. 2020. “Optimal Data Collection for Randomized Control Trials.” *Econometrics Journal* 23(1): 1–31.
+
+Heterogeneidad con aprendizaje automático y alta dimensionalidad:
+
+Egami, Naoki, y Kosuke Imai. 2018. “Causal Interaction in Factorial Experiments: Application to Conjoint Analysis.” *Journal of the American Statistical Association*: 1–34. 
+
+Athey, Susan, y Guido W. Imbens. 2019. “Machine Learning Methods That Economists Should Know About.” *Annual Review of Economics* 11(1): 685–725.
+
+Athey, Susan, Julie Tibshirani, y Stefan Wager. 2019. “Generalized Random Forests.” *Annals of Statistics* 47(2): 1179–1203.
+
+Wager, Stefan, y Susan Athey. 2018. “Estimation and Inference of Heterogeneous Treatment Effects Using Random Forests.” *Journal of the American Statistical Association* 113(523): 1228–42. 
+
+Athey, Susan, y Stefan Wager. 2019. “Estimating Treatment Effects with Causal Forests: An Application.” *Observational Studies* 5(2): 37–51.
+
+Xinkun Nie and Stefan Wager. 2021. Quasi-Oracle Estimation of Heterogeneous Treatment Effects. *Biometrika*, 108(2).
+
+
+
+- *Corrección por hipótesis múltiples*
+<!-- - *Procedimientos de ponderación*  -->
+
+EGAP, [10 Things to Know About Multiple Comparisons](https://egap.org/resource/10-things-to-know-about-multiple-comparisons/)
+
+
+### Tema 6. Tipos de experimentos en ciencias sociales
+
+- *Experimentos naturales*
+
+Dunning, Thad. 2012. *Natural Experiments in the Social Sciences Natural Experiments in the Social Sciences*.
+
+Dunning, Thad. 2008. “Improving Causal Inference: Strengths and Limitations of Natural Experiments.” *Political Research Quarterly* 61(2): 282--293. 
+
+- *Experimentos de campo*
+
+Gerber, Alan S, y Donald P Green. 2012. *Field Experiments: Design, Analysis, y Interpretation*. WW Norton.
+
+Coppock, A. and Green, D. P. (2015). "Assessing the correspondence between experimental results obtained in the lab and field: A review of recent social science research". *Political Science Research and Methods*, 3(1):113–131
+
+List, J. A. (2011). "Why economists should conduct field experiments and 14 tips for pulling one off". *The Journal of Economic Perspectives*, 25(3):3–15
+
+
+- *Experimentos de encuesta*
+
+
+Generales:
+
+Gaines, Brian J., James H. Kuklinski, y Paul J. Quirk. 2007. “The Logic of the Survey Experiment Reexamined.” *Political Analysis* 15(01): 1–20.
+
+
+Coppock, Alexander. 2018. “Generalizing from Survey Experiments Conducted on Mechanical Turk: A Replication Approach.” *Political Science Research and Methods* (2015): 1–16.
+
+Tobergte, David R., y Shirley Curtis. 2013. “The Generalizability of Survey Experiments.” *Journal of Chemical Information and Modeling* 53(9): 1689–99.
+
+
+Tratamientos de información
+
+Linos, Katerina, y Kimberly Twist. 2018. “Diverse Pre-Treatment Effects in Survey Experiments.” *Journal of Experimental Political Science* 5(2): 148–58.
+
+Fernández-Albertos, José, y Alexander Kuo. 2018. “Income Perception, Information, and Progressive Taxation: Evidence from a Survey Experiment.” *Political Science Research and Methods* 6(01): 83–110.
+
+Cruces, Guillermo, Ricardo Perez-Truglia, y Martin Tetaz. 2013. “Biased Perceptions of Income Distribution and Preferences for Redistribution: Evidence from a Survey Experiment.” *Journal of Public Economics* 98: 100–112.
+
+
+Stokes, Leah C., y Christopher Warshaw. 2017. “Renewable Energy Policy Design and Framing Influence Public Support in the United States.” Nature Energy 2: 17107. 
+
+
+Conjoint:
+
+
+Hainmueller, Jens, Daniel J. Hopkins, y Teppei Yamamoto. 2014. “Causal Inference in Conjoint Analysis: Understanding Multidimensional Choices via Stated Preference Experiments.” *Political Analysis* 22(1): 1–30.
+
+Leeper, Thomas J., Sara B. Hobolt, y James Tilley. 2020. “Measuring Subgroup Preferences in Conjoint Experiments.” *Political Analysis* 28(2): 207–21. 
+
+
+
+Experimentos de lista:
+
+Blair, Graeme, y Kosuke Imai. 2012. “Statistical Analysis of List Experiments.” *Political Analysis* 20(1): 47–77.
+
+
+Mecanismos causales:
+
+Acharya, Avidit, Matthew Blackwell, y Maya Sen. 2018. “Analyzing Causal Mechanisms in Survey Experiments.” *Political Analysis* 26(4): 1–31. 
+
+
+Cumplimiento a la asignación y atención:
+
+Aronow, Peter M., Jonathon Baron, and Lauren Pinson. 2019. “A Note on Dropping Experimental Subjects Who Fail a Manipulation Check.” *Political Analysis* 27(4): 572–89.
+
+
+- *Experimentos de laboratorio*
+
+Levitt, Steven, D., and John A. List. 2007. "What Do Laboratory Experiments Measuring Social Preferences Reveal About the Real World?" Journal of Economic Perspectives, 21 (2): 153-174.
+
+Falk, A. and Heckman, J. J. (2009). "Lab experiments are a major source of knowledge in the social sciences". *Science*, 326(5952):535–538
+
+<!-- Renshon, J., Lee, J. J., y Tingley, D. (2017). Emotions and the micro-foundations of commitment problems. International Organization, 71(S1):189–218 -->
+Habyarimana, J., Humphreys, M., Posner, D. N., y Weinstein, J. M. (2007). "Why does ethnic diversity undermine public goods provision?" *American Political Science Review*, 101(4):709–725
+
+Oxley, D. R., Smith, K. B., Alford, J. R., Hibbing, M. V., Miller, J. L., Scalora, M., Hatemi, P. K., y Hibbing, J. R. (2008). "Political attitudes vary with physiological traits". *Science*, 321(5896):1667–1670
+
+<!-- Enos, R. D. and Gidron, N. (2018). Exclusion and cooperation in diverse societies: Experimental evidence from israel. American Political Science Review, 112(4):742–757 -->
+
+Levine, D. K. and Palfrey, T. R. (2007). The paradox of voter participation? a laboratory study. American political science Review, 101(1):143–158
+
+
+### Tema 7. Pre-registro de experimentos
+
+- *Elaboración de un plan de análisis*
+- *Ética en la investigación experimental*
+- *Materiales de pre-registro*
+
+
+Bowers, J., & Testa, P. F. (2019). "Better Government, Better Science: The Promise of and Challenges Facing the Evidence-Informed Policy Movement." *Annual Review of Political Science*, 22, 521-542.
+

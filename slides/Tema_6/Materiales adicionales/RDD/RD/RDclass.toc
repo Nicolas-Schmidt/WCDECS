@@ -1,8 +1,0 @@
-\beamer@sectionintoc {1}{Regresi\IeC {\'o}n Discontinua: motivaci\IeC {\'o}n}{2}{0}{1}
-\beamer@sectionintoc {2}{Notaci\IeC {\'o}n y estructura}{5}{0}{2}
-\beamer@sectionintoc {3}{Identificaci\IeC {\'o}n}{14}{0}{3}
-\beamer@sectionintoc {4}{Estimaci\IeC {\'o}n e inferencia}{17}{0}{4}
-\beamer@sectionintoc {5}{Ejemplos}{29}{0}{5}
-\beamer@sectionintoc {6}{Dise\IeC {\~n}o difuso}{34}{0}{6}
-\beamer@sectionintoc {7}{Chequeos y validez}{36}{0}{7}
-\beamer@sectionintoc {8}{An\IeC {\'a}lisis estad\IeC {\'\i }stico de DRD}{42}{0}{8}
