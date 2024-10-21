@@ -3,6 +3,10 @@ output:
   github_document:
 ---
 
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
 <nav class="navbar">
   <ul>
     <li><a href="#informacion-general">Información General</a></li>
@@ -15,62 +19,7 @@ output:
   </ul>
 </nav>
 
-<style>
-/* Oculta el título del repositorio */
-h1 {
-  display: none;
-}
 
-/* Estilo general del cuerpo */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #FFFFFF;
-  margin: 0;
-  padding: 0;
-}
-
-/* Barra de navegación fija */
-.navbar {
-  background-color: #8a2be2;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-/* Lista de navegación sin viñetas y sin márgenes */
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Alineación horizontal de los elementos */
-.navbar li {
-  float: left;
-}
-
-/* Enlaces de la barra de navegación */
-.navbar a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Efecto al pasar el ratón sobre los enlaces */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Asegura que el contenido no se superponga con la barra fija */
-h2, p {
-  margin-top: 80px;
-}
-</style>
 
 ## Diseño e implementación de experimentos en ciencias sociales <a name="informacion-general"></a>
 
