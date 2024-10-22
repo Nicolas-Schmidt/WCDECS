@@ -19,6 +19,8 @@ output:
     </ul>
 </nav>
 
+<br>
+
 
 ## Diseño e implementación de experimentos en ciencias sociales <a name="informacion-general"></a>
 
@@ -134,6 +136,7 @@ df <- data %>%
         across(everything(), ~ replace_na(as.character(.), ""))
     )
 
+names(df)[which(names(df) == "Ejercicios domiciliarios")] <- "Ejercicios"
 
 
 table_gt <- df %>% 
@@ -159,7 +162,7 @@ table_gt <- df %>%
         table.border.top.width = px(3),  
         table.border.bottom.width = px(3)  
     ) %>%
-    fmt_markdown(columns = c("Presentación", "Lab", "Tema"))  
+    fmt_markdown(columns = c("Presentación", "Lab", "Tema", "Ejercicios"))  
 
 
 for (i in seq_len(nrow(df))) {
