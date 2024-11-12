@@ -19,7 +19,7 @@ header-includes: \usepackage[spanish]{babel}
 
 
 ***
-```{r setup, include = FALSE}
+```{r setup, include = FALSE, warning=FALSE}
 
 knitr::opts_chunk$set(fig.align = "center", eval=TRUE, tidy.opts=list(width.cutoff=60), tidy=TRUE, cache=TRUE)
 
@@ -59,7 +59,7 @@ table_2_2
 
 Cargamos la librería:
 
-```{r, tidy=TRUE}
+```{r, tidy=TRUE, warning=FALSE}
 # install.packages("ri2")
 library(ri2)
 ```
@@ -81,21 +81,71 @@ Para realizar una inferencia de aleatorización debemos proporcionar
 
 Se declarar procedimiento de aleatorización
 
-```{r, tidy=TRUE}
+```{r, tidy=TRUE, warning=FALSE}
 
 declaration <- randomizr::declare_ra(N = 7, m = 2)
 
 declaration
+```
+
+#### Interpretación
+
+**1. Random assignment procedure: Complete random assignment:**  
+El procedimiento utilizado es una **asignación completamente aleatoria**. Esto significa que cada unidad tiene la misma probabilidad de ser asignada a uno de los dos grupos (tratamiento o control), sin restricciones.
+
+**2. Number of units: 7**  
+La cantidad total de unidades (por ejemplo, personas, grupos o elementos) a asignar es **7**.
+
+**3. Number of treatment arms: 2**  
+Hay **2 grupos** o categorías de asignación posibles:  
+
+- **0:** Grupo de control (no recibe tratamiento).  
+- **1:** Grupo de tratamiento (recibe la intervención o tratamiento).
+
+**4. The possible treatment categories are 0 and 1**  
+Las dos categorías de tratamiento son **0** y **1**, donde:
+
+- **0** representa el grupo de control.  
+- **1** representa el grupo de tratamiento.
+
+**5. The number of possible random assignments is 21.**  
+Hay **21 formas posibles** de asignar 2 unidades al grupo de tratamiento y 5 al grupo de control.  
+Esto se debe a que \(C(7,2) = 21\), es decir, las combinaciones de 7 elementos tomados de 2 en 2.
+
+**6. The probabilities of assignment are constant across units:**  
+La probabilidad de ser asignado a cada grupo es constante para todas las unidades:
+
+- **prob_0 (Control):** 0.714 (5 de las 7 unidades se asignan al grupo de control).  
+- **prob_1 (Tratamiento):** 0.286 (2 de las 7 unidades se asignan al grupo de tratamiento).
+
+Como la asignación es completa y fija en términos de números, cada unidad tiene esas probabilidades asignadas, con la distribución ya definida de 5 en control y 2 en tratamiento.
+
+#### En suma
+
+Este proceso implica que estamos realizando una **asignación aleatoria completa** de 7 unidades, donde **exactamente 2** unidades recibirán tratamiento y **5** no lo recibirán. El número de posibles combinaciones para distribuir esas 2 unidades en el grupo de tratamiento es **21**. Además, cada unidad tiene una probabilidad constante del 71.4% de estar en control y 28.6% de estar en tratamiento.
 
 
+
+### Cálculo Manual
+```{r, tidy=TRUE}
 N = 7
 m = 2
 (p_0 = (N-m) / N)
 (p_1 = 1 - p_0)
 
+    combinaciones <- choose(N, m)
+combinaciones
 ```
 
-Se realiza la inferencia..
+### Inferencia
+
+**Descripción del Proceso**
+
+- **Hipótesis Nula:**En este caso, la hipótesis nula es que el tratamiento no tiene efecto alguno sobre la variable de respuesta (Y). Específicamente, la función prueba la hipótesis "efecto = 0" (por el argumento sharp_hypothesis = 0).
+
+- **Permutaciones Aleatorias:**
+    - `conduct_ri()` genera muchas permutaciones aleatorias del tratamiento (variable Z en este caso) para calcular la distribución de los resultados bajo la hipótesis nula.
+    - Luego compara el estimador real con esta distribución generada aleatoriamente para calcular el valor p (proporción de permutaciones donde los resultados simulados son al menos tan extremos como el observado).
 
 
 ```{r, tidy=TRUE}
@@ -105,8 +155,6 @@ ri2_out <- conduct_ri(
   sharp_hypothesis = 0,
   data = table_2_2
 )
-
-ri2_out
 ```
 
 
@@ -115,6 +163,25 @@ Observamos el resumen
 ```{r, tidy=TRUE}
 summary(ri2_out)
 ```
+
+###### Interpretación del Output
+
+**`term`:**  
+- La variable independiente o **tratamiento** es `Z`. Esta es la variable que se manipuló en el experimento (por ejemplo, si las unidades recibieron tratamiento o no).
+
+**`estimate`:**  
+- El **estimado del efecto del tratamiento** es **6.5**. Esto sugiere que, en promedio, las unidades en el grupo de tratamiento tuvieron un valor 6.5 unidades mayor en la variable de resultado (`Y`) en comparación con las unidades en el grupo de control.
+
+**`two_tailed_p_value`:**  
+- El **valor p** es **0.3809524**.  
+  Este valor indica la probabilidad de observar un efecto tan extremo (o más extremo) que 6.5, **si la hipótesis nula fuera cierta** (es decir, si no hubiera ninguna diferencia real entre los grupos de tratamiento y control).
+
+###### En suma
+
+- Con un **valor p de 0.381**, **no hay suficiente evidencia para rechazar la hipótesis nula** al nivel de significancia común de 0.05. Esto significa que no se puede afirmar, con un alto nivel de confianza, que el tratamiento (Z) tenga un efecto significativo en la variable de resultado (Y).  
+- Aunque el estimado del efecto es positivo (6.5), podría deberse al azar, ya que el valor p es relativamente alto.
+
+
 
 Visualizamos
 
@@ -164,12 +231,19 @@ Visualizamos el resultado:
 
 library(ggplot2)
 
-ggplot(data.frame(estadisticas_permutadas), aes(x = estadisticas_permutadas)) +
-  geom_histogram(binwidth = 1, fill = "#279F00", color = "black") +
-  geom_vline(xintercept = estadistica_obs, color = "red", linetype = "dashed", size = 1) +
-  labs(title = "Distribución Nula de la Estadística",
+ggplot(data.frame(estadisticas_permutadas), 
+       aes(x = estadisticas_permutadas)) +
+  geom_histogram(binwidth = 1, 
+                 fill = "#279F00", 
+                 color = "black") +
+  geom_vline(xintercept = estadistica_obs, 
+             color = "red", 
+             linetype = "dashed", size = 1) +
+  labs(
+      title = "Distribución Nula de la Estadística",
        x = "Diferencia en Medias",
-       y = "Frecuencia") +
+       y = "Frecuencia"
+      ) +
   theme_minimal()
 
 
