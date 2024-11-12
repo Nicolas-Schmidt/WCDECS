@@ -1,0 +1,75 @@
+/* Oculta el título del repositorio */
+h1 {
+    display: none;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Ajustes para la barra de navegación */
+.navbar {
+    background-color: #8a2be2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho del viewport */
+    z-index: 9999; /* Barra al frente */
+    display: flex;
+    justify-content: center; /* Centra la barra */
+    box-sizing: border-box;
+}
+
+/* Asegura que la lista no tenga márgenes y se comporte de manera flexible */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite apilamiento en pantallas pequeñas */
+    justify-content: space-around; /* Distribuye los enlaces */
+    width: 100%; /* Hace que ocupe el ancho completo disponible */
+    max-width: 1200px; /* Controla el ancho máximo para pantallas grandes */
+}
+
+/* Estilos de los enlaces */
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    flex: 1; /* Los enlaces se distribuyen uniformemente */
+}
+
+/* Estilo al pasar el mouse sobre los enlaces */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Asegura que el contenido comience debajo de la barra */
+h2, p {
+    margin-top: 60px; /* Ajusta este valor si la barra es más alta */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Apila los enlaces verticalmente */
+        align-items: center; /* Centra los enlaces apilados */
+    }
+
+    .navbar a {
+        text-align: left; /* Alinea el texto a la izquierda */
+        padding: 10px 20px; /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    h2, p {
+        margin-top: 80px; /* Asegura que no se pise el contenido al apilarse */
+    }
+}
+
